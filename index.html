@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARSENAL — Outils & méthodes offensives</title>
+  <meta name="description" content="Mémo exhaustif et avancé d'outils et de méthodes : OSINT, pentest, Red Team. Cheat-sheet par cas d'usage et catalogue d'outils classé par catégorie." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ░░ Barre latérale ░░ -->
+  <aside id="sidebar">
+    <div class="brand">
+      <div class="brand-logo">&gt;_</div>
+      <div class="brand-text">
+        <span class="brand-name" id="brandName">ARSENAL</span>
+        <span class="brand-ver" id="brandVer">v1.0</span>
+      </div>
+    </div>
+
+    <div class="side-search">
+      <input type="search" id="search" placeholder="rechercher un outil, une commande…" autocomplete="off" />
+      <kbd>/</kbd>
+    </div>
+
+    <nav id="catNav" aria-label="Catégories"></nav>
+
+    <div class="side-foot">
+      <a id="repoLink" href="#" target="_blank" rel="noopener">★ Dépôt GitHub</a>
+      <span id="toolCount"></span>
+    </div>
+  </aside>
+
+  <!-- ░░ Contenu ░░ -->
+  <main id="main">
+    <header class="hero">
+      <h1><span class="prompt">root@arsenal:~#</span> <span id="heroTitle">ARSENAL</span></h1>
+      <p class="tagline" id="tagline">Mémo exhaustif d'outils &amp; méthodes — OSINT · Pentest · Red Team</p>
+
+      <div class="phase-bar" id="phaseBar" aria-label="Filtrer par phase"></div>
+
+      <div class="hero-tabs">
+        <button class="tab active" data-view="cheats">⚡ Cheat-sheet (par cas d'usage)</button>
+        <button class="tab" data-view="tools">🧰 Catalogue d'outils</button>
+        <button class="tab" data-view="method">🧭 Méthodologie</button>
+      </div>
+    </header>
+
+    <!-- Vue : Cheat-sheet -->
+    <section id="view-cheats" class="view"></section>
+
+    <!-- Vue : Catalogue -->
+    <section id="view-tools" class="view hidden"></section>
+
+    <!-- Vue : Méthodologie -->
+    <section id="view-method" class="view hidden">
+      <div class="method-wrap">
+        <h2 class="method-h">Les 5 phases d'un test d'intrusion</h2>
+        <p class="method-sub">Reconnaissance → Énumération → Analyse de vulnérabilités → Exploitation → Post-exploitation. Chaque sortie alimente l'étape suivante.</p>
+        <ol class="killchain" id="killchain"></ol>
+
+        <h2 class="method-h">Chaîne type « énumération → exploitation »</h2>
+        <pre class="flow">netdiscover ─▶ ips.txt ─▶ nmap (-iL -sV -oA) ─▶ scan.xml
+                               │                 │
+                               ▼                 ▼
+                  nmap --script vuln / OpenVAS   eyewitness (interfaces web)
+                               │
+                               ▼
+                  searchsploit &lt;produit/CVE&gt; ─▶ msfconsole
+                                                    │
+               use exploit/… ; set RHOSTS/LHOST/payload ; exploit
+                                                    │
+                                                    ▼
+                                           Meterpreter (session)
+                                                    │
+               upload linpeas/winpeas ; modules post ; dump creds
+                                                    │
+                                                    ▼
+               Mouvement latéral (pass-the-hash) ─▶ pivoting (ssh -L / chisel)</pre>
+
+        <h2 class="method-h">Faire circuler les résultats</h2>
+        <div class="chain-grid" id="chainGrid"></div>
+      </div>
+    </section>
+
+    <footer class="page-foot">
+      <span id="footName">ARSENAL</span> — liste vivante, pensée pour être ré-alimentée.
+      Un outil manque ? Ajoute un objet dans <code>data.js</code>.
+      <br />Usage strictement légal : tests autorisés, labos, CTF, formation.
+    </footer>
+  </main>
+
+  <!-- bouton retour haut -->
+  <button id="toTop" title="Haut de page" aria-label="Haut de page">↑</button>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
