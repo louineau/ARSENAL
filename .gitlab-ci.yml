@@ -1,0 +1,16 @@
+# GitLab Pages — déploiement du site statique ARSENAL
+# Les fichiers sont à la racine ; GitLab Pages sert le dossier "public/".
+# Le job copie simplement le site dans public/ à chaque push sur la branche par défaut.
+
+pages:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - mkdir -p public
+    - cp index.html style.css app.js data.js public/
+    - cp .nojekyll public/ 2>/dev/null || true
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
