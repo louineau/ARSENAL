@@ -335,8 +335,8 @@ const TOOLS = [
     desc: "Proxy HTTP(S) interactif pour inspecter et modifier le trafic.", cmd: "mitmproxy -p 8080", tags: "proxy https interception trafic api" },
 
   /* ===== Wi-Fi & sans-fil ===== */
-  { name: "Aircrack-ng", url: "https://www.aircrack-ng.org/", cat: "wireless", platforms: ["linux"], phases: ["exploit"], star: true,
-    desc: "Suite d'audit Wi-Fi : capture de handshakes et cassage WEP/WPA.", cmd: "aircrack-ng -w rockyou.txt capture.cap", tags: "wifi wpa handshake wep cassage" },
+  { name: "Aircrack-ng (suite)", url: "https://www.aircrack-ng.org/", cat: "wireless", platforms: ["linux"], phases: ["exploit"], star: true,
+    desc: "Suite d'audit Wi-Fi — inclut airmon-ng (mode monitor), airodump-ng (capture), aireplay-ng (déauth/injection) et aircrack-ng (cassage WEP/WPA).", cmd: "aircrack-ng -w rockyou.txt capture.cap", tags: "wifi wpa handshake wep cassage suite airodump-ng airodump aireplay-ng aireplay airmon-ng airmon airbase-ng monitor deauth injection capture" },
   { name: "Wifite2", url: "https://github.com/derv82/wifite2", cat: "wireless", platforms: ["linux"], phases: ["exploit"],
     desc: "Automatise les attaques Wi-Fi (WEP/WPA/WPS) autour d'Aircrack.", cmd: "wifite", tags: "wifi automatisation wpa wps" },
   { name: "Kismet", url: "https://www.kismetwireless.net/", cat: "wireless", platforms: ["linux"], phases: ["recon","enum"],
