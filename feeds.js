@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-10-30T08:33:20+00:00",
+ "updated": "2026-10-30T10:07:28+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -46,6 +46,14 @@ window.ARSENAL_FEEDS = {
   }
  ],
  "items": [
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Hackers Actively Exploit Highly Critical Drupal Commerce Core Authorization Bypass Flaw",
+   "link": "https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html",
+   "summary": "Drupal has warned that threat actors are exploiting a \"highly critical\" security flaw in its Commerce Core component. The vulnerability, tracked as CVE-2026-118539 (CVSS score: N/A), is a case of missing authorization affecting Commerce Cor…",
+   "date": "2026-10-30T07:45:30+00:00"
+  },
   {
    "source": "The Hacker News",
    "kind": "news",
@@ -189,14 +197,6 @@ window.ARSENAL_FEEDS = {
    "link": "https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html",
    "summary": "Hackers exploited a critical Cisco Catalyst SD-WAN flaw, fixed in February, to plant custom malware inside the systems that control an organization's SD-WAN network. The malware, called KeyDrift, is designed to copy the keys that encrypt tr…",
    "date": "2026-10-29T08:24:22+00:00"
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "China-Linked Hackers Exploited VMware ESX Zero-Day to Reduce Audit Trail Visibility",
-   "link": "https://thehackernews.com/2026/10/china-linked-hackers-exploited-vmware.html",
-   "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a security flaw impacting Broadcom VMware ESX to its Known Exploited Vulnerabilities (KEV) catalog, after CrowdStrike revealed that it had been weaponized b…",
-   "date": "2026-10-29T06:22:33+00:00"
   },
   {
    "source": "CERT-FR · Avis",
