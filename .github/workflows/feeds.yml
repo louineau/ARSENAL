@@ -1,0 +1,43 @@
+name: Veille — mise à jour des flux
+
+# Agrège les flux RSS/Atom (CERT-FR, CISA, Exploit-DB…) dans feeds.js.
+on:
+  schedule:
+    - cron: "17 */6 * * *"      # toutes les 6 heures (minute décalée pour éviter la congestion)
+  workflow_dispatch: {}          # bouton « Run workflow » manuel dans l'onglet Actions
+  push:
+    paths:
+      - "scripts/build_feeds.py" # régénère quand le script change
+      - ".github/workflows/feeds.yml"
+
+permissions:
+  contents: write                # autorise le commit de feeds.js
+
+concurrency:
+  group: feeds
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Générer feeds.js
+        run: python scripts/build_feeds.py
+
+      - name: Commit si changement
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add feeds.js
+          if git diff --staged --quiet; then
+            echo "Aucun changement dans la veille."
+          else
+            git commit -m "chore(veille): mise à jour des flux $(date -u +%FT%TZ)"
+            git push
+          fi

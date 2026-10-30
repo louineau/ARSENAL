@@ -46,6 +46,7 @@
         <button class="tab active" data-view="cheats">⚡ Cheat-sheet (par cas d'usage)</button>
         <button class="tab" data-view="tools">🧰 Catalogue d'outils</button>
         <button class="tab" data-view="method">🧭 Méthodologie</button>
+        <button class="tab" data-view="veille">📡 Veille</button>
       </div>
     </header>
 
@@ -86,6 +87,9 @@
       </div>
     </section>
 
+    <!-- Vue : Veille (flux agrégés par scripts/build_feeds.py) -->
+    <section id="view-veille" class="view hidden"></section>
+
     <footer class="page-foot">
       <span id="footName">ARSENAL</span> — liste vivante, pensée pour être ré-alimentée.
       Un outil manque ? Ajoute un objet dans <code>data.js</code>.
@@ -97,6 +101,7 @@
   <button id="toTop" title="Haut de page" aria-label="Haut de page">↑</button>
 
   <script src="data.js"></script>
+  <script src="feeds.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

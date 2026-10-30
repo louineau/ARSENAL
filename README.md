@@ -92,6 +92,20 @@ Méthodologie et cas d'usage synthétisés à partir du cours **Lead Pentester (
 
 ---
 
+## 📡 Veille (flux RSS automatiques)
+
+L'onglet **Veille** agrège des flux RSS/Atom (CERT-FR avis/alertes/actus, CISA, Exploit-DB, The Hacker News) et les affiche triés par date, filtrables par source et cherchables.
+
+Fonctionnement — 100 % automatique, sans backend :
+1. Un **workflow GitHub Actions** ([.github/workflows/feeds.yml](.github/workflows/feeds.yml)) s'exécute toutes les 6 h (et à la demande).
+2. Il lance [scripts/build_feeds.py](scripts/build_feeds.py) (Python standard, zéro dépendance) qui récupère les flux et génère **`feeds.js`**.
+3. Il commite `feeds.js` ; la page le charge comme `data.js`.
+
+> ⚙️ À activer une fois : sur GitHub, **Settings → Actions → General → Workflow permissions → Read and write permissions** (pour que l'Action puisse committer `feeds.js`).
+
+**Ajouter une source** : une ligne dans la liste `FEEDS` de `scripts/build_feeds.py`.
+**Régénérer à la main** : `python scripts/build_feeds.py` (puis commit).
+
 ## ⚖️ Avertissement
 
 Ressource **pédagogique**. À n'utiliser que dans un cadre **légal** :

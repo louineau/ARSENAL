@@ -73,6 +73,8 @@
   }
 
   const state = { view: "cheats", phase: null, q: "", qTokens: [] };
+  let veilleKind = null; // filtre source actif dans la vue Veille
+  const KIND_LABEL = { alerte: "Alerte", avis: "Avis", actu: "Actu", cve: "CVE", exploit: "Exploit", news: "News" };
 
   /* ---- en-têtes / marque ---- */
   $("#brandName").textContent = META.name;
@@ -256,16 +258,72 @@
     });
   }
 
+  /* ---- vue veille (flux RSS agrégés) ---- */
+  function timeAgo(iso) {
+    if (!iso) return "";
+    const d = new Date(iso), s = Math.floor((Date.now() - d.getTime()) / 1000);
+    if (isNaN(s)) return "";
+    if (s < 3600) return "il y a " + Math.max(1, Math.floor(s / 60)) + " min";
+    if (s < 86400) return "il y a " + Math.floor(s / 3600) + " h";
+    const j = Math.floor(s / 86400);
+    return j < 30 ? "il y a " + j + " j" : d.toLocaleDateString("fr-FR");
+  }
+  function renderVeille() {
+    const root = $("#view-veille");
+    root.innerHTML = "";
+    const F = window.ARSENAL_FEEDS;
+    if (!F || !F.items || !F.items.length) {
+      root.appendChild(el("p", "empty",
+        "Pas encore de données de veille. Le fichier feeds.js est généré automatiquement par GitHub Actions — ou localement via <code>python scripts/build_feeds.py</code>."));
+      return;
+    }
+    const head = el("div", "veille-head");
+    head.appendChild(el("span", "veille-upd",
+      `📡 ${F.items.length} actualités · ${F.updated ? "mis à jour " + esc(timeAgo(F.updated)) : ""}`));
+    const chips = el("div", "veille-chips");
+    const mkChip = (kind, label) => {
+      const c = el("button", "vchip" + (veilleKind === kind ? " active" : ""), esc(label));
+      c.addEventListener("click", () => { veilleKind = (veilleKind === kind ? null : kind); renderVeille(); });
+      return c;
+    };
+    chips.appendChild(mkChip(null, "toutes"));
+    [...new Set(F.items.map(i => i.kind))].forEach(k => chips.appendChild(mkChip(k, KIND_LABEL[k] || k)));
+    head.appendChild(chips);
+    root.appendChild(head);
+
+    const list = el("div", "feed-list");
+    let n = 0;
+    F.items.forEach(it => {
+      if (veilleKind && it.kind !== veilleKind) return;
+      if (state.qTokens.length && !textMatches(it.title + " " + (it.summary || "") + " " + it.source, state.qTokens)) return;
+      n++;
+      const card = el("article", "feed-item");
+      card.innerHTML =
+        `<div class="feed-top">
+           <span class="kind kind-${esc(it.kind)}">${esc(KIND_LABEL[it.kind] || it.kind)}</span>
+           <span class="feed-src">${esc(it.source)}</span>
+           <span class="feed-date">${esc(timeAgo(it.date))}</span>
+         </div>
+         <a class="feed-title" href="${esc(it.link)}" target="_blank" rel="noopener">${esc(it.title)}</a>
+         ${it.summary ? `<p class="feed-sum">${esc(it.summary)}</p>` : ""}`;
+      list.appendChild(card);
+    });
+    if (!n) list.appendChild(el("p", "empty", "Aucune actualité pour ce filtre."));
+    root.appendChild(list);
+  }
+
   /* ---- orchestration ---- */
   function render() {
     if (state.view === "tools") renderTools();
     else if (state.view === "cheats") renderCheats();
+    else if (state.view === "veille") renderVeille();
     else renderMethod();
   }
   function setView(v) {
     state.view = v;
     document.querySelectorAll(".hero-tabs .tab").forEach(t => t.classList.toggle("active", t.dataset.view === v));
-    ["cheats", "tools", "method"].forEach(id => $("#view-" + id).classList.toggle("hidden", id !== v));
+    ["cheats", "tools", "method", "veille"].forEach(id => { const sec = $("#view-" + id); if (sec) sec.classList.toggle("hidden", id !== v); });
+    $("#phaseBar").style.display = (v === "cheats" || v === "tools") ? "" : "none";
     render();
   }
 
