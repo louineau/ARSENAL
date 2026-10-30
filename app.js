@@ -134,12 +134,13 @@
       const a = el("button", "cat-link");
       a.innerHTML = `<span class="ci">${c.icon}</span><span>${esc(c.label)}</span><span class="cc">${n}</span>`;
       a.addEventListener("click", () => {
-        setView("tools");
-        setTimeout(() => {
-          const target = document.getElementById("cat-" + c.id);
-          if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-          closeSidebar();
-        }, 40);
+        // réinitialise les filtres actifs pour que la catégorie soit toujours affichée
+        if (state.phase) { state.phase = null; updateRailActive(); }
+        if (state.q) { state.q = ""; state.qTokens = []; searchEl.value = ""; }
+        setView("tools"); // rend le catalogue de façon synchrone : la cible existe déjà
+        const target = document.getElementById("cat-" + c.id);
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+        closeSidebar();
       });
       nav.appendChild(a);
     });
