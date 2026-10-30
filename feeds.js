@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-10-30T18:03:23+00:00",
+ "updated": "2026-10-30T22:26:01+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -56,6 +56,17 @@ window.ARSENAL_FEEDS = {
   {
    "source": "The Hacker News",
    "kind": "news",
+   "title": "Chinese Hackers Use AI-Powered ARTEX to Target Over 200 Organizations Worldwide",
+   "link": "https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html",
+   "summary": "Chinese state-sponsored threat actors have been observed using a Go-based artificial intelligence (AI)-powered penetration testing framework called ARTEX in attacks aimed at high-value targets simultaneously. The activity has been attribute…",
+   "date": "2026-10-30T16:58:44+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
    "title": "TeamViewer Flaw Lets Remote Computers Attack Users Who Connect to Control Them",
    "link": "https://thehackernews.com/2026/10/teamviewer-flaw-lets-remote-computers.html",
    "summary": "TeamViewer has fixed a flaw that lets the machine being controlled in a remote session attack the computer that connected to control it. In a TeamViewer session, the computer that connects and takes control is the viewer, and the machine it…",
@@ -87,6 +98,19 @@ window.ARSENAL_FEEDS = {
    "cvss": null,
    "sev": null,
    "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-111357 Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability CVE-202…",
+   "date": "2026-10-30T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "réseau"
+   ]
   },
   {
    "source": "The Hacker News",
@@ -373,17 +397,6 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-   "link": "https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-97229 GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound vulnerabil…",
-   "date": "2026-10-29T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
    "title": "Hitachi Energy TRO600 series products",
    "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02",
    "summary": "View CSAF Summary Hitachi Energy is aware of multiple vulnerabilities that affect the TRO600 series product versions listed in this document. These vulnerabilities can be exploited for remote code execution (RCE) to carry out further attack…",
@@ -404,6 +417,17 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-97229 GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound vulnerabil…",
+   "date": "2026-10-29T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
    "source": "The Hacker News",
    "kind": "news",
    "title": "Webinar: How to Build AI Threat Readiness Into Your Security Operations",
@@ -413,19 +437,6 @@ window.ARSENAL_FEEDS = {
    "cvss": null,
    "sev": null,
    "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Telegram Android Flaw Lets Attackers Run Code When Users Answer Voice Calls",
-   "link": "https://thehackernews.com/2026/10/telegram-android-flaw-lets-attackers.html",
-   "summary": "A flaw in Telegram for Android could be chained with two other bugs to take full control of a victim's phone through a voice call, once the victim answered, according to security startup NebuSec. The attacker needed only an ordinary Telegra…",
-   "date": "2026-10-29T11:39:18+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "android"
-   ]
   },
   {
    "source": "CERT-FR · Avis",
@@ -477,9 +488,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Mitsubishi Electric and Mitsubishi Electric Iconics Digital Solutions GENESIS, GENESIS64, ICONICS Suite, Hyper Historian, AnalytiX, MobileHMI, IoTWorX, MC Works64, GENESIS32 and Bi…",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02",
-   "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to execute arbitrary code (CVE-2023-4863), bypass authentication (CVE-2026-16436 and CVE-2026-16437), or perform arbitrary operations (CVE-2026-16438…",
+   "title": "EPICS Base",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01",
+   "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to cause a denial-of-service condition, corrupt memory, disclose sensitive information, or potentially execute arbitrary code. The following versions…",
    "date": "2026-10-27T12:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -488,9 +499,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "EPICS Base",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01",
-   "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to cause a denial-of-service condition, corrupt memory, disclose sensitive information, or potentially execute arbitrary code. The following versions…",
+   "title": "Mitsubishi Electric and Mitsubishi Electric Iconics Digital Solutions GENESIS, GENESIS64, ICONICS Suite, Hyper Historian, AnalytiX, MobileHMI, IoTWorX, MC Works64, GENESIS32 and Bi…",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02",
+   "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to execute arbitrary code (CVE-2023-4863), bypass authentication (CVE-2026-16436 and CVE-2026-16437), or perform arbitrary operations (CVE-2026-16438…",
    "date": "2026-10-27T12:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -510,12 +521,45 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-116231",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116231",
+   "summary": "A security flaw has been discovered in Oray Pugongying X5 Pro 7.6.1. The impacted element is an unknown function of the component Ser2net. Performing a manipulation of the argument regmsg results in crlf injection. It is possible to initiat…",
+   "date": "2026-10-26T08:17:17.620000+00:00",
+   "cvss": 9.9,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-116111",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116111",
+   "summary": "A vulnerability was determined in 2K Games Civilization V 1.0.3.144. Impacted is the function loadstring of the component Lua Sandbox. Executing a manipulation can lead to type confusion. The attack may be performed from remote. The exploit…",
+   "date": "2026-10-26T03:17:11.603000+00:00",
+   "cvss": 9.6,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
    "source": "CERT-FR · Actualités",
    "kind": "actu",
    "title": "Bulletin d'actualité CERTFR-2026-ACT-045 (26 octobre 2026)",
    "link": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-045/",
    "summary": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le CERT-FR dans le cadre d'une…",
    "date": "2026-10-26T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog-0",
+   "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-110447 Collabora Online – Built-in CODE Server OS Command Injection Vulnerability This type of vu…",
+   "date": "2026-10-23T12:00:00+00:00",
    "cvss": null,
    "sev": null,
    "platforms": []
@@ -534,14 +578,36 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
-   "source": "CISA · Advisories",
+   "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-   "link": "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog-0",
-   "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-110447 Collabora Online – Built-in CODE Server OS Command Injection Vulnerability This type of vu…",
-   "date": "2026-10-23T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
+   "title": "CVE-2026-114616",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-114616",
+   "summary": "Authlib is a Python library which builds OAuth and OpenID Connect servers. Prior to 1.9.1, Authlib's OctKey.import_key() and HMAC signing and verification path accept zero-length key material. If an application's secret lookup can return an…",
+   "date": "2026-10-22T22:18:04.420000+00:00",
+   "cvss": 9.1,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-114615",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-114615",
+   "summary": "Authlib is a Python library which builds OAuth and OpenID Connect servers. From 1.3.1 until 1.9.0, OctKey.import_key() checks asymmetric-key markers only at byte zero while Authlib's PEM loaders accept leading whitespace, comments, or a byt…",
+   "date": "2026-10-22T22:18:04.257000+00:00",
+   "cvss": 9.1,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-115375",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115375",
+   "summary": "Incus 7.0.0 before 7.0.2 and 7.1.0 before 7.5.0 contains a path traversal vulnerability that allows clients able to create instances to write files on the host. The flaw stems from unvalidated dependent custom volume names in instance backu…",
+   "date": "2026-10-22T19:17:44.133000+00:00",
+   "cvss": 9.9,
+   "sev": "crit",
    "platforms": []
   },
   {
@@ -591,17 +657,6 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Siemens PSS(R)SINCAL",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-06",
-   "summary": "View CSAF Summary PSS(R)SINCAL uses WibuKey third-party product that contains an out-of-bounds write vulnerability. An attacker could exploit this vulnerability to cause a system crash, resulting in a denial-of-service condition. This affec…",
-   "date": "2026-10-22T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
    "title": "Siemens RUGGEDCOM CROSSBOW",
    "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12",
    "summary": "View CSAF Summary RUGGEDCOM CROSSBOW contains multiple vulnerabilities that could allow an attacker to execute arbitrary SQL commands on the underlying database, retrieve sensitive administrative credentials, escalate privileges, and perfor…",
@@ -624,9 +679,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Siemens Industrial Edge App Publisher",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02",
-   "summary": "View CSAF Summary The Industrial Edge App Publisher contains a vulnerability chain involving improper certificate validation and the rendering of unescaped data from backend responses. These issues can be combined to allow an attacker on th…",
+   "title": "Managing AI Token Consumption for Operational Resilience",
+   "link": "https://www.cisa.gov/resources-tools/resources/managing-ai-token-consumption-operational-resilience",
+   "summary": "CISA, the Canadian Centre for Cyber Security (Cyber Centre), and partners are releasing joint guidance, Managing AI Token Consumption for Operational Resilience , to help organizations understand and manage token usage in support of operati…",
    "date": "2026-10-22T12:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -655,6 +710,17 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-114639",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-114639",
+   "summary": "Traefik 2.11.0 before 2.11.58 and 3.0.0 before 3.7.14 contains an authentication bypass because a first request preauthenticated with an Authorization: Negotiate token authenticates a socket in the globally shared backend connection pool, w…",
+   "date": "2026-10-22T02:16:56.800000+00:00",
+   "cvss": 8.7,
+   "sev": "high",
+   "platforms": []
+  },
+  {
    "source": "Exploit-DB",
    "kind": "exploit",
    "title": "[remote] PHP2Shell (CVE-2026-109618) - PHP core versions after v5.4 - RCE",
@@ -663,6 +729,30 @@ window.ARSENAL_FEEDS = {
    "date": "2026-10-22T00:00:00+00:00",
    "cvss": null,
    "sev": "high",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-96778",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-96778",
+   "summary": "Pillow is a Python imaging library. From 9.4.0 until 13.0.0, ImagingJpegEncode() in src/libImaging/JpegEncode.c can call jpeg_write_marker() for a JPEG COM comment when an ICC profile has exactly filled the 65536-byte encoder buffer. libjpe…",
+   "date": "2026-10-21T21:20:33.093000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-109619",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-109619",
+   "summary": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it h…",
+   "date": "2026-10-21T14:17:09.823000+00:00",
+   "cvss": 9.2,
+   "sev": "crit",
    "platforms": [
     "web"
    ]
@@ -801,94 +891,6 @@ window.ARSENAL_FEEDS = {
    "date": "2026-10-21T00:00:00+00:00",
    "cvss": null,
    "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-101529",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-101529",
-   "summary": "Vulnerability in the Oracle Enterprise Manager for Oracle Database product of Oracle Enterprise Manager (component: Data Guard Management). Supported versions that are affected are 13.5 and 24.1. Easily exploitable vulnerability allows low…",
-   "date": "2026-10-20T22:18:02.293000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-101528",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-101528",
-   "summary": "Vulnerability in the Oracle Enterprise Manager for Oracle Database product of Oracle Enterprise Manager (component: Data Guard Management). Supported versions that are affected are 13.5 and 24.1. Easily exploitable vulnerability allows low…",
-   "date": "2026-10-20T22:18:02.180000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-101503",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-101503",
-   "summary": "Vulnerability in Oracle Trusted Answer Search (component: PLSQL package). The supported version that is affected is 26.1. Easily exploitable vulnerability allows low privileged attacker with network access via Oracle Net to compromise Oracl…",
-   "date": "2026-10-20T22:17:59.557000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-101501",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-101501",
-   "summary": "Vulnerability in Oracle Trusted Answer Search (component: PLSQL package). The supported version that is affected is 26.1. Easily exploitable vulnerability allows low privileged attacker with network access via Oracle Net to compromise Oracl…",
-   "date": "2026-10-20T22:17:59.323000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-101458",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-101458",
-   "summary": "Vulnerability in the Siebel CRM Deployment product of Oracle Siebel CRM (component: Server Infrastructure). Supported versions that are affected are 17.0-26.9. Easily exploitable vulnerability allows unauthenticated attacker with network ac…",
-   "date": "2026-10-20T22:17:54.557000+00:00",
-   "cvss": 8.2,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-101457",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-101457",
-   "summary": "Vulnerability in the Siebel Apps - Life Sciences product of Oracle Siebel CRM (component: eDetailing). Supported versions that are affected are 17.0-26.9. Easily exploitable vulnerability allows low privileged attacker with network access v…",
-   "date": "2026-10-20T22:17:54.440000+00:00",
-   "cvss": 8.8,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-101451",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-101451",
-   "summary": "Vulnerability in the Siebel Life Sciences product of Oracle Siebel CRM (component: Web UI). Supported versions that are affected are 17.0-26.9. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to…",
-   "date": "2026-10-20T22:17:53.753000+00:00",
-   "cvss": 8.7,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-101446",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-101446",
-   "summary": "Vulnerability in the Siebel CRM Cloud Applications product of Oracle Siebel CRM (component: Siebel Cloud Manager). Supported versions that are affected are 17.0-26.9. Easily exploitable vulnerability allows low privileged attacker with netw…",
-   "date": "2026-10-20T22:17:53.193000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
    "platforms": []
   },
   {
