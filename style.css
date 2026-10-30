@@ -156,17 +156,25 @@ code{ font-family:var(--mono); font-size:.86em; }
 [data-phase="vuln"]{ --ph:var(--ph-vuln); }
 [data-phase="exploit"]{ --ph:var(--ph-exploit); }
 [data-phase="post"]{ --ph:var(--ph-post); }
-.cheat-head{ display:flex; gap:10px; align-items:flex-start; margin-bottom:12px; }
+.cheat-head{ display:flex; gap:10px; align-items:flex-start; margin-bottom:13px; padding-bottom:11px; border-bottom:1px solid var(--border); }
 .cheat-ico{ font-size:20px; line-height:1; }
-.cheat-title{ font-weight:700; font-size:14.5px; color:var(--text); }
-.cheat-steps{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:7px; }
-.cheat-step{ display:flex; flex-direction:column; gap:3px; }
-.cheat-step .st-tool{ font-size:12px; color:var(--accent-2); font-weight:600; }
+.cheat-title{ font-weight:700; font-size:14.5px; color:var(--text); line-height:1.35; }
+.cheat-steps{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px; }
+.cheat-step{ display:flex; flex-direction:column; gap:5px; }
+.cheat-step .st-tool{ font-size:12.5px; color:var(--accent-2); font-weight:700; letter-spacing:.01em; }
 .cmd{
-  position:relative; background:#060a10; border:1px solid var(--border);
-  border-radius:7px; padding:7px 34px 7px 10px; font-family:var(--mono);
-  font-size:12px; color:#bfe9cf; overflow-x:auto; white-space:pre;
+  position:relative; background:var(--bg-2); border:1px solid var(--border);
+  border-left:2px solid color-mix(in oklab, var(--accent-2) 55%, var(--border));
+  border-radius:7px; padding:8px 34px 8px 11px; font-family:var(--mono);
+  font-size:12px; color:#d2e8da; overflow-x:auto; white-space:pre;
+  scrollbar-width:thin; scrollbar-color:var(--border-2) transparent;
 }
+.cmd::-webkit-scrollbar{ height:6px; }
+.cmd::-webkit-scrollbar-track{ background:transparent; margin:0 8px; }
+.cmd::-webkit-scrollbar-thumb{ background:var(--border-2); border-radius:3px; }
+.cmd:hover::-webkit-scrollbar-thumb{ background:#3b5267; }
+/* commentaire « # … » dans une commande : discret, pour ne pas noyer la commande */
+.cmt{ color:var(--text-faint); font-style:italic; }
 .cmd .copy{
   position:absolute; right:5px; top:5px; background:var(--panel-2); border:1px solid var(--border-2);
   color:var(--text-faint); border-radius:5px; font-size:11px; cursor:pointer; padding:2px 6px;
@@ -218,12 +226,16 @@ code{ font-family:var(--mono); font-size:.86em; }
 .plat.macos{ color:#cdd6e4; }
 .tool-desc{ font-size:12.8px; color:var(--text-dim); margin:0; }
 .tool-cmd{
-  background:#060a10; border:1px solid var(--border); border-radius:6px;
-  padding:6px 9px; font-family:var(--mono); font-size:11.5px; color:#bfe9cf;
+  background:var(--bg-2); border:1px solid var(--border);
+  border-left:2px solid color-mix(in oklab, var(--accent-2) 45%, var(--border));
+  border-radius:6px; padding:7px 10px; font-family:var(--mono); font-size:11.5px; color:#d2e8da;
   overflow-x:auto; white-space:pre; position:relative;
+  scrollbar-width:thin; scrollbar-color:var(--border-2) transparent;
 }
 .tool-cmd::-webkit-scrollbar{ height:6px; }
+.tool-cmd::-webkit-scrollbar-track{ background:transparent; }
 .tool-cmd::-webkit-scrollbar-thumb{ background:var(--border-2); border-radius:3px; }
+.tool-cmd:hover::-webkit-scrollbar-thumb{ background:#3b5267; }
 .tool-foot{ display:flex; align-items:center; gap:8px; margin-top:auto; }
 .phase-tag{ font-family:var(--mono); font-size:10px; color:var(--text-faint); }
 .tool-link{ margin-left:auto; font-family:var(--mono); font-size:11px; color:var(--accent-2); }

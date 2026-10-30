@@ -107,6 +107,11 @@
   const repo = $("#repoLink");
   if (META.repo && META.repo !== "https://github.com/") { repo.href = META.repo; } else { repo.style.display = "none"; }
 
+  // met en forme une commande : grise le commentaire « # … » final pour le distinguer
+  function fmtCmd(text) {
+    return esc(text).replace(/(\s#\s[^]*)$/, '<span class="cmt">$1</span>');
+  }
+
   /* ---- bouton copier ---- */
   function copyBtn(text) {
     const b = el("button", "copy", "copy");
@@ -207,7 +212,7 @@
        <p class="tool-desc">${esc(t.desc)}</p>`;
     if (t.cmd) {
       const cmd = el("div", "tool-cmd");
-      cmd.textContent = t.cmd;
+      cmd.innerHTML = fmtCmd(t.cmd);
       cmd.appendChild(copyBtn(t.cmd));
       c.appendChild(cmd);
     }
@@ -256,7 +261,7 @@
       let steps = "";
       ch.steps.forEach(s => {
         steps += `<li class="cheat-step"><span class="st-tool">▸ ${esc(s.tool)}</span>
-          <div class="cmd">${esc(s.cmd)}</div></li>`;
+          <div class="cmd">${fmtCmd(s.cmd)}</div></li>`;
       });
       card.innerHTML =
         `<div class="cheat-head"><span class="cheat-ico">${ch.icon}</span><span class="cheat-title">${esc(ch.title)}</span></div>
