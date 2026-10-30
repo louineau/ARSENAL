@@ -234,6 +234,8 @@ code{ font-family:var(--mono); font-size:.86em; }
 }
 .vchip:hover{ color:var(--text); border-color:var(--accent-2); }
 .vchip.active{ background:var(--accent-2); color:var(--bg); border-color:var(--accent-2); font-weight:700; }
+.vchip-lbl{ font-family:var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:.08em; color:var(--text-faint); align-self:center; margin-right:2px; }
+.vchip-sort{ margin-left:auto; border-style:dashed; }
 
 .feed-list{ display:flex; flex-direction:column; gap:10px; }
 .feed-item{
@@ -257,6 +259,23 @@ code{ font-family:var(--mono); font-size:.86em; }
 .feed-title{ display:block; font-weight:600; font-size:14.5px; color:var(--text); line-height:1.4; }
 .feed-title:hover{ color:var(--accent-2); text-decoration:none; }
 .feed-sum{ margin:5px 0 0; font-size:12.8px; color:var(--text-dim); }
+
+/* criticité (badge CVSS) */
+.sev{
+  font-family:var(--mono); font-size:9.5px; font-weight:700; letter-spacing:.04em;
+  padding:2px 7px; border-radius:5px; border:1px solid transparent; white-space:nowrap;
+}
+.sev-crit{ color:#ff4d6d; border-color:#5a2030; background:rgba(255,77,109,.12); }
+.sev-high{ color:#ff9f43; border-color:#4d3a1c; background:rgba(255,159,67,.10); }
+.sev-med{ color:#ffd45e; border-color:#463c1a; background:rgba(255,212,94,.08); }
+.sev-low{ color:var(--text-dim); border-color:var(--border-2); }
+
+/* tags plateforme */
+.feed-plats{ display:flex; flex-wrap:wrap; gap:5px; margin-top:7px; }
+.plat{
+  font-family:var(--mono); font-size:10px; color:var(--text-dim);
+  padding:1px 7px; border-radius:10px; border:1px solid var(--border-2); background:var(--bg);
+}
 
 /* ░░ Footer ░░ */
 .page-foot{

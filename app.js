@@ -73,8 +73,20 @@
   }
 
   const state = { view: "cheats", phase: null, q: "", qTokens: [] };
-  let veilleKind = null; // filtre source actif dans la vue Veille
+  let veilleKind = null;      // filtre source (type de flux) actif
+  let veilleSevMin = -1;      // seuil de criticité (-1 = toutes)
+  let veillePlat = null;      // filtre plateforme actif
+  let veilleSort = "date";    // "date" (récent) ou "crit" (criticité)
   const KIND_LABEL = { alerte: "Alerte", avis: "Avis", actu: "Actu", cve: "CVE", exploit: "Exploit", news: "News" };
+  const SEV_LABEL = { crit: "Critique", high: "Élevé", med: "Moyen", low: "Faible" };
+  const SEV_RANK = { crit: 3, high: 2, med: 1, low: 0 };
+  const SEV_STEPS = [
+    { label: "toutes", min: -1 },
+    { label: "🟡 ≥ Moyen", min: 1 },
+    { label: "🟠 ≥ Élevé", min: 2 },
+    { label: "🔴 Critique", min: 3 },
+  ];
+  const PLAT_LABEL = { windows: "Windows", linux: "Linux", macos: "macOS", android: "Android", ios: "iOS", web: "Web", "réseau": "Réseau", vmware: "VMware" };
 
   /* ---- en-têtes / marque ---- */
   $("#brandName").textContent = META.name;
@@ -277,38 +289,95 @@
         "Pas encore de données de veille. Le fichier feeds.js est généré automatiquement par GitHub Actions — ou localement via <code>python scripts/build_feeds.py</code>."));
       return;
     }
+
+    // index de recherche : titre, résumé, source, type, criticité, score CVSS, plateformes
+    const searchText = (it) => [
+      it.title, it.summary || "", it.source,
+      KIND_LABEL[it.kind] || it.kind,
+      it.sev ? "cvss " + SEV_LABEL[it.sev] + (it.cvss != null ? " " + it.cvss : "") : "",
+      (it.platforms || []).map(p => PLAT_LABEL[p] || p).join(" "),
+    ].join(" ");
+
     const head = el("div", "veille-head");
     head.appendChild(el("span", "veille-upd",
       `📡 ${F.items.length} actualités · ${F.updated ? "mis à jour " + esc(timeAgo(F.updated)) : ""}`));
+
+    // ligne — source (type de flux) + bascule de tri
     const chips = el("div", "veille-chips");
-    const mkChip = (kind, label) => {
+    const mkKind = (kind, label) => {
       const c = el("button", "vchip" + (veilleKind === kind ? " active" : ""), esc(label));
       c.addEventListener("click", () => { veilleKind = (veilleKind === kind ? null : kind); renderVeille(); });
       return c;
     };
-    chips.appendChild(mkChip(null, "toutes"));
-    [...new Set(F.items.map(i => i.kind))].forEach(k => chips.appendChild(mkChip(k, KIND_LABEL[k] || k)));
+    chips.appendChild(mkKind(null, "toutes sources"));
+    [...new Set(F.items.map(i => i.kind))].forEach(k => chips.appendChild(mkKind(k, KIND_LABEL[k] || k)));
+    const sortBtn = el("button", "vchip vchip-sort", veilleSort === "crit" ? "⇅ Criticité" : "⇅ Récent");
+    sortBtn.addEventListener("click", () => { veilleSort = (veilleSort === "crit" ? "date" : "crit"); renderVeille(); });
+    chips.appendChild(sortBtn);
     head.appendChild(chips);
+
+    // ligne — seuil de criticité
+    const sevRow = el("div", "veille-chips");
+    sevRow.appendChild(el("span", "vchip-lbl", "Criticité"));
+    SEV_STEPS.forEach(s => {
+      const c = el("button", "vchip" + (veilleSevMin === s.min ? " active" : ""), esc(s.label));
+      c.addEventListener("click", () => { veilleSevMin = s.min; renderVeille(); });
+      sevRow.appendChild(c);
+    });
+    head.appendChild(sevRow);
+
+    // ligne — plateforme (uniquement celles présentes dans les données)
+    const platsPresent = [...new Set(F.items.flatMap(i => i.platforms || []))];
+    if (platsPresent.length) {
+      const platRow = el("div", "veille-chips");
+      platRow.appendChild(el("span", "vchip-lbl", "Plateforme"));
+      const mkPlat = (p, label) => {
+        const c = el("button", "vchip" + (veillePlat === p ? " active" : ""), esc(label));
+        c.addEventListener("click", () => { veillePlat = (veillePlat === p ? null : p); renderVeille(); });
+        return c;
+      };
+      platRow.appendChild(mkPlat(null, "toutes"));
+      platsPresent.forEach(p => platRow.appendChild(mkPlat(p, PLAT_LABEL[p] || p)));
+      head.appendChild(platRow);
+    }
     root.appendChild(head);
 
+    // filtrage (source + criticité + plateforme + recherche)
+    let items = F.items.filter(it => {
+      if (veilleKind && it.kind !== veilleKind) return false;
+      if (veilleSevMin > -1 && (SEV_RANK[it.sev] ?? -1) < veilleSevMin) return false;
+      if (veillePlat && !(it.platforms || []).includes(veillePlat)) return false;
+      if (state.qTokens.length && !textMatches(searchText(it), state.qTokens)) return false;
+      return true;
+    });
+    // tri par criticité à la demande (sinon : déjà trié par date)
+    if (veilleSort === "crit") {
+      const weight = (it) => it.cvss != null ? it.cvss : (SEV_RANK[it.sev] ?? -1) * 3;
+      items = items.slice().sort((a, b) =>
+        (weight(b) - weight(a)) || String(b.date || "").localeCompare(String(a.date || "")));
+    }
+
     const list = el("div", "feed-list");
-    let n = 0;
-    F.items.forEach(it => {
-      if (veilleKind && it.kind !== veilleKind) return;
-      if (state.qTokens.length && !textMatches(it.title + " " + (it.summary || "") + " " + it.source, state.qTokens)) return;
-      n++;
+    items.forEach(it => {
+      const sevBadge = it.sev
+        ? `<span class="sev sev-${esc(it.sev)}">${it.cvss != null ? "CVSS " + esc(String(it.cvss)) : esc(SEV_LABEL[it.sev])}</span>`
+        : "";
+      const platTags = (it.platforms || [])
+        .map(p => `<span class="plat">${esc(PLAT_LABEL[p] || p)}</span>`).join("");
       const card = el("article", "feed-item");
       card.innerHTML =
         `<div class="feed-top">
            <span class="kind kind-${esc(it.kind)}">${esc(KIND_LABEL[it.kind] || it.kind)}</span>
+           ${sevBadge}
            <span class="feed-src">${esc(it.source)}</span>
            <span class="feed-date">${esc(timeAgo(it.date))}</span>
          </div>
          <a class="feed-title" href="${esc(it.link)}" target="_blank" rel="noopener">${esc(it.title)}</a>
-         ${it.summary ? `<p class="feed-sum">${esc(it.summary)}</p>` : ""}`;
+         ${it.summary ? `<p class="feed-sum">${esc(it.summary)}</p>` : ""}
+         ${platTags ? `<div class="feed-plats">${platTags}</div>` : ""}`;
       list.appendChild(card);
     });
-    if (!n) list.appendChild(el("p", "empty", "Aucune actualité pour ce filtre."));
+    if (!items.length) list.appendChild(el("p", "empty", "Aucune actualité pour ce filtre."));
     root.appendChild(list);
   }
 

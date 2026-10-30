@@ -94,11 +94,17 @@ Méthodologie et cas d'usage synthétisés à partir du cours **Lead Pentester (
 
 ## 📡 Veille (flux RSS automatiques)
 
-L'onglet **Veille** agrège des flux RSS/Atom (CERT-FR avis/alertes/actus, CISA, Exploit-DB, The Hacker News) et les affiche triés par date, filtrables par source et cherchables.
+L'onglet **Veille** agrège des flux RSS/Atom (CERT-FR avis/alertes/actus, CISA, Exploit-DB, The Hacker News) **+ les CVE notés CVSS de la base NVD (NIST)**, et les affiche triés par date.
+
+Chaque actualité est enrichie automatiquement :
+- **Criticité** — score **CVSS** (badge couleur : 🔴 Critique ≥ 9 · 🟠 Élevé ≥ 7 · 🟡 Moyen ≥ 4). Le score vient de NVD quand il existe, sinon il est extrait du texte, sinon estimé par mots-clés (alerte, « activement exploité », RCE…).
+- **Plateforme** — système/produit probablement concerné (Windows, Linux, macOS, Android, iOS, Web, Réseau, VMware), déduit du texte.
+
+Filtres disponibles dans l'onglet : par **source**, par **seuil de criticité**, par **plateforme**, un **tri Récent ↔ Criticité**, et la **recherche** globale indexe tout (titre, résumé, type, criticité, score, plateforme) — ex. `cvss windows` ou `critique linux`.
 
 Fonctionnement — 100 % automatique, sans backend :
 1. Un **workflow GitHub Actions** ([.github/workflows/feeds.yml](.github/workflows/feeds.yml)) s'exécute toutes les 6 h (et à la demande).
-2. Il lance [scripts/build_feeds.py](scripts/build_feeds.py) (Python standard, zéro dépendance) qui récupère les flux et génère **`feeds.js`**.
+2. Il lance [scripts/build_feeds.py](scripts/build_feeds.py) (Python standard, zéro dépendance) qui récupère les flux, calcule criticité + plateforme, et génère **`feeds.js`**.
 3. Il commite `feeds.js` ; la page le charge comme `data.js`.
 
 > ⚙️ À activer une fois : sur GitHub, **Settings → Actions → General → Workflow permissions → Read and write permissions** (pour que l'Action puisse committer `feeds.js`).
