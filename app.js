@@ -14,7 +14,65 @@
   const PHASE_LABEL = Object.fromEntries(PHASES.map(p => [p.id, p.label]));
   const CAT_BY_ID = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
 
-  const state = { view: "cheats", phase: null, q: "" };
+  /* ---- Recherche tolérante : mots-clés, sans accents, synonymes FR <-> EN ----
+   * "scan de port" / "port scan" / "analyse de ports" trouvent tous Nmap.
+   * Pour enrichir : ajouter un groupe de termes équivalents dans SYN_GROUPS.
+   * Les termes multi-mots (ex. "mot de passe") servent de cible de recherche. */
+  const normalize = (s) => String(s).toLowerCase().normalize("NFD")
+    .replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+  const STOPWORDS = new Set("de du des la le les l un une d a au aux et ou en mot the of to for and or with an on in my".split(" "));
+  const SYN_GROUPS = [
+    ["scan", "scanner", "analyse", "scanning", "decouverte"],
+    ["port", "ports"],
+    ["reseau", "network"],
+    ["password", "mot de passe", "motdepasse", "mdp", "credential", "credentials", "identifiant", "identifiants", "creds", "passe"],
+    ["hash", "hashes", "empreinte", "condensat"],
+    ["bruteforce", "brute force", "cassage", "casser", "crack", "cracking"],
+    ["wordlist", "wordlists", "dictionnaire", "dictionnaires"],
+    ["subdomain", "subdomains", "sous domaine", "sous domaines", "sousdomaine"],
+    ["domaine", "domain", "annuaire"],
+    ["web", "http", "https", "site", "application web"],
+    ["vulnerabilite", "vulnerabilites", "vulnerability", "vuln", "vulns", "cve", "faille", "failles"],
+    ["privesc", "escalade", "privilege", "privileges", "elevation"],
+    ["reverse shell", "revshell", "shell inverse"],
+    ["pivot", "pivoting", "tunnel", "tunneling", "rebond"],
+    ["sniff", "sniffing", "capture", "ecoute", "interception"],
+    ["mitm", "man in the middle", "homme du milieu"],
+    ["wifi", "wireless", "sans fil"],
+    ["reverse", "retro", "decompilation", "desassemblage", "desassembleur"],
+    ["memoire", "memory"],
+    ["forensic", "forensique", "investigation", "dfir"],
+    ["detection", "detecter", "blue team", "siem", "surveillance", "monitoring"],
+    ["osint", "renseignement", "reconnaissance", "recon"],
+    ["enumeration", "enumerer", "enum"],
+    ["exploit", "exploitation", "exploiter"],
+    ["phishing", "hameconnage"],
+    ["email", "mail", "courriel", "emails"],
+    ["persistance", "persistence", "backdoor", "porte derobee"],
+    ["lateral", "laterale", "lateral movement", "mouvement lateral"],
+    ["kerberos", "kerberoast", "kerberoasting", "asrep"],
+    ["ntlm", "pass the hash", "pth"],
+    ["smb", "partage", "partages", "share", "shares"],
+    ["dns", "zone", "axfr"],
+    ["training", "entrainement", "apprentissage", "lab", "labs", "ctf"]
+  ];
+  const SYNONYMS = {};
+  SYN_GROUPS.forEach(g => {
+    const terms = g.map(normalize);
+    terms.forEach(t => { SYNONYMS[t] = Array.from(new Set([...(SYNONYMS[t] || []), ...terms])); });
+  });
+  const tokenize = (q) => normalize(q).split(" ").filter(w => w && !STOPWORDS.has(w));
+  function tokenMatches(tok, hay) {
+    const cands = SYNONYMS[tok] ? [tok, ...SYNONYMS[tok]] : [tok];
+    return cands.some(c => hay.includes(c));
+  }
+  function textMatches(rawHay, tokens) {
+    if (!tokens.length) return true;
+    const hay = normalize(rawHay);
+    return tokens.every(t => tokenMatches(t, hay)); // tous les mots doivent correspondre (ET)
+  }
+
+  const state = { view: "cheats", phase: null, q: "", qTokens: [] };
 
   /* ---- en-têtes / marque ---- */
   $("#brandName").textContent = META.name;
@@ -82,9 +140,9 @@
 
   /* ---- filtrage ---- */
   function matchQ(t) {
-    if (!state.q) return true;
-    const q = state.q.toLowerCase();
-    return (t.name + " " + t.desc + " " + (t.cmd || "") + " " + (t.tags || "") + " " + (CAT_BY_ID[t.cat] ? CAT_BY_ID[t.cat].label : "")).toLowerCase().includes(q);
+    const hay = t.name + " " + t.desc + " " + (t.cmd || "") + " " + (t.tags || "") + " " +
+      (CAT_BY_ID[t.cat] ? CAT_BY_ID[t.cat].label : "");
+    return textMatches(hay, state.qTokens);
   }
   function matchPhase(t) {
     if (!state.phase) return true;
@@ -144,9 +202,9 @@
     let n = 0;
     CHEATS.forEach(ch => {
       if (state.phase && ch.phase !== state.phase) return;
-      if (state.q) {
-        const hay = (ch.title + " " + ch.note + " " + ch.steps.map(s => s.tool + " " + s.cmd).join(" ")).toLowerCase();
-        if (!hay.includes(state.q.toLowerCase())) return;
+      if (state.qTokens.length) {
+        const hay = ch.title + " " + ch.note + " " + ch.steps.map(s => s.tool + " " + s.cmd).join(" ");
+        if (!textMatches(hay, state.qTokens)) return;
       }
       n++;
       const card = el("article", "cheat");
@@ -223,7 +281,7 @@
     const t = e.target.closest(".tab"); if (t) setView(t.dataset.view);
   });
   const searchEl = $("#search");
-  searchEl.addEventListener("input", () => { state.q = searchEl.value.trim(); render(); });
+  searchEl.addEventListener("input", () => { state.q = searchEl.value.trim(); state.qTokens = tokenize(state.q); render(); });
   document.addEventListener("keydown", e => {
     if (e.key === "/" && document.activeElement !== searchEl) { e.preventDefault(); searchEl.focus(); }
     if (e.key === "Escape") { searchEl.blur(); }
