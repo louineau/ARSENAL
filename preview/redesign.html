@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr" data-dir="1b">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARSENAL — Aperçu refonte (3 directions)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&family=Martian+Mono:wght@400;500;700&family=Instrument+Sans:wght@400;500;600&family=Archivo:wght@400..900&family=Red+Hat+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:#111;color:#eee;font-family:'IBM Plex Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none}
+  .mono{font-variant-numeric:tabular-nums}
+
+  /* ===================== BARRE DE CONTRÔLE (neutre) ===================== */
+  .ctl{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;
+    padding:10px 18px;background:#0c0c0e;border-bottom:1px solid #26262b}
+  .ctl .brand{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#fff;letter-spacing:.04em}
+  .ctl .note{font-family:'JetBrains Mono',monospace;font-size:11px;color:#7a7a82;border:1px solid #2c2c33;border-radius:4px;padding:2px 7px}
+  .seg{display:flex;gap:3px;background:#161619;border:1px solid #2c2c33;border-radius:7px;padding:3px}
+  .seg button{font-family:'JetBrains Mono',monospace;font-size:12px;color:#aaa;background:none;border:0;border-radius:5px;padding:5px 11px;cursor:pointer;white-space:nowrap}
+  .seg button:hover{color:#fff}
+  .seg button.on{background:#2c2c33;color:#fff;font-weight:700}
+  .seg.dir button.on{background:#3ddc97;color:#06120c}
+  .ctl .spacer{margin-left:auto}
+  .ctl label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;color:#5f5f66;text-transform:uppercase;margin-right:2px}
+
+  #stage{min-height:calc(100vh - 54px)}
+  .wrap{max-width:1080px;margin:0 auto;padding:26px 22px 90px}
+  .dirhead{display:flex;flex-direction:column;gap:6px;margin-bottom:22px}
+  .dirhead .tag{font-size:12px;letter-spacing:.1em}
+  .dirhead h1{margin:0;font-size:30px}
+  .dirhead p{margin:0;max-width:720px;line-height:1.55;font-size:14.5px;opacity:.85}
+  .section-t{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin:26px 0 10px}
+
+  /* ============================================================= 1a PHOSPHORE */
+  #stage[data-dir="1a"]{background:#0a0e0d;color:#d7e2dc;font-family:'IBM Plex Sans',sans-serif}
+  [data-dir="1a"] .mono,[data-dir="1a"] .k{font-family:'JetBrains Mono',monospace}
+  [data-dir="1a"] .dirhead .tag{color:#3ddc97;font-family:'JetBrains Mono',monospace}
+  [data-dir="1a"] .dirhead h1{font-family:'JetBrains Mono',monospace;color:#e9f3ee;font-weight:700}
+  [data-dir="1a"] .prompt{font-family:'JetBrains Mono',monospace;font-size:13px;background:#0d1311;border:1px solid #1f2a26;border-radius:5px;
+    padding:9px 13px;display:flex;align-items:center;gap:9px;margin-bottom:14px}
+  [data-dir="1a"] .prompt .g{color:#3ddc97}[data-dir="1a"] .prompt .b{color:#6cb4ff}[data-dir="1a"] .prompt .d{color:#8b9a93}
+  [data-dir="1a"] .prompt .cmd{color:#e9f3ee}
+  [data-dir="1a"] .prompt .cur{display:inline-block;width:7px;height:14px;background:#3ddc97;animation:blink 1.1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  [data-dir="1a"] .cols{display:grid;grid-template-columns:210px minmax(0,1fr);gap:20px;align-items:start}
+  [data-dir="1a"] .tree{font-family:'JetBrains Mono',monospace;font-size:12.5px;line-height:1.85;color:#8b9a93;border:1px solid #1f2a26;border-radius:6px;padding:12px 12px;background:#070a09}
+  [data-dir="1a"] .tree .root{color:#e9f3ee}
+  [data-dir="1a"] .tree .on{color:#3ddc97}
+  [data-dir="1a"] .tree .n{color:#5d6b65}
+  [data-dir="1a"] .tree .dot{color:#ff5c5c}
+  [data-dir="1a"] .lsh,[data-dir="1a"] .lsrow{font-family:'JetBrains Mono',monospace;font-size:12.5px;display:grid;gap:12px;align-items:center;padding:7px 10px}
+  [data-dir="1a"] .lsh{color:#5d6b65;border-bottom:1px solid #1f2a26}
+  [data-dir="1a"] .lsrow{border-bottom:1px solid #121a17}
+  [data-dir="1a"] .lsrow:hover{background:#0e1613}
+  [data-dir="1a"] .veille-ls{grid-template-columns:96px 128px minmax(0,1fr) 78px 54px}
+  [data-dir="1a"] .tools-ls{grid-template-columns:150px 86px minmax(0,1fr) 70px}
+  [data-dir="1a"] .cell-t{font-family:'IBM Plex Sans';font-size:13px;color:#d7e2dc;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  [data-dir="1a"] .sevb{justify-self:start;font-weight:700;padding:1px 7px;border-radius:2px}
+  [data-dir="1a"] .id{color:#6cb4ff}[data-dir="1a"] .dim{color:#8b9a93}[data-dir="1a"] .faint{color:#5d6b65}
+  [data-dir="1a"] .heat{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;max-width:430px}
+  [data-dir="1a"] .heat .wk{display:grid;grid-template-rows:repeat(7,10px);gap:3px}
+  [data-dir="1a"] .heat .d{border-radius:2px}
+  [data-dir="1a"] .legend{font-family:'JetBrains Mono',monospace;font-size:11px;color:#8b9a93;display:flex;align-items:center;gap:6px;margin-top:8px}
+  [data-dir="1a"] .cheat{font-family:'JetBrains Mono',monospace;border:1px solid #1f2a26;border-radius:6px;padding:12px 14px;margin-bottom:12px;background:#070a09}
+  [data-dir="1a"] .cheat h3{margin:0 0 9px;font-size:14px;color:#e9f3ee;font-family:'IBM Plex Sans'}
+  [data-dir="1a"] .cheat .ln{font-size:12.5px;color:#d7e2dc;padding:3px 0;display:flex;gap:8px}
+  [data-dir="1a"] .cheat .ln .p{color:#3ddc97}
+  [data-dir="1a"] .cheat .note{margin-top:9px;font-family:'IBM Plex Sans';font-size:12.5px;color:#8b9a93;border-top:1px solid #1f2a26;padding-top:8px}
+
+  /* ============================================================ 1b KILL CHAIN */
+  #stage[data-dir="1b"]{background:#101114;color:#ecebe6;font-family:'Instrument Sans',sans-serif}
+  [data-dir="1b"] .mono,[data-dir="1b"] .k{font-family:'Martian Mono',monospace}
+  [data-dir="1b"] .dirhead .tag{color:#ff6b35;font-family:'Martian Mono',monospace}
+  [data-dir="1b"] .dirhead h1{font-family:'Martian Mono',monospace;color:#f6f5f0;font-weight:700;font-size:26px}
+  [data-dir="1b"] .rail{position:relative;padding:20px 40px 8px;margin-bottom:10px}
+  [data-dir="1b"] .rail .line{position:absolute;left:66px;right:66px;top:32px;height:4px;border-radius:2px;
+    background:linear-gradient(90deg,#7aa2ff,#59d0e0,#f2c94c,#ff6b35,#e0558f)}
+  [data-dir="1b"] .rail .stations{display:grid;grid-template-columns:repeat(5,1fr);position:relative}
+  [data-dir="1b"] .st{display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer}
+  [data-dir="1b"] .st .dot{width:20px;height:20px;border-radius:50%;background:#0c0d10;border:3px solid currentColor;transition:all .25s}
+  [data-dir="1b"] .st.on .dot{width:28px;height:28px}
+  [data-dir="1b"] .st .nm{font-family:'Martian Mono';font-size:11px;font-weight:700;letter-spacing:.06em}
+  [data-dir="1b"] .st .k{font-size:12px;color:#9a9ba3}
+  [data-dir="1b"] .st:not(.on) .nm{color:#ecebe6}
+  [data-dir="1b"] .plats{display:flex;gap:8px;flex-wrap:wrap;font-size:12px;margin-bottom:14px;align-items:center}
+  [data-dir="1b"] .plats .lb{color:#9a9ba3}
+  [data-dir="1b"] .pchip{padding:3px 10px;border-radius:20px;border:1px solid #2a2c33;color:#ecebe6;cursor:pointer}
+  [data-dir="1b"] .pchip.on{background:#59d0e0;color:#061417;border-color:#59d0e0;font-weight:600}
+  [data-dir="1b"] .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#2a2c33;border:1px solid #2a2c33}
+  [data-dir="1b"] .card{background:#14151a;padding:13px 15px;display:flex;flex-direction:column;gap:8px}
+  [data-dir="1b"] .card:hover{background:#181a20}
+  [data-dir="1b"] .card .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  [data-dir="1b"] .card .nm{font-family:'Martian Mono';font-size:13px;font-weight:700;color:#f6f5f0}
+  [data-dir="1b"] .segs{display:flex;gap:2px}
+  [data-dir="1b"] .segs span{width:10px;height:4px;border-radius:1px}
+  [data-dir="1b"] .card .d{font-size:12.5px;line-height:1.45;color:#b9b9c0}
+  [data-dir="1b"] .cmd{font-family:'Martian Mono';font-size:10.5px;background:#0c0d10;border:1px solid #23252c;border-radius:3px;padding:6px 8px;color:#ecebe6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  [data-dir="1b"] .cmd .s{color:#ff6b35}
+  [data-dir="1b"] .seismo{display:flex;align-items:flex-end;gap:2px;height:72px;border-bottom:1px solid #33353d;padding-bottom:1px;margin-bottom:6px}
+  [data-dir="1b"] .seismo .bar{flex:1;border-radius:1px 1px 0 0;min-height:2px}
+  [data-dir="1b"] .gauge{display:flex;align-items:center;gap:8px}
+  [data-dir="1b"] .gauge .track{display:flex;gap:2px}
+  [data-dir="1b"] .gauge .track i{width:9px;height:12px;border-radius:1px;background:#23252c}
+  [data-dir="1b"] .kev{font-family:'Martian Mono';font-size:9px;font-weight:700;background:#ff4d4d;color:#190000;padding:1px 5px;border-radius:2px}
+  [data-dir="1b"] .newscard{background:#14151a;border:1px solid #23252c;border-radius:5px;padding:12px 14px;display:flex;flex-direction:column;gap:7px;margin-bottom:8px}
+  [data-dir="1b"] .newscard .ttl{font-size:14px;color:#f6f5f0;font-weight:600;line-height:1.35}
+  [data-dir="1b"] .newscard .meta{display:flex;gap:10px;align-items:center;font-family:'Martian Mono';font-size:10.5px;color:#9a9ba3;flex-wrap:wrap}
+
+  /* ====================================================== 1c MANUEL DE TERRAIN */
+  #stage[data-dir="1c"]{background:#14120f;color:#ede5d5;font-family:'Archivo',sans-serif}
+  [data-dir="1c"] .mono,[data-dir="1c"] .k{font-family:'Red Hat Mono',monospace}
+  [data-dir="1c"] .dirhead .tag{color:#a59c8c;font-family:'Red Hat Mono',monospace}
+  [data-dir="1c"] .dirhead h1{font-weight:900;font-stretch:68%;text-transform:uppercase;color:#f5eedf;font-size:40px;line-height:.95}
+  [data-dir="1c"] .cols{display:grid;grid-template-columns:240px minmax(0,1fr);gap:0;border:1px solid #34302a;background:#100e0c}
+  [data-dir="1c"] .idx{border-right:1px solid #34302a;padding:14px 0}
+  [data-dir="1c"] .idx .h{padding:0 16px 9px;font-family:'Red Hat Mono';font-size:11px;letter-spacing:.12em;color:#a59c8c}
+  [data-dir="1c"] .idx .it{display:grid;grid-template-columns:52px 1fr;gap:6px;padding:7px 16px;cursor:pointer;border-left:3px solid transparent;align-items:baseline}
+  [data-dir="1c"] .idx .it:hover{background:#19150f}
+  [data-dir="1c"] .idx .it.on{background:#1f1b16;border-left-color:#ffd23f}
+  [data-dir="1c"] .idx .it .num{font-family:'Red Hat Mono';font-size:11px;color:#a59c8c}
+  [data-dir="1c"] .idx .it.on .num{color:#ffd23f}
+  [data-dir="1c"] .idx .it .t{font-size:13px}
+  [data-dir="1c"] .idx .it.on .t{color:#f5eedf;font-weight:700}
+  [data-dir="1c"] .fiche{padding:22px 26px}
+  [data-dir="1c"] .fiche .crumb{display:flex;justify-content:space-between;font-family:'Red Hat Mono';font-size:11px;color:#a59c8c;letter-spacing:.06em;margin-bottom:14px}
+  [data-dir="1c"] .si{font-family:'Red Hat Mono';font-size:13px;font-weight:700;color:#ffd23f}
+  [data-dir="1c"] .fiche h2{margin:2px 0 16px;font-size:34px;font-weight:850;font-stretch:70%;text-transform:uppercase;color:#f5eedf;line-height:1}
+  [data-dir="1c"] .step{display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;border-top:1px solid #34302a;padding-top:12px;margin-top:12px}
+  [data-dir="1c"] .step .no{font-size:28px;font-weight:900;font-stretch:62%;color:#ffd23f;line-height:1}
+  [data-dir="1c"] .step .st{font-size:15px;font-weight:700;color:#f5eedf}
+  [data-dir="1c"] .step .tool{font-family:'Red Hat Mono';font-size:11px;color:#a59c8c;margin-left:8px}
+  [data-dir="1c"] .step .cmd{font-family:'Red Hat Mono';font-size:12px;background:#1f1b16;padding:8px 10px;margin-top:6px;color:#ede5d5;display:flex;justify-content:space-between;gap:10px}
+  [data-dir="1c"] .step .cmd .cp{color:#ffd23f;flex:none;cursor:pointer}
+  [data-dir="1c"] .sinon{font-family:'Red Hat Mono';font-size:12px;color:#a59c8c;border-top:1px solid #34302a;padding-top:10px;margin-top:14px}
+  [data-dir="1c"] .matrix{display:grid;grid-template-columns:150px repeat(5,1fr);gap:2px;font-family:'Red Hat Mono';font-size:10px}
+  [data-dir="1c"] .matrix .hd{color:#a59c8c;text-align:center;padding:4px 0}
+  [data-dir="1c"] .matrix .rn{color:#c3baa9;display:flex;align-items:center}
+  [data-dir="1c"] .matrix .c{text-align:center;padding:6px 0;cursor:default}
+  [data-dir="1c"] .dlabel{font-family:'Red Hat Mono';font-weight:700;font-size:11px;padding:2px 7px;color:#1a1400;display:inline-block}
+  [data-dir="1c"] .wall{display:flex;flex-direction:column;gap:6px}
+  [data-dir="1c"] .wall .g{display:grid;grid-template-columns:72px 1fr;gap:8px;align-items:center}
+  [data-dir="1c"] .wall .g .n{font-family:'Red Hat Mono';font-size:10px;color:#c3baa9}
+  [data-dir="1c"] .wall .cells{display:flex;flex-wrap:wrap;gap:2px}
+  [data-dir="1c"] .wall .cells span{width:10px;height:10px}
+  [data-dir="1c"] .tbl{width:100%;border-collapse:collapse;font-size:13px}
+  [data-dir="1c"] .tbl th{font-family:'Red Hat Mono';font-size:10px;letter-spacing:.08em;color:#a59c8c;text-align:left;padding:6px 10px;border-bottom:1px solid #34302a}
+  [data-dir="1c"] .tbl td{padding:7px 10px;border-bottom:1px solid #221f1a}
+  [data-dir="1c"] .tbl td.nm{font-weight:700;color:#f5eedf}
+</style>
+</head>
+<body>
+
+<div class="ctl">
+  <span class="brand">ARSENAL</span>
+  <span class="note">aperçu · site en ligne non modifié</span>
+  <label>Direction</label>
+  <div class="seg dir" id="segDir">
+    <button data-dir="1a">Phosphore</button>
+    <button data-dir="1b" class="on">Kill Chain ★</button>
+    <button data-dir="1c">Manuel de terrain</button>
+  </div>
+  <div class="spacer"></div>
+  <label>Vue</label>
+  <div class="seg" id="segView">
+    <button data-view="veille" class="on">Veille</button>
+    <button data-view="outils">Outils</button>
+    <button data-view="cas">Cas d'usage</button>
+  </div>
+</div>
+
+<div id="stage" data-dir="1b"></div>
+
+<script src="../data.js"></script>
+<script src="../feeds.js"></script>
+<script>
+(function(){
+  const A = window.ARSENAL || {};
+  const F = window.ARSENAL_FEEDS || { items: [] };
+  const TOOLS = A.TOOLS || [];
+  const CHEATS = A.CHEATS || [];
+  const CATS = A.CATEGORIES || [];
+  const PHASES = (A.PHASES || []).filter(p => p.id !== "support");
+  const ITEMS = F.items || [];
+
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
+  const PH = {
+    recon:{c:"#7aa2ff",s:"REC",n:"Recon"}, enum:{c:"#59d0e0",s:"ÉNU",n:"Énum"},
+    vuln:{c:"#f2c94c",s:"VUL",n:"Vuln"}, exploit:{c:"#ff6b35",s:"EXP",n:"Exploit"},
+    post:{c:"#e0558f",s:"POST",n:"Post"}, support:{c:"#8b9a93",s:"SUP",n:"Supp"}
+  };
+  const PLAB = { windows:"Windows", linux:"Linux", macos:"macOS", android:"Android", ios:"iOS", web:"Web", "réseau":"Réseau", vmware:"VMware", multi:"Multi" };
+
+  // --- criticité d'un item de veille
+  function score(it){
+    if (it.cvss != null) return it.cvss;
+    return it.sev === "crit" ? 9.2 : it.sev === "high" ? 7.5 : it.sev === "med" ? 5 : it.sev === "low" ? 2 : null;
+  }
+  function sevStyle(s){
+    if (s == null) return { g:"·", c:"#8b9a93", bg:"transparent", l:"—" };
+    if (s >= 9)   return { g:"■", c:"#ff5c5c", bg:"#ff5c5c24", l:"CRITIQUE" };
+    if (s >= 7)   return { g:"▲", c:"#ff9f43", bg:"#ff9f4324", l:"ÉLEVÉ" };
+    if (s >= 4)   return { g:"●", c:"#ffd166", bg:"#ffd16624", l:"MOYEN" };
+    return { g:"○", c:"#6cb4ff", bg:"#6cb4ff24", l:"FAIBLE" };
+  }
+  function ageOf(iso){
+    if (!iso) return "—";
+    const s = Math.floor((Date.now() - new Date(iso).getTime())/1000);
+    if (isNaN(s)) return "—";
+    if (s < 3600) return Math.max(1,Math.floor(s/60))+" min";
+    if (s < 86400) return Math.floor(s/3600)+" h";
+    return Math.floor(s/86400)+" j";
+  }
+  const sortByScore = arr => arr.slice().sort((a,b)=>(score(b)||0)-(score(a)||0));
+  const daysAgo = n => { const d=new Date(); d.setHours(0,0,0,0); d.setDate(d.getDate()-n); return d; };
+
+  /* ======================= 1a PHOSPHORE ======================= */
+  const DIR1A = {
+    tag:"ÉVOLUTION SOIGNÉE", h1:"Phosphore",
+    desc:"On garde l'ADN terminal mais on le rend vrai : le site se navigue comme un système de fichiers. La sidebar devient une arborescence, la recherche devient la ligne de commande, les actus deviennent des lignes ls -l.",
+    veille(){
+      // heatmap 12 semaines
+      const byDay = {};
+      ITEMS.forEach(it => { if(!it.date) return; const k=new Date(it.date).toISOString().slice(0,10); const s=score(it); if(s!=null) byDay[k]=Math.max(byDay[k]||0,s); });
+      const bucket = s => s==null?"#141c19":s>=9?"#ff5c5c":s>=7?"#ff9f43cc":s>=4?"#ffd16688":"#1d3a2c";
+      let weeks="";
+      for(let w=11; w>=0; w--){ let days="";
+        for(let d=6; d>=0; d--){ const dt=daysAgo(w*7+d); const k=dt.toISOString().slice(0,10); days+=`<div class="d" style="background:${bucket(byDay[k])}" title="${k}"></div>`; }
+        weeks+=`<div class="wk">${days}</div>`;
+      }
+      const rows = sortByScore(ITEMS).slice(0,22).map(it=>{ const s=score(it); const z=sevStyle(s);
+        const plat=(it.platforms||[])[0]; return `<div class="lsrow veille-ls">
+          <span class="sevb mono" style="color:${z.c};background:${z.bg}">${z.g} ${s!=null?s.toFixed(1):"—"}</span>
+          <span class="id mono">${esc((it.source||"").split("·").pop().trim().slice(0,14))}</span>
+          <span class="cell-t">${esc(it.title)}</span>
+          <span class="dim mono">${esc(plat?PLAB[plat]||plat:"")}</span>
+          <span class="faint mono">${esc(ageOf(it.date))}</span></div>`;}).join("");
+      return `<div class="prompt"><span class="g">root@arsenal</span><span class="d">:</span><span class="b">~/veille</span><span class="d">#</span> <span class="cmd">grep -i "cvss≥7" --sort=crit</span><span class="cur"></span></div>
+        <div class="section-t">activité · 12 semaines · teinte = CVSS max du jour</div>
+        <div class="heat">${weeks}</div>
+        <div class="legend"><span>moins</span><span class="d" style="width:10px;height:10px;background:#141c19;border-radius:2px"></span><span class="d" style="width:10px;height:10px;background:#1d3a2c;border-radius:2px"></span><span class="d" style="width:10px;height:10px;background:#ffd16688;border-radius:2px"></span><span class="d" style="width:10px;height:10px;background:#ff9f43cc;border-radius:2px"></span><span class="d" style="width:10px;height:10px;background:#ff5c5c;border-radius:2px"></span><span>plus critique</span></div>
+        <div class="section-t">flux · trié par criticité</div>
+        <div class="lsh veille-ls"><span>CVSS</span><span>SOURCE</span><span>TITRE</span><span>PLAT.</span><span>ÂGE</span></div>
+        ${rows}`;
+    },
+    outils(){
+      const tree = CATS.slice(0,10).map((c,i)=>{ const n=TOOLS.filter(t=>t.cat===c.id).length; const last=i===9;
+        return `<div><span class="n">${last?"└─":"├─"}</span> ${esc(c.id)}/ <span class="n">${n}</span></div>`;}).join("");
+      const rows = TOOLS.slice(0,30).map(t=>{ const ph=(t.phases||[]).map(p=>(PH[p]||{}).s||p).join(" ");
+        return `<div class="lsrow tools-ls">
+          <span class="mono" style="color:#e9f3ee">${t.star?"★ ":""}${esc(t.name)}</span>
+          <span class="dim mono">${esc((t.platforms||[]).map(p=>PLAB[p]||p).join(","))}</span>
+          <span class="cell-t">${esc(t.desc)}</span>
+          <span class="faint mono">${esc(ph)}</span></div>`;}).join("");
+      return `<div class="cols">
+        <div class="tree"><div class="root">arsenal/</div><div><span class="n">├─</span> cas-usage/ <span class="n">${CHEATS.length}</span></div><div><span class="on">├─ outils/</span> <span class="n">${TOOLS.length}</span></div>${tree}<div><span class="n">├─</span> veille/ <span class="n">${ITEMS.length}</span> <span class="dot">●</span></div></div>
+        <div><div class="prompt"><span class="g">root@arsenal</span><span class="d">:</span><span class="b">~/outils</span><span class="d">#</span> <span class="cmd">ls -l --phase=enum</span><span class="cur"></span></div>
+          <div class="lsh tools-ls"><span>OUTIL</span><span>PLATEFORME</span><span>DESCRIPTION</span><span>PHASES</span></div>${rows}</div></div>`;
+    },
+    cas(){
+      return CHEATS.slice(0,6).map(ch=>{ const lines=(ch.steps||[]).map(s=>`<div class="ln"><span class="p">$</span><span class="cell-t" style="white-space:normal">${esc(s.cmd)}</span></div>`).join("");
+        return `<div class="cheat"><h3>${ch.icon||"»"} ${esc(ch.title)}</h3>${lines}${ch.note?`<div class="note">▸ ${esc(ch.note)}</div>`:""}</div>`;}).join("");
+    }
+  };
+
+  /* ======================= 1b KILL CHAIN ======================= */
+  let phaseSel = "enum", platSel = null;
+  const DIR1B = {
+    tag:"REFONTE STRUCTURELLE", h1:"Kill Chain",
+    desc:"La navigation principale devient la chaîne d'attaque : un rail de 5 stations (recon → post-exploit). Chaque phase a sa couleur, qu'on retrouve partout. On ne cherche plus « dans une catégorie » mais « où j'en suis dans mon test ».",
+    rail(){
+      return `<div class="rail"><div class="line"></div><div class="stations">${PHASES.map(p=>{ const m=PH[p.id]; const n=TOOLS.filter(t=>(t.phases||[]).includes(p.id)).length; const on=p.id===phaseSel;
+        return `<div class="st ${on?"on":""}" data-phase="${p.id}" style="color:${m.c}"><div class="dot"></div><div class="nm">${m.n.toUpperCase()}</div><div class="k">${n} outils</div></div>`;}).join("")}</div></div>`;
+    },
+    outils(){
+      const plats=["windows","linux","web","réseau"];
+      const chips=`<div class="plats"><span class="lb mono">Plateforme</span>${plats.map(p=>`<span class="pchip ${platSel===p?"on":""}" data-plat="${p}">${PLAB[p]||p}</span>`).join("")}</div>`;
+      let list=TOOLS.filter(t=>(t.phases||[]).includes(phaseSel));
+      if(platSel) list=list.filter(t=>(t.platforms||[]).includes(platSel==="réseau"?"multi":platSel)|| (t.tags||"").includes(platSel));
+      const cards=list.slice(0,18).map(t=>{ const segs=PHASES.map(p=>`<span style="background:${(t.phases||[]).includes(p.id)?PH[p.id].c:"#2a2c33"}"></span>`).join("");
+        return `<div class="card"><div class="top"><span class="nm">${esc(t.name)}</span><div class="segs">${segs}</div></div><div class="d">${esc(t.desc)}</div>${t.cmd?`<div class="cmd"><span class="s">$</span> ${esc(t.cmd)}</div>`:""}</div>`;}).join("");
+      return this.rail()+chips+`<div class="section-t">${(PH[phaseSel]||{}).n} ${platSel?"· "+(PLAB[platSel]||platSel):""} — ${list.length} outils</div><div class="grid">${cards||'<div class="card"><div class="d">Aucun outil.</div></div>'}</div>`;
+    },
+    veille(){
+      // sismographe 30 jours
+      const byDay={}; ITEMS.forEach(it=>{ if(!it.date)return; const k=new Date(it.date).toISOString().slice(0,10); const s=score(it); if(s!=null) byDay[k]=Math.max(byDay[k]||0,s); });
+      let bars="";
+      for(let d=29; d>=0; d--){ const k=daysAgo(d).toISOString().slice(0,10); const s=byDay[k]; const z=sevStyle(s); const h=s!=null?Math.round(s*6.5):2;
+        bars+=`<div class="bar" style="height:${h}px;background:${s!=null?z.c:"#23252c"}" title="${k}${s!=null?" · CVSS "+s.toFixed(1):""}"></div>`; }
+      const cards=sortByScore(ITEMS).slice(0,14).map(it=>{ const s=score(it); const z=sevStyle(s); const filled=s!=null?Math.round(s):0;
+        const track=Array.from({length:10},(_,i)=>`<i style="background:${i<filled?z.c:"#23252c"}"></i>`).join("");
+        const kev=(it.summary||"").toLowerCase().match(/exploit|activement|in the wild|kev/)?'<span class="kev">KEV</span>':"";
+        return `<div class="newscard"><div class="meta"><span class="gauge"><span class="track">${track}</span></span><span style="color:${z.c};font-weight:700">${z.l} ${s!=null?s.toFixed(1):""}</span>${kev}<span>${esc(it.source)}</span><span style="margin-left:auto">${esc(ageOf(it.date))}</span></div><div class="ttl">${esc(it.title)}</div></div>`;}).join("");
+      return `<div class="section-t">sismographe · 30 jours · hauteur = CVSS max du jour</div><div class="seismo">${bars}</div><div class="section-t">alertes · triées par criticité</div>${cards}`;
+    },
+    cas(){
+      return `<div class="grid" style="grid-template-columns:repeat(2,minmax(0,1fr))">${CHEATS.slice(0,6).map(ch=>{ const m=PH[ch.phase]||PH.enum;
+        const steps=(ch.steps||[]).map(s=>`<div class="cmd"><span class="s" style="color:${m.c}">›</span> ${esc(s.cmd)}</div>`).join("");
+        return `<div class="card" style="box-shadow:inset 0 3px 0 ${m.c}"><div class="top"><span class="nm">${ch.icon||""} ${esc(ch.title)}</span></div>${steps}${ch.note?`<div class="d">${esc(ch.note)}</div>`:""}</div>`;}).join("")}</div>`;
+    }
+  };
+
+  /* ======================= 1c MANUEL DE TERRAIN ======================= */
+  let ficheSel = 0;
+  const DIR1C = {
+    tag:"REFONTE AUDACIEUSE", h1:"Manuel de terrain",
+    desc:"On quitte le cliché « hacker » pour le manuel technique militaire : grosse typo condensée, sections numérotées, jaune signalétique. Chaque cas d'usage devient une fiche SI… ALORS… imprimable.",
+    cas(){
+      const withSteps = CHEATS.filter(c=>c.steps && c.steps.length);
+      if(ficheSel>=withSteps.length) ficheSel=0;
+      const idx = withSteps.slice(0,12).map((c,i)=>`<div class="it ${i===ficheSel?"on":""}" data-fiche="${i}"><span class="num">§${String(i+1).padStart(2,"0")}.${(c.phase||"x").slice(0,1).toUpperCase()}</span><span class="t">${esc(c.title)}</span></div>`).join("");
+      const ch = withSteps[ficheSel]||withSteps[0];
+      const steps = (ch.steps||[]).map((s,i)=>`<div class="step"><span class="no">${String(i+1).padStart(2,"0")}</span><div><div><span class="st">${esc(s.tool||"")}</span></div><div class="cmd"><span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(s.cmd)}</span><span class="cp">COPIER</span></div></div></div>`).join("");
+      const next = withSteps[(ficheSel+1)%withSteps.length];
+      return `<div class="cols"><div class="idx"><div class="h">INDEX DES SITUATIONS</div>${idx}</div>
+        <div class="fiche"><div class="crumb mono"><span>§ ${String(ficheSel+1).padStart(2,"0")} — ${esc((ch.phase||"").toUpperCase())}</span><span>${(ch.steps||[]).length} ÉTAPES</span></div>
+        <div class="si">SI</div><h2>${esc(ch.title)}</h2>${steps}
+        <div class="sinon">SINON → <span style="color:#ffd23f;text-decoration:underline">${esc(next?next.title:"—")}</span></div></div></div>`;
+    },
+    outils(){
+      const rows = CATS.map(c=>{ const cells=PHASES.map(p=>{ const n=TOOLS.filter(t=>t.cat===c.id&&(t.phases||[]).includes(p.id)).length;
+        const bg=n===0?"#1a1713":n>6?"#ffd23f":n>3?"#6b5a22":"#3a3226"; const fg=n>6?"#1a1400":"#ede5d5";
+        return `<span class="c" style="background:${bg};color:${fg}">${n||"·"}</span>`;}).join("");
+        return `<span class="rn">${esc(c.label)}</span>${cells}`;}).join("");
+      return `<div class="section-t">matrice catégorie × phase — une case = un filtre</div>
+        <div class="matrix"><span></span>${PHASES.map(p=>`<span class="hd">${(PH[p.id]||{}).s}</span>`).join("")}${rows}</div>`;
+    },
+    veille(){
+      const groups={}; ITEMS.forEach(it=>{ const p=(it.platforms||[])[0]||"autre"; (groups[p]=groups[p]||[]).push(it); });
+      const order=["windows","linux","web","réseau","vmware","android","ios","autre"];
+      const wc=s=>s==null?"#403a32":s>=9?"#ff5233":s>=7?"#ff8a3d":s>=4?"#ffd23f":"#8fb09a";
+      const wall=order.filter(p=>groups[p]).map(p=>{ const cells=sortByScore(groups[p]).map(it=>`<span style="background:${wc(score(it))}" title="${esc(it.title)}"></span>`).join("");
+        return `<div class="g"><span class="n">${(PLAB[p]||p).toUpperCase()}</span><div class="cells">${cells}</div></div>`;}).join("");
+      const tbl = sortByScore(ITEMS).slice(0,12).map(it=>{ const s=score(it); const z=sevStyle(s);
+        return `<tr><td><span class="dlabel" style="background:${s!=null?z.c:"#403a32"}">${z.l} ${s!=null?s.toFixed(1):""}</span></td><td class="nm">${esc(it.title)}</td><td class="mono" style="color:#a59c8c">${esc(it.source)}</td></tr>`;}).join("");
+      return `<div class="section-t">mur de CVE — une case = une alerte, groupée par plateforme, triée par gravité</div>
+        <div class="wall">${wall}</div>
+        <div class="section-t">alertes — étiquettes de danger</div>
+        <table class="tbl"><thead><tr><th>GRAVITÉ</th><th>TITRE</th><th>SOURCE</th></tr></thead><tbody>${tbl}</tbody></table>`;
+    }
+  };
+
+  const DIRS = { "1a":DIR1A, "1b":DIR1B, "1c":DIR1C };
+  let curDir = "1b", curView = "veille";
+
+  function render(){
+    const D = DIRS[curDir];
+    const stage = document.getElementById("stage");
+    stage.setAttribute("data-dir", curDir);
+    const body = (D[curView] ? D[curView]() : "<p>—</p>");
+    stage.innerHTML = `<div class="wrap"><div class="dirhead"><span class="tag mono">${esc(D.tag)} · ${curView.toUpperCase()}</span><h1>${esc(D.h1)}</h1><p>${esc(D.desc)}</p></div>${body}</div>`;
+    // réattache les handlers spécifiques
+    if(curDir==="1b"){
+      stage.querySelectorAll(".st").forEach(e=>e.addEventListener("click",()=>{ phaseSel=e.dataset.phase; render(); }));
+      stage.querySelectorAll(".pchip").forEach(e=>e.addEventListener("click",()=>{ platSel=platSel===e.dataset.plat?null:e.dataset.plat; render(); }));
+    }
+    if(curDir==="1c"){
+      stage.querySelectorAll(".idx .it").forEach(e=>e.addEventListener("click",()=>{ ficheSel=+e.dataset.fiche; render(); }));
+    }
+  }
+
+  document.getElementById("segDir").addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b)return;
+    curDir=b.dataset.dir; document.querySelectorAll("#segDir button").forEach(x=>x.classList.toggle("on",x===b)); render(); });
+  document.getElementById("segView").addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b)return;
+    curView=b.dataset.view; document.querySelectorAll("#segView button").forEach(x=>x.classList.toggle("on",x===b)); render(); });
+
+  render();
+})();
+</script>
+</body>
+</html>

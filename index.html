@@ -7,7 +7,7 @@
   <meta name="description" content="Mémo exhaustif et avancé d'outils et de méthodes : OSINT, pentest, Red Team et Blue Team/SOC. Cheat-sheet par cas d'usage et catalogue d'outils classé par catégorie." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -99,6 +99,15 @@
 
   <!-- bouton retour haut -->
   <button id="toTop" title="Haut de page" aria-label="Haut de page">↑</button>
+
+  <!-- palette de commandes (Ctrl K) -->
+  <div id="palette" class="palette hidden" role="dialog" aria-modal="true" aria-label="Aller à">
+    <div class="palette-box">
+      <input id="paletteInput" type="text" placeholder="Aller à… — outil, catégorie, vue, phase" autocomplete="off" />
+      <div id="paletteList" class="palette-list"></div>
+      <div class="palette-hint"><span><kbd>↑</kbd><kbd>↓</kbd> naviguer</span><span><kbd>⏎</kbd> ouvrir</span><span><kbd>Échap</kbd> fermer</span><span style="margin-left:auto">hors palette : <kbd>j</kbd><kbd>k</kbd> parcourir · <kbd>/</kbd> chercher</span></div>
+    </div>
+  </div>
 
   <script src="data.js"></script>
   <script src="feeds.js"></script>

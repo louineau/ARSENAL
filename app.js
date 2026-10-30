@@ -13,6 +13,10 @@
 
   const PHASE_LABEL = Object.fromEntries(PHASES.map(p => [p.id, p.label]));
   const CAT_BY_ID = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
+  const PHASE_COLOR = { recon: "#7aa2ff", enum: "#59d0e0", vuln: "#f2c94c", exploit: "#ff6b35", post: "#e0558f", support: "#9a9ba3" };
+  const PHASE_SHORT = { recon: "Recon", enum: "Énum", vuln: "Vuln", exploit: "Exploit", post: "Post", support: "Supp" };
+  const PHASES_MAIN = PHASES.filter(p => p.id !== "support");
+  const primaryPhase = (t) => (t.phases || []).find(p => p !== "support") || null;
 
   /* ---- Recherche tolérante : mots-clés, sans accents, synonymes FR <-> EN ----
    * "scan de port" / "port scan" / "analyse de ports" trouvent tous Nmap.
@@ -80,6 +84,11 @@
   const KIND_LABEL = { alerte: "Alerte", avis: "Avis", actu: "Actu", cve: "CVE", exploit: "Exploit", news: "News" };
   const SEV_LABEL = { crit: "Critique", high: "Élevé", med: "Moyen", low: "Faible" };
   const SEV_RANK = { crit: 3, high: 2, med: 1, low: 0 };
+  const SEV_GLYPH = { crit: "■", high: "▲", med: "●", low: "○" };
+  // score numérique d'un item (CVSS si présent, sinon estimé depuis le niveau)
+  const sevScore = (it) => it.cvss != null ? it.cvss
+    : it.sev === "crit" ? 9.2 : it.sev === "high" ? 7.5 : it.sev === "med" ? 5 : it.sev === "low" ? 2 : null;
+  const sevColor = (s) => s == null ? "var(--border-2)" : s >= 9 ? "#ff5c5c" : s >= 7 ? "#ff9f43" : s >= 4 ? "#ffd166" : "#6cb4ff";
   const SEV_STEPS = [
     { label: "toutes", min: -1 },
     { label: "🟡 ≥ Moyen", min: 1 },
@@ -131,25 +140,40 @@
     });
   }
 
-  /* ---- barre de phases ---- */
-  function buildPhaseBar() {
+  /* ---- rail « kill chain » (nav + filtre par phase) ---- */
+  function buildPhaseRail() {
     const bar = $("#phaseBar");
     bar.innerHTML = "";
-    const all = el("button", "phase-chip active", "toutes phases");
-    all.dataset.phase = "";
-    bar.appendChild(all);
-    PHASES.filter(p => p.id !== "support").forEach(p => {
-      const c = el("button", "phase-chip", esc(p.label));
-      c.dataset.phase = p.id;
-      bar.appendChild(c);
+    const rail = el("div", "rail", '<div class="rail-line"></div>');
+    const stations = el("div", "rail-stations");
+    PHASES_MAIN.forEach(p => {
+      const n = TOOLS.filter(t => (t.phases || []).includes(p.id)).length;
+      const b = el("button", "station",
+        `<span class="dot"></span><span class="nm">${esc(PHASE_SHORT[p.id] || p.id)}</span><span class="k">${n}</span>`);
+      b.dataset.phase = p.id;
+      b.style.setProperty("--ph", PHASE_COLOR[p.id]);
+      b.title = p.label;
+      stations.appendChild(b);
     });
+    rail.appendChild(stations);
+    bar.appendChild(rail);
+    const reset = el("button", "rail-reset", "× toutes phases");
+    reset.dataset.phase = "";
+    bar.appendChild(reset);
     bar.addEventListener("click", (e) => {
-      const chip = e.target.closest(".phase-chip");
-      if (!chip) return;
-      state.phase = chip.dataset.phase || null;
-      [...bar.children].forEach(c => c.classList.toggle("active", c === chip));
+      const s = e.target.closest(".station, .rail-reset");
+      if (!s) return;
+      const ph = s.dataset.phase || null;
+      state.phase = (state.phase === ph) ? null : ph; // re-cliquer la station active = tout afficher
+      updateRailActive();
       render();
     });
+    updateRailActive();
+  }
+  function updateRailActive() {
+    const bar = $("#phaseBar");
+    bar.querySelectorAll(".station").forEach(s => s.classList.toggle("active", s.dataset.phase === state.phase));
+    bar.classList.toggle("has-sel", !!state.phase);
   }
 
   /* ---- filtrage ---- */
@@ -166,13 +190,19 @@
   /* ---- carte outil ---- */
   function toolCard(t) {
     const c = el("article", "tool");
+    const prim = primaryPhase(t);
+    if (prim) c.dataset.phase = prim;
     const plats = (t.platforms || []).map(p => `<span class="plat ${p}">${p}</span>`).join("");
     const star = t.star ? '<span class="star" title="Incontournable">★</span>' : "";
-    const phases = (t.phases || []).filter(p => p !== "support").map(p => PHASE_LABEL[p] || p).join(" · ");
+    // mini-indicateur : 5 segments = phases couvertes (légende couleur = phase)
+    const segs = PHASES_MAIN.map(p => {
+      const on = (t.phases || []).includes(p.id);
+      return `<span style="background:${on ? PHASE_COLOR[p.id] : "var(--border-2)"}" title="${esc(p.label)}${on ? "" : " (non couverte)"}"></span>`;
+    }).join("");
     c.innerHTML =
       `<div class="tool-top">
          <span class="tool-name"><a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name)}</a></span>${star}
-         <span class="tool-plats">${plats}</span>
+         <span class="tool-segs" aria-label="phases couvertes">${segs}</span>
        </div>
        <p class="tool-desc">${esc(t.desc)}</p>`;
     if (t.cmd) {
@@ -182,7 +212,7 @@
       c.appendChild(cmd);
     }
     c.appendChild(el("div", "tool-foot",
-      `<span class="phase-tag">${esc(phases)}</span><a class="tool-link" href="${esc(t.url)}" target="_blank" rel="noopener">ouvrir ↗</a>`));
+      `<span class="tool-plats">${plats}</span><a class="tool-link" href="${esc(t.url)}" target="_blank" rel="noopener">ouvrir ↗</a>`));
     return c;
   }
 
@@ -222,6 +252,7 @@
       }
       n++;
       const card = el("article", "cheat");
+      if (ch.phase) card.dataset.phase = ch.phase;
       let steps = "";
       ch.steps.forEach(s => {
         steps += `<li class="cheat-step"><span class="st-tool">▸ ${esc(s.tool)}</span>
@@ -342,6 +373,26 @@
     }
     root.appendChild(head);
 
+    // sismographe — 30 jours, une barre/jour, hauteur = CVSS max du jour
+    const byDay = {};
+    F.items.forEach(it => {
+      if (!it.date) return;
+      const k = new Date(it.date).toISOString().slice(0, 10);
+      const s = sevScore(it);
+      if (s != null) byDay[k] = Math.max(byDay[k] || 0, s);
+    });
+    let bars = "";
+    for (let d = 29; d >= 0; d--) {
+      const dt = new Date(); dt.setHours(0, 0, 0, 0); dt.setDate(dt.getDate() - d);
+      const k = dt.toISOString().slice(0, 10);
+      const s = byDay[k];
+      const h = s != null ? Math.round(s * 6) + 2 : 2;
+      bars += `<div class="sbar" style="height:${h}px;background:${s != null ? sevColor(s) : "var(--border-2)"}" title="${k}${s != null ? " · CVSS " + s.toFixed(1) : " · —"}"></div>`;
+    }
+    const seis = el("div", "seismo-wrap",
+      `<div class="seismo-cap">sismographe · 30 jours · hauteur = CVSS max du jour</div><div class="seismo">${bars}</div>`);
+    root.appendChild(seis);
+
     // filtrage (source + criticité + plateforme + recherche)
     let items = F.items.filter(it => {
       if (veilleKind && it.kind !== veilleKind) return false;
@@ -360,15 +411,17 @@
     const list = el("div", "feed-list");
     items.forEach(it => {
       const sevBadge = it.sev
-        ? `<span class="sev sev-${esc(it.sev)}">${it.cvss != null ? "CVSS " + esc(String(it.cvss)) : esc(SEV_LABEL[it.sev])}</span>`
+        ? `<span class="sev sev-${esc(it.sev)}">${SEV_GLYPH[it.sev] || ""} ${it.cvss != null ? "CVSS " + esc(String(it.cvss)) : esc(SEV_LABEL[it.sev])}</span>`
         : "";
+      const kev = /\b(kev)\b|exploit|activement|in the wild|ran[çc]ongiciel|ransomware|0-?day|zero-?day/i
+        .test((it.title || "") + " " + (it.summary || "")) ? '<span class="kev" title="Exploitation active probable">KEV</span>' : "";
       const platTags = (it.platforms || [])
         .map(p => `<span class="plat">${esc(PLAT_LABEL[p] || p)}</span>`).join("");
       const card = el("article", "feed-item");
       card.innerHTML =
         `<div class="feed-top">
            <span class="kind kind-${esc(it.kind)}">${esc(KIND_LABEL[it.kind] || it.kind)}</span>
-           ${sevBadge}
+           ${sevBadge}${kev}
            <span class="feed-src">${esc(it.source)}</span>
            <span class="feed-date">${esc(timeAgo(it.date))}</span>
          </div>
@@ -381,8 +434,73 @@
     root.appendChild(list);
   }
 
+  /* ---- palette de commandes (Ctrl K) ---- */
+  let PALETTE = null, palSel = 0, palItems = [];
+  function buildPaletteIndex() {
+    const idx = [];
+    [["cheats", "⚡ Cheat-sheet (cas d'usage)"], ["tools", "🧰 Catalogue d'outils"], ["method", "🧭 Méthodologie"], ["veille", "📡 Veille"]]
+      .forEach(([v, l]) => idx.push({ label: l, sub: "vue", hay: l, act: () => setView(v) }));
+    PHASES_MAIN.forEach(p => idx.push({
+      label: "Phase : " + p.label, sub: "filtre", hay: "phase " + p.label,
+      act: () => { state.phase = p.id; updateRailActive(); setView("tools"); }
+    }));
+    CATEGORIES.forEach(c => idx.push({
+      label: c.icon + " " + c.label, sub: "catégorie", hay: c.label + " " + c.desc,
+      act: () => { setView("tools"); setTimeout(() => { const t = document.getElementById("cat-" + c.id); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" }); }, 60); }
+    }));
+    TOOLS.forEach(t => idx.push({
+      label: t.name, sub: "outil · " + ((CAT_BY_ID[t.cat] || {}).label || ""), hay: t.name + " " + t.desc + " " + (t.tags || ""),
+      act: () => window.open(t.url, "_blank", "noopener")
+    }));
+    return idx;
+  }
+  function openPalette() { if (!PALETTE) return; PALETTE.classList.remove("hidden"); const i = $("#paletteInput"); i.value = ""; filterPalette(""); i.focus(); }
+  function closePalette() { if (PALETTE) PALETTE.classList.add("hidden"); }
+  function filterPalette(q) {
+    const toks = tokenize(q), all = buildPaletteIndex();
+    palItems = (toks.length ? all.filter(x => textMatches(x.hay, toks)) : all).slice(0, 40);
+    palSel = 0; renderPalette();
+  }
+  function renderPalette() {
+    const list = $("#paletteList");
+    if (!palItems.length) { list.innerHTML = '<div class="palette-empty">Aucun résultat</div>'; return; }
+    list.innerHTML = palItems.map((x, i) =>
+      `<div class="palette-item${i === palSel ? " sel" : ""}" data-i="${i}"><span class="pl-label">${esc(x.label)}</span><span class="pl-sub">${esc(x.sub)}</span></div>`).join("");
+    const sel = list.querySelector(".palette-item.sel"); if (sel) sel.scrollIntoView({ block: "nearest" });
+  }
+  function palMove(d) { if (!palItems.length) return; palSel = (palSel + d + palItems.length) % palItems.length; renderPalette(); }
+  function palExec(i) { const x = palItems[i == null ? palSel : i]; if (!x) return; closePalette(); x.act(); }
+  function setupPalette() {
+    PALETTE = $("#palette");
+    if (!PALETTE) return;
+    const inp = $("#paletteInput");
+    inp.addEventListener("input", () => filterPalette(inp.value));
+    inp.addEventListener("keydown", e => {
+      if (e.key === "ArrowDown") { e.preventDefault(); palMove(1); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); palMove(-1); }
+      else if (e.key === "Enter") { e.preventDefault(); palExec(); }
+      else if (e.key === "Escape") { e.preventDefault(); closePalette(); }
+    });
+    $("#paletteList").addEventListener("click", e => { const it = e.target.closest(".palette-item"); if (it) palExec(+it.dataset.i); });
+    PALETTE.addEventListener("click", e => { if (e.target === PALETTE) closePalette(); });
+  }
+
+  /* ---- navigation clavier (j / k / Entrée) ---- */
+  let cursorEl = null;
+  function visibleCards() { const sec = $("#view-" + state.view); return sec ? [...sec.querySelectorAll(".tool, .cheat, .feed-item")] : []; }
+  function moveCursor(d) {
+    const list = visibleCards(); if (!list.length) return;
+    let i = list.indexOf(cursorEl);
+    i = i < 0 ? (d > 0 ? 0 : list.length - 1) : Math.max(0, Math.min(list.length - 1, i + d));
+    if (cursorEl) cursorEl.classList.remove("kbd-cursor");
+    cursorEl = list[i]; cursorEl.classList.add("kbd-cursor");
+    cursorEl.scrollIntoView({ block: "center", behavior: "smooth" });
+  }
+  function openCursor() { if (!cursorEl) return; const a = cursorEl.querySelector("a[href]"); if (a) window.open(a.href, "_blank", "noopener"); }
+
   /* ---- orchestration ---- */
   function render() {
+    cursorEl = null;
     if (state.view === "tools") renderTools();
     else if (state.view === "cheats") renderCheats();
     else if (state.view === "veille") renderVeille();
@@ -410,8 +528,16 @@
   const searchEl = $("#search");
   searchEl.addEventListener("input", () => { state.q = searchEl.value.trim(); state.qTokens = tokenize(state.q); render(); });
   document.addEventListener("keydown", e => {
-    if (e.key === "/" && document.activeElement !== searchEl) { e.preventDefault(); searchEl.focus(); }
-    if (e.key === "Escape") { searchEl.blur(); }
+    const pOpen = PALETTE && !PALETTE.classList.contains("hidden");
+    if ((e.key === "k" || e.key === "K") && (e.ctrlKey || e.metaKey)) { e.preventDefault(); pOpen ? closePalette() : openPalette(); return; }
+    if (pOpen) return; // la palette gère son propre clavier
+    const typing = /^(input|textarea|select)$/i.test((document.activeElement || {}).tagName || "");
+    if (e.key === "/" && !typing) { e.preventDefault(); searchEl.focus(); return; }
+    if (e.key === "Escape") { searchEl.blur(); return; }
+    if (typing || e.ctrlKey || e.metaKey || e.altKey) return;
+    if (e.key === "j") { e.preventDefault(); moveCursor(1); }
+    else if (e.key === "k") { e.preventDefault(); moveCursor(-1); }
+    else if (e.key === "Enter") { openCursor(); }
   });
   const toTop = $("#toTop");
   window.addEventListener("scroll", () => toTop.classList.toggle("show", window.scrollY > 500));
@@ -419,6 +545,7 @@
 
   /* ---- init ---- */
   buildCatNav();
-  buildPhaseBar();
+  buildPhaseRail();
+  setupPalette();
   setView("cheats");
 })();
