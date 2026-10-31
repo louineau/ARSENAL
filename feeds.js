@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-10-31T12:41:17+00:00",
+ "updated": "2026-10-31T21:41:21+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -34,8 +34,9 @@ window.ARSENAL_FEEDS = {
    "name": "Exploit-DB",
    "kind": "exploit",
    "url": "https://www.exploit-db.com/rss.xml",
-   "ok": true,
-   "count": 15
+   "ok": false,
+   "count": 0,
+   "error": "HTTP Error 502: Bad Gateway"
   },
   {
    "name": "The Hacker News",
@@ -523,6 +524,17 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-116234",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116234",
+   "summary": "A vulnerability was detected in Oray Pugongying X5 Pro 7.6.1. Affected is an unknown function of the file /etc/ipsec.conf of the component IPsec Policy Handler. The manipulation of the argument secproto results in crlf injection. The attack…",
+   "date": "2026-10-26T09:16:34.953000+00:00",
+   "cvss": 9.1,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-116231",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116231",
    "summary": "A security flaw has been discovered in Oray Pugongying X5 Pro 7.6.1. The impacted element is an unknown function of the component Ser2net. Performing a manipulation of the argument regmsg results in crlf injection. It is possible to initiat…",
@@ -690,6 +702,19 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-115330",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115330",
+   "summary": "Lotus through 0.10.2 contains an sql injection vulnerability that allows authenticated organization users to execute arbitrary SQL by appending stacked statements to custom metric queries. Attackers can submit semicolon-separated SQL throug…",
+   "date": "2026-10-22T11:17:52.153000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2022-51022",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2022-51022",
    "summary": "YiShaAdmin 2.2 through 3.1, fixed in commit 025b062, contains an unauthenticated path traversal vulnerability in the /admin/File/DownloadFile endpoint that allows attackers to read and delete arbitrary files via the filePath parameter. Atta…",
@@ -697,6 +722,30 @@ window.ARSENAL_FEEDS = {
    "cvss": 9.1,
    "sev": "crit",
    "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2021-48015",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2021-48015",
+   "summary": "JeeWMS before commit 0a610e8 contains an unauthenticated path traversal vulnerability that allows remote attackers to read arbitrary files via the dbPath parameter. Attackers can send GET requests to /systemController/showOrDownByurl.do wit…",
+   "date": "2026-10-22T11:17:04.537000+00:00",
+   "cvss": 8.7,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2019-25779",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2019-25779",
+   "summary": "WooThemes Diarise through 1.5.9 contains a file read vulnerability that allows unauthenticated attackers to read arbitrary files through the calendar parameter of download.php. Attackers can send GET requests with file:// scheme paths to th…",
+   "date": "2026-10-22T11:17:03.930000+00:00",
+   "cvss": 8.7,
+   "sev": "high",
+   "platforms": [
+    "web"
+   ]
   },
   {
    "source": "NVD · CVE notés CVSS",
@@ -710,67 +759,6 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-114639",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-114639",
-   "summary": "Traefik 2.11.0 before 2.11.58 and 3.0.0 before 3.7.14 contains an authentication bypass because a first request preauthenticated with an Authorization: Negotiate token authenticates a socket in the globally shared backend connection pool, w…",
-   "date": "2026-10-22T02:16:56.800000+00:00",
-   "cvss": 8.7,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[remote] PHP2Shell (CVE-2026-109618) - PHP core versions after v5.4 - RCE",
-   "link": "https://www.exploit-db.com/exploits/52704",
-   "summary": "PHP2Shell (CVE-2026-109618) - PHP core versions after v5.4 - RCE",
-   "date": "2026-10-22T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-96778",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-96778",
-   "summary": "Pillow is a Python imaging library. From 9.4.0 until 13.0.0, ImagingJpegEncode() in src/libImaging/JpegEncode.c can call jpeg_write_marker() for a JPEG COM comment when an ICC profile has exactly filled the 65536-byte encoder buffer. libjpe…",
-   "date": "2026-10-21T21:20:33.093000+00:00",
-   "cvss": 8.8,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-109619",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-109619",
-   "summary": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it h…",
-   "date": "2026-10-21T14:17:09.823000+00:00",
-   "cvss": 9.2,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-109618",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618",
-   "summary": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing a…",
-   "date": "2026-10-21T14:17:09.357000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
    "source": "CERT-FR · Alertes",
    "kind": "alerte",
    "title": "[Màj] Multiples vulnérabilités dans PHP (21 octobre 2026)",
@@ -782,116 +770,6 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "web"
    ]
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[webapps] pizzafy-1.0 - SQLi",
-   "link": "https://www.exploit-db.com/exploits/52703",
-   "summary": "pizzafy-1.0 - SQLi",
-   "date": "2026-10-21T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[remote] South River Technologies Titan MFT Server 26.0.0 - code execution",
-   "link": "https://www.exploit-db.com/exploits/52701",
-   "summary": "South River Technologies Titan MFT Server 26.0.0 - code execution",
-   "date": "2026-10-21T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[remote] Synametrics Syncrify 6.2 - command execution",
-   "link": "https://www.exploit-db.com/exploits/52700",
-   "summary": "Synametrics Syncrify 6.2 - command execution",
-   "date": "2026-10-21T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[webapps] Keycloak 26.7.2 - Unauthenticated Account Takeover",
-   "link": "https://www.exploit-db.com/exploits/52699",
-   "summary": "Keycloak 26.7.2 - Unauthenticated Account Takeover",
-   "date": "2026-10-21T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[webapps] Open eClass 3.15 - RCE",
-   "link": "https://www.exploit-db.com/exploits/52698",
-   "summary": "Open eClass 3.15 - RCE",
-   "date": "2026-10-21T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[webapps] Automotive Shop Management System 1.0 - SQLi",
-   "link": "https://www.exploit-db.com/exploits/52697",
-   "summary": "Automotive Shop Management System 1.0 - SQLi",
-   "date": "2026-10-21T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[remote] Edimax BR-6478AC firmware v2.20 - authenticated command injection",
-   "link": "https://www.exploit-db.com/exploits/52696",
-   "summary": "Edimax BR-6478AC firmware v2.20 - authenticated command injection",
-   "date": "2026-10-21T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[remote] Exasol Database 7.1.30 - command execution",
-   "link": "https://www.exploit-db.com/exploits/52695",
-   "summary": "Exasol Database 7.1.30 - command execution",
-   "date": "2026-10-21T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[remote] Parasoft Continuous Testing Platform 10.7.5 - JSP command execution",
-   "link": "https://www.exploit-db.com/exploits/52694",
-   "summary": "Parasoft Continuous Testing Platform 10.7.5 - JSP command execution",
-   "date": "2026-10-21T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[remote] ProSoft RLX-IFH24E v2.2.44 - Unsigned Firmware Upgrade Package Executed as Root",
-   "link": "https://www.exploit-db.com/exploits/52693",
-   "summary": "ProSoft RLX-IFH24E v2.2.44 - Unsigned Firmware Upgrade Package Executed as Root",
-   "date": "2026-10-21T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
   },
   {
    "source": "CERT-FR · Actualités",
@@ -946,52 +824,6 @@ window.ARSENAL_FEEDS = {
    "link": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-042/",
    "summary": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le CERT-FR dans le cadre d'une…",
    "date": "2026-10-05T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[remote] Teltonika_RutOS 00.07.06.21 - command injection",
-   "link": "https://www.exploit-db.com/exploits/52692",
-   "summary": "Teltonika_RutOS 00.07.06.21 - command injection",
-   "date": "2026-10-01T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[webapps] TigerGraph_Community_Edition 4.2.4 - arbitrary file write",
-   "link": "https://www.exploit-db.com/exploits/52691",
-   "summary": "TigerGraph_Community_Edition 4.2.4 - arbitrary file write",
-   "date": "2026-10-01T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[webapps] WordPress 7.0.2 - Path Travesal",
-   "link": "https://www.exploit-db.com/exploits/52690",
-   "summary": "WordPress 7.0.2 - Path Travesal",
-   "date": "2026-10-01T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[webapps] Food-Ordering 1.0 - LFI",
-   "link": "https://www.exploit-db.com/exploits/52689",
-   "summary": "Food-Ordering 1.0 - LFI",
-   "date": "2026-10-01T00:00:00+00:00",
    "cvss": null,
    "sev": null,
    "platforms": []
