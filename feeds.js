@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-10-30T22:26:01+00:00",
+ "updated": "2026-10-31T05:52:02+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
