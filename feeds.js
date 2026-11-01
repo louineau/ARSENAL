@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-01T13:37:20+00:00",
+ "updated": "2026-11-01T22:07:24+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -504,6 +504,63 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-117532",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-117532",
+   "summary": "REDAXO core from 5.3.0 before 5.21.4 contains an authentication bypass vulnerability in the structure/history plugin that allows unauthenticated attackers to forge temporary login tokens. Attackers can force the session-tied secret into a p…",
+   "date": "2026-10-27T11:17:33.597000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-116506",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116506",
+   "summary": "A vulnerability was determined in TOTOLINK A950RG 4.1.2cu.5268_B20221104. Affected is the function apmib_set of the file firewall.so. This manipulation causes command injection. The attack may be initiated remotely. The exploit has been pub…",
+   "date": "2026-10-26T21:18:13.047000+00:00",
+   "cvss": 9.9,
+   "sev": "crit",
+   "platforms": [
+    "réseau"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-115915",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115915",
+   "summary": "vLLM is an inference and serving engine for large language models. Prior to 0.32.0, ImageMediaIO passes attacker-controlled image bytes to Pillow through Image.open(BytesIO(data)) without restricting decoder selection, and the MIME label do…",
+   "date": "2026-10-26T18:17:38.883000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-116370",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116370",
+   "summary": "A security flaw has been discovered in 2K Games Sid Meier's Civilization VI 1.0.12.68. The affected element is the function loadstring of the component Lua sandbox. Performing a manipulation results in type confusion. The attack may be init…",
+   "date": "2026-10-26T17:17:25.930000+00:00",
+   "cvss": 9.6,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-112346",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-112346",
+   "summary": "OpenHands Software Agent SDK before 1.52.0 contains an unauthenticated remote code execution vulnerability where the DockerWorkspace and Apptainer workspace launchers bind the sandbox agent server to all network interfaces (0.0.0.0) with an…",
+   "date": "2026-10-26T16:17:14.110000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-116485",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116485",
    "summary": "danmu_api before 1.21.7 contains an authentication bypass vulnerability that allows unauthenticated attackers to modify server environment configuration when the default TOKEN is used and ADMIN_TOKEN is unset. Attackers can send POST reques…",
@@ -570,6 +627,17 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-116099",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116099",
+   "summary": "A flaw has been found in Fusion Creators Studio SCP Containment Breach Multiplayer up to 1.295. This issue affects the function BlitzBanks of the component Skynet++ Virtual Machine. Executing a manipulation can lead to out-of-bounds write.…",
+   "date": "2026-10-26T00:17:14.613000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
+   "platforms": []
+  },
+  {
    "source": "CERT-FR · Actualités",
    "kind": "actu",
    "title": "Bulletin d'actualité CERTFR-2026-ACT-045 (26 octobre 2026)",
@@ -578,6 +646,17 @@ window.ARSENAL_FEEDS = {
    "date": "2026-10-26T00:00:00+00:00",
    "cvss": null,
    "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-116178",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116178",
+   "summary": "vLLM from 0.20.0 before 0.30.0 contains a denial of service vulnerability that allows remote attackers to crash the engine by sending inconsistent multimodal metadata to the disaggregated /inference/v1/generate endpoint. Attackers can repla…",
+   "date": "2026-10-25T14:16:57.483000+00:00",
+   "cvss": 8.2,
+   "sev": "high",
    "platforms": []
   },
   {
@@ -634,83 +713,6 @@ window.ARSENAL_FEEDS = {
    "summary": "Authlib is a Python library which builds OAuth and OpenID Connect servers. From 1.3.1 until 1.9.0, OctKey.import_key() checks asymmetric-key markers only at byte zero while Authlib's PEM loaders accept leading whitespace, comments, or a byt…",
    "date": "2026-10-22T22:18:04.257000+00:00",
    "cvss": 9.1,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-112331",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-112331",
-   "summary": "Motor.NET before 0.19.0 contains a denial-of-service vulnerability that allows a remote attacker who can produce records to a consumed topic to crash the service permanently by sending a single crafted record. By setting the content-type he…",
-   "date": "2026-10-22T20:17:05.750000+00:00",
-   "cvss": 8.7,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-115375",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115375",
-   "summary": "Incus 7.0.0 before 7.0.2 and 7.1.0 before 7.5.0 contains a path traversal vulnerability that allows clients able to create instances to write files on the host. The flaw stems from unvalidated dependent custom volume names in instance backu…",
-   "date": "2026-10-22T19:17:44.133000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-115353",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115353",
-   "summary": "Mistune before 3.3.0 contains a path traversal vulnerability in the RST include directive that allows attackers to read arbitrary files by supplying relative or absolute paths. Attackers can submit markdown containing include directives ref…",
-   "date": "2026-10-22T19:17:41.227000+00:00",
-   "cvss": 9.2,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-94502",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-94502",
-   "summary": "In EmberZNet 9.1.1 and earlier, a malformed Publish Price Matrix command can result in an out-of-bounds write potentially leading to remote code execution. These messages must come from a device that has already joined the network. Only dev…",
-   "date": "2026-10-22T14:17:51.640000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-85080",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-85080",
-   "summary": "In EmberZNet 9.1.1 and earlier, a malformed GetGroupMembership message can result in an out-of-bounds write leading to a crash. A limited number of values can be written using this vulnerability, so no route to remote code execution was obs…",
-   "date": "2026-10-22T14:17:51.013000+00:00",
-   "cvss": 9.1,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-85079",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-85079",
-   "summary": "In EmberZNet 9.1.1 and earlier, a malformed Simple_Desc_req response can result in an out-of-bounds write potentially leading to remote code execution. This response must come from a device that has already joined the network, and the attac…",
-   "date": "2026-10-22T14:17:50.877000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-111497",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497",
-   "summary": "A buffer overflow vulnerability in the Brotli decoder (c/dec/decode.c) in Google Brotli versions 1.0.3 through 1.2.0 on all platforms allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memo…",
-   "date": "2026-10-22T14:17:37.190000+00:00",
-   "cvss": 9.8,
    "sev": "crit",
    "platforms": []
   },
