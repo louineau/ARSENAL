@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-10-31T21:41:21+00:00",
+ "updated": "2026-11-01T06:15:42+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -34,9 +34,8 @@ window.ARSENAL_FEEDS = {
    "name": "Exploit-DB",
    "kind": "exploit",
    "url": "https://www.exploit-db.com/rss.xml",
-   "ok": false,
-   "count": 0,
-   "error": "HTTP Error 502: Bad Gateway"
+   "ok": true,
+   "count": 15
   },
   {
    "name": "The Hacker News",
@@ -509,6 +508,17 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-116214",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116214",
+   "summary": "MacCMS v10 before 2026.1000.4054 contains an authentication bypass vulnerability that allows unauthenticated attackers to reset any member's password because check_msg() never compares msg_to. Attackers can request a recovery code to their…",
+   "date": "2026-10-26T14:16:34.173000+00:00",
+   "cvss": 9.3,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
@@ -614,11 +624,33 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-112331",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-112331",
+   "summary": "Motor.NET before 0.19.0 contains a denial-of-service vulnerability that allows a remote attacker who can produce records to a consumed topic to crash the service permanently by sending a single crafted record. By setting the content-type he…",
+   "date": "2026-10-22T20:17:05.750000+00:00",
+   "cvss": 8.7,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-115375",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115375",
    "summary": "Incus 7.0.0 before 7.0.2 and 7.1.0 before 7.5.0 contains a path traversal vulnerability that allows clients able to create instances to write files on the host. The flaw stems from unvalidated dependent custom volume names in instance backu…",
    "date": "2026-10-22T19:17:44.133000+00:00",
    "cvss": 9.9,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-115353",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115353",
+   "summary": "Mistune before 3.3.0 contains a path traversal vulnerability in the RST include directive that allows attackers to read arbitrary files by supplying relative or absolute paths. Attackers can submit markdown containing include directives ref…",
+   "date": "2026-10-22T19:17:41.227000+00:00",
+   "cvss": 9.2,
    "sev": "crit",
    "platforms": []
   },
@@ -724,39 +756,17 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2021-48015",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2021-48015",
-   "summary": "JeeWMS before commit 0a610e8 contains an unauthenticated path traversal vulnerability that allows remote attackers to read arbitrary files via the dbPath parameter. Attackers can send GET requests to /systemController/showOrDownByurl.do wit…",
-   "date": "2026-10-22T11:17:04.537000+00:00",
-   "cvss": 8.7,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2019-25779",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2019-25779",
-   "summary": "WooThemes Diarise through 1.5.9 contains a file read vulnerability that allows unauthenticated attackers to read arbitrary files through the calendar parameter of download.php. Attackers can send GET requests with file:// scheme paths to th…",
-   "date": "2026-10-22T11:17:03.930000+00:00",
-   "cvss": 8.7,
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] PHP2Shell (CVE-2026-109618) - PHP core versions after v5.4 - RCE",
+   "link": "https://www.exploit-db.com/exploits/52704",
+   "summary": "PHP2Shell (CVE-2026-109618) - PHP core versions after v5.4 - RCE",
+   "date": "2026-10-22T00:00:00+00:00",
+   "cvss": null,
    "sev": "high",
    "platforms": [
     "web"
    ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-114656",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-114656",
-   "summary": "Traefik before 2.11.58 and 3.7.13 contains an authentication bypass vulnerability that allows unauthenticated clients to skip client-certificate checks because negated Host matchers are counted as served domains. Attackers can reach backend…",
-   "date": "2026-10-22T02:16:57.403000+00:00",
-   "cvss": 9.3,
-   "sev": "crit",
-   "platforms": []
   },
   {
    "source": "CERT-FR · Alertes",
@@ -770,6 +780,116 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "web"
    ]
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[webapps] pizzafy-1.0 - SQLi",
+   "link": "https://www.exploit-db.com/exploits/52703",
+   "summary": "pizzafy-1.0 - SQLi",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] South River Technologies Titan MFT Server 26.0.0 - code execution",
+   "link": "https://www.exploit-db.com/exploits/52701",
+   "summary": "South River Technologies Titan MFT Server 26.0.0 - code execution",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] Synametrics Syncrify 6.2 - command execution",
+   "link": "https://www.exploit-db.com/exploits/52700",
+   "summary": "Synametrics Syncrify 6.2 - command execution",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[webapps] Keycloak 26.7.2 - Unauthenticated Account Takeover",
+   "link": "https://www.exploit-db.com/exploits/52699",
+   "summary": "Keycloak 26.7.2 - Unauthenticated Account Takeover",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[webapps] Open eClass 3.15 - RCE",
+   "link": "https://www.exploit-db.com/exploits/52698",
+   "summary": "Open eClass 3.15 - RCE",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[webapps] Automotive Shop Management System 1.0 - SQLi",
+   "link": "https://www.exploit-db.com/exploits/52697",
+   "summary": "Automotive Shop Management System 1.0 - SQLi",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] Edimax BR-6478AC firmware v2.20 - authenticated command injection",
+   "link": "https://www.exploit-db.com/exploits/52696",
+   "summary": "Edimax BR-6478AC firmware v2.20 - authenticated command injection",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] Exasol Database 7.1.30 - command execution",
+   "link": "https://www.exploit-db.com/exploits/52695",
+   "summary": "Exasol Database 7.1.30 - command execution",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] Parasoft Continuous Testing Platform 10.7.5 - JSP command execution",
+   "link": "https://www.exploit-db.com/exploits/52694",
+   "summary": "Parasoft Continuous Testing Platform 10.7.5 - JSP command execution",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] ProSoft RLX-IFH24E v2.2.44 - Unsigned Firmware Upgrade Package Executed as Root",
+   "link": "https://www.exploit-db.com/exploits/52693",
+   "summary": "ProSoft RLX-IFH24E v2.2.44 - Unsigned Firmware Upgrade Package Executed as Root",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
   },
   {
    "source": "CERT-FR · Actualités",
@@ -824,6 +944,52 @@ window.ARSENAL_FEEDS = {
    "link": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-042/",
    "summary": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le CERT-FR dans le cadre d'une…",
    "date": "2026-10-05T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] Teltonika_RutOS 00.07.06.21 - command injection",
+   "link": "https://www.exploit-db.com/exploits/52692",
+   "summary": "Teltonika_RutOS 00.07.06.21 - command injection",
+   "date": "2026-10-01T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[webapps] TigerGraph_Community_Edition 4.2.4 - arbitrary file write",
+   "link": "https://www.exploit-db.com/exploits/52691",
+   "summary": "TigerGraph_Community_Edition 4.2.4 - arbitrary file write",
+   "date": "2026-10-01T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[webapps] WordPress 7.0.2 - Path Travesal",
+   "link": "https://www.exploit-db.com/exploits/52690",
+   "summary": "WordPress 7.0.2 - Path Travesal",
+   "date": "2026-10-01T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[webapps] Food-Ordering 1.0 - LFI",
+   "link": "https://www.exploit-db.com/exploits/52689",
+   "summary": "Food-Ordering 1.0 - LFI",
+   "date": "2026-10-01T00:00:00+00:00",
    "cvss": null,
    "sev": null,
    "platforms": []
