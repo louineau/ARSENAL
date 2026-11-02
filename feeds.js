@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-01T22:07:24+00:00",
+ "updated": "2026-11-02T06:17:35+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -56,6 +56,19 @@ window.ARSENAL_FEEDS = {
   {
    "source": "The Hacker News",
    "kind": "news",
+   "title": "New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value",
+   "link": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html",
+   "summary": "Cybersecurity researchers have discovered a new Windows infostealer malware called VOLTA-AUTODOXER (aka VOLTA) that makes use of a large language model (LLM) to rank a victim's stolen data by their monetization value. Like other typical ste…",
+   "date": "2026-11-02T05:51:07+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "windows"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
    "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key",
    "link": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
    "summary": "A critical flaw in Canonical's LXD and MicroCloud let an attacker log in as a trusted client without holding that client's private key. To do it, the attacker had to reach their HTTPS API over the network and have the trusted client's publi…",
@@ -80,7 +93,7 @@ window.ARSENAL_FEEDS = {
    "kind": "news",
    "title": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
    "link": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
-   "summary": "The U.S. Federal Bureau of Investigation (FBI) has officially attributed the theft of more than $6 billion in virtual assets to TraderTraitor, a North Korea-aligned elite hacking group also tracked as Jade Sleet, Pressure Chollima, PUKCHONG…",
+   "summary": "The U.S. Federal Bureau of Investigation (FBI) has officially attributed the theft of more than $6 billion in virtual assets from Binance to TraderTraitor, a North Korea-aligned elite hacking group also tracked as Jade Sleet, Pressure Choll…",
    "date": "2026-11-01T07:03:00+00:00",
    "cvss": null,
    "sev": null,
@@ -222,17 +235,6 @@ window.ARSENAL_FEEDS = {
    "link": "https://thehackernews.com/2026/10/syrian-hacker-behind-fake-tweet-that.html",
    "summary": "Ahmad Umar Agha, a Syrian Electronic Army hacker known online as \"Th3Pr0,\" has been sentenced by a U.S. federal court to 42 months in prison for his role in a hacking conspiracy that targeted Western news outlets. The conspiracy was organiz…",
    "date": "2026-10-30T10:40:45+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor",
-   "link": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
-   "summary": "Cybersecurity researchers have disclosed that a trojanized version of Anthropic's official Claude Code extension was distributed through the Cursor Marketplace as a legitimate update, attempting to install a persistent SSH backdoor on affec…",
-   "date": "2026-10-30T08:55:47+00:00",
    "cvss": null,
    "sev": null,
    "platforms": []
@@ -469,6 +471,30 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-104351",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-104351",
+   "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit…",
+   "date": "2026-10-27T17:16:55.593000+00:00",
+   "cvss": 9.9,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-104350",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-104350",
+   "summary": "Adobe Campaign Classic (ACC) is affected by a reflected Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this vulnerability to inject malicious scripts into a web page, potentially gaining elevated access or control over…",
+   "date": "2026-10-27T17:16:55.457000+00:00",
+   "cvss": 9.3,
+   "sev": "crit",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
@@ -618,6 +644,17 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-116116",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116116",
+   "summary": "A vulnerability was detected in Yoosee GM8135S Camera 21.00.01.36. Affected is an unknown function of the component Secure Boot. Performing a manipulation results in improper verification of cryptographic signature. The attack needs to be a…",
+   "date": "2026-10-26T04:17:55.047000+00:00",
+   "cvss": 8.4,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-116111",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116111",
    "summary": "A vulnerability was determined in 2K Games Civilization V 1.0.3.144. Impacted is the function loadstring of the component Lua Sandbox. Executing a manipulation can lead to type confusion. The attack may be performed from remote. The exploit…",
@@ -646,17 +683,6 @@ window.ARSENAL_FEEDS = {
    "date": "2026-10-26T00:00:00+00:00",
    "cvss": null,
    "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-116178",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116178",
-   "summary": "vLLM from 0.20.0 before 0.30.0 contains a denial of service vulnerability that allows remote attackers to crash the engine by sending inconsistent multimodal metadata to the disaggregated /inference/v1/generate endpoint. Attackers can repla…",
-   "date": "2026-10-25T14:16:57.483000+00:00",
-   "cvss": 8.2,
-   "sev": "high",
    "platforms": []
   },
   {
@@ -693,28 +719,6 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "web"
    ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-114616",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-114616",
-   "summary": "Authlib is a Python library which builds OAuth and OpenID Connect servers. Prior to 1.9.1, Authlib's OctKey.import_key() and HMAC signing and verification path accept zero-length key material. If an application's secret lookup can return an…",
-   "date": "2026-10-22T22:18:04.420000+00:00",
-   "cvss": 9.1,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-114615",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-114615",
-   "summary": "Authlib is a Python library which builds OAuth and OpenID Connect servers. From 1.3.1 until 1.9.0, OctKey.import_key() checks asymmetric-key markers only at byte zero while Authlib's PEM loaders accept leading whitespace, comments, or a byt…",
-   "date": "2026-10-22T22:18:04.257000+00:00",
-   "cvss": 9.1,
-   "sev": "crit",
-   "platforms": []
   },
   {
    "source": "CISA · Advisories",
