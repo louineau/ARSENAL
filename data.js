@@ -556,7 +556,13 @@ const TOOLS = [
   { name: "Pentest-Tools.com", url: "https://pentest-tools.com/", cat: "infra", platforms: ["web"], phases: ["recon"], star: true,
     desc: "Scanners hébergés (nmap, découverte réseau, vulnérabilités) lancés depuis leur infrastructure — aucun paquet depuis ton IP.", tags: "scanner heberge nmap ligne saas externe recon vulnerabilite" },
   { name: "HackerTarget", url: "https://hackertarget.com/", cat: "infra", platforms: ["web"], phases: ["recon"],
-    desc: "Nmap et outils de reconnaissance en ligne, lancés depuis leurs serveurs (quota gratuit limité).", tags: "nmap en ligne recon heberge gratuit externe" }
+    desc: "Nmap et outils de reconnaissance en ligne, lancés depuis leurs serveurs (quota gratuit limité).", tags: "nmap en ligne recon heberge gratuit externe" },
+  { name: "Killercoda", url: "https://killercoda.com/", cat: "infra", platforms: ["web"], phases: ["support"], star: true,
+    desc: "Environnements Ubuntu/Kali en root dans le navigateur, avec accès internet — instantané, rien à déployer (successeur de Katacoda).", tags: "killercoda katacoda navigateur kali ubuntu root instantane sandbox gratuit" },
+  { name: "Play with Docker", url: "https://labs.play-with-docker.com/", cat: "infra", platforms: ["web"], phases: ["support"],
+    desc: "Bac à sable Docker instantané dans le navigateur (sessions ~4 h) — lance un conteneur nmap à la volée.", tags: "docker conteneur navigateur sandbox instantane playwithdocker gratuit" },
+  { name: "Oracle Cloud Free Tier", url: "https://www.oracle.com/cloud/free/", cat: "infra", platforms: ["linux"], phases: ["support"],
+    desc: "VM ARM « always free » réellement gratuite — déployée une fois, elle sert de machine d'attaque permanente.", tags: "oracle cloud free tier gratuit vm arm always free vps permanent" }
 ];
 
 /* ------------------------------------------------- CHEATS (cas d'usage) ---
@@ -564,6 +570,16 @@ const TOOLS = [
  * steps = liste de { tool, cmd } ; names doivent idéalement exister dans TOOLS.
  */
 const CHEATS = [
+  { icon: "🕶️", title: "Scanner un port sans exposer mon IP",
+    phase: "recon",
+    steps: [
+      { tool: "Google Cloud Shell", cmd: "Box externe (VPS / Cloud Shell / Killercoda) : nmap -Pn -p <port> <cible>   # la cible voit l'IP de la box" },
+      { tool: "Pentest-Tools.com", cmd: "Sans VM : scanner hébergé → ton IP ne touche jamais la cible" },
+      { tool: "proxychains", cmd: "Tunnel SSH vers ton VPS : ssh -D 1080 -N user@vps   puis   proxychains nmap -sT -Pn -p <port> <cible>" },
+      { tool: "Nmap", cmd: "Idle/zombie scan : nmap -Pn -sI <zombie> -p <port> <cible>   # trouver un zombie : nmap --script ipidseq <plage>" }
+    ],
+    note: "⚠️ -D (decoys) et -S (spoof) NE cachent PAS ton IP (elle part quand même vers la cible). Proxy SOCKS = TCP connect seulement (-sT -Pn ; ni SYN, ni UDP, ni détection OS). Un bon zombie a un IP-ID incrémental et peu de trafic (vieilles imprimantes / IoT). Masquer son IP ne légalise rien : cible autorisée uniquement." },
+
   { icon: "🚪", title: "Je démarre un test interne, je ne connais que le sous-réseau",
     phase: "enum",
     steps: [
