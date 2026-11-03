@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-03T06:55:22+00:00",
+ "updated": "2026-11-03T19:32:04+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -56,6 +56,155 @@ window.ARSENAL_FEEDS = {
   {
    "source": "The Hacker News",
    "kind": "news",
+   "title": "mSecure Warns Users to Change Passwords, Reset 2FA and Passkeys After Suspicious Activity",
+   "link": "https://thehackernews.com/2026/11/msecure-warns-users-to-change-passwords.html",
+   "summary": "Customers of the mSecure password manager are being urged to act now to protect the confidential information they store in it, possibly by changing passwords, resetting two-factor authentication (2FA), and removing passkeys. The warning cam…",
+   "date": "2026-11-03T18:46:38+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes",
+   "link": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
+   "summary": "Blockchain infrastructure provider Chainstack on Tuesday disclosed that it was targeted in a cyber attack that allowed an unauthorized party to gain access to some parts of its infrastructure. The incident is assessed to be part of a large-…",
+   "date": "2026-11-03T18:16:19+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Binance Reveals How Fake Job Interviews and AI Tool Abuse Led to $6.43 Billion Theft",
+   "link": "https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html",
+   "summary": "Binance on Tuesday said the record-setting theft of $6.43 billion in assets from the world's largest cryptocurrency exchange was the culmination of a \"sophisticated, multi-stage campaign\" that involved the use of a tampered Homebrew install…",
+   "date": "2026-11-03T16:55:58+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "windows"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access",
+   "link": "https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html",
+   "summary": "Barracuda has disclosed details of two vulnerabilities affecting its products that, if chained together, could allow an attacker to bypass authorization controls and gain root access to a susceptible device. The vulnerabilities, a pre-authe…",
+   "date": "2026-11-03T15:59:19+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Google Warns LLMjacking Attacks Are Costing Some Enterprises Up to $1 Million in Cloud Charges",
+   "link": "https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html",
+   "summary": "Google on Monday warned that threat actors are hijacking enterprise access to Large Language Models (LLMs) to fraudulently leverage expensive computing resources and AI services. The tactic is called LLMjacking, a form of resource hijacking…",
+   "date": "2026-11-03T15:41:53+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "cPGuard Update Channel Hijacked to Backdoor Linux Servers and Collect Password Hashes",
+   "link": "https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html",
+   "summary": "An attacker broke into the update system of the cPGuard security tool on November 2 and used it to send a malicious script to customers' Linux servers. The script installed a backdoor and collected password hashes and other sensitive files…",
+   "date": "2026-11-03T15:16:32+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "linux"
+   ]
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "Subnet Solutions PowerSYSTEM Center",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-307-01",
+   "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to execute unauthorized SQL commands and gain access to unauthorized resources. The following versions of Subnet Solutions PowerSYSTEM Center are aff…",
+   "date": "2026-11-03T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing",
+   "link": "https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html",
+   "summary": "Fixed kernels for a use-after-free vulnerability in the Linux kernel's IPv4 TCP code are now available for Red Hat Enterprise Linux 8, 9, and 10, while Ubuntu's fixes for its three newest long-term-support releases remain in its opt-in test…",
+   "date": "2026-11-03T11:23:53+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "linux"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "The 4 Elements of Exposure Prioritization and How to Operationalize Them",
+   "link": "https://thehackernews.com/2026/11/the-4-elements-of-exposure.html",
+   "summary": "Your team is remediating more vulnerabilities than ever, yet your breach risk has barely changed. You’re spending too much time and effort on exposures attackers may never exploit, while higher-risk exposures sit, waiting in the queue. Gart…",
+   "date": "2026-11-03T11:18:20+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Russia-Aligned Gorbag Hackers Exploit WinRAR Flaw to Deploy Data-Stealing Malware",
+   "link": "https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html",
+   "summary": "A Russia-aligned threat actor known as Gorbag has been observed using simple information stealer malware in attacks targeting Ukrainian organizations. \"Active since at least February 2025, the group has focused exclusively on Ukrainian targ…",
+   "date": "2026-11-03T11:00:45+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Hackers Exploit BTCPay Server Flaw to Steal Bitcoin and Litecoin From Hot Wallets",
+   "link": "https://thehackernews.com/2026/11/hackers-exploit-btcpay-server-flaw-to.html",
+   "summary": "BTCPay Server, a self-hosted, open-source cryptocurrency payment processor, has urged users to install the latest version of its software in response to reports of Bitcoin and Litecoin being stolen from hot wallets on instances running olde…",
+   "date": "2026-11-03T08:31:48+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Synology NAS Devices Targeted in Ransomware Attacks Exploiting Patched DSM Flaw",
+   "link": "https://thehackernews.com/2026/11/synology-nas-devices-targeted-in.html",
+   "summary": "Synology is urging customers to update the DiskStation Manager (DSM) software powering its Network Attached Storage (NAS) devices following ransomware attacks. The Taiwanese vendor said it observed threat actors exploiting a vulnerability p…",
+   "date": "2026-11-03T07:43:07+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "New Wave of Refrigeration Cyberattacks Hits Supermarkets Across Europe, Forcing Stores to Pull Food",
+   "link": "https://thehackernews.com/2026/11/second-wave-of-cyberattacks-hits.html",
+   "summary": "Attackers remotely changed the settings on refrigeration controls at supermarkets in Belgium, Sweden, Estonia and other European countries overnight into Monday, November 2, warming fridges and freezers. No chain reported more than several…",
+   "date": "2026-11-03T07:27:07+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
    "title": "Attackers Exploit Critical Siemens IoT2050 Flaw to Plant Remote Command Backdoors",
    "link": "https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html",
    "summary": "A maximum-severity security flaw impacting Siemens SIMATIC IoT2050 Advanced devices has come under active exploitation, VulnCheck has revealed. The vulnerability, tracked as CVE-2026-58115 (CVSS score: 10.0), is a case of missing authentica…",
@@ -78,6 +227,65 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans Google Android (03 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1443/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans Google Android. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialit…",
+   "date": "2026-11-03T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "android"
+   ]
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans GLPI (03 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1444/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans GLPI. Elles permettent à un attaquant de provoquer une élévation de privilèges, une injection de code indirecte à distance (XSS) et un contournement de la politique de sécurité.",
+   "date": "2026-11-03T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans PostgreSQL (03 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1445/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans PostgreSQL. Elles permettent à un attaquant de provoquer une injection SQL (SQLi), un contournement de la politique de sécurité et un problème de sécurité non spécifié par l'éditeur.",
+   "date": "2026-11-03T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans NetApp ONTAP 9 (03 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1446/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans NetApp ONTAP 9. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance.",
+   "date": "2026-11-03T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans Xen (03 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1447/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans Xen. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données et une atteinte à l'intégrité des données.",
+   "date": "2026-11-03T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
    "source": "The Hacker News",
    "kind": "news",
    "title": "⚡ Weekly Recap: Critical CVEs, Linux DDoS Botnet, Device-Code Phishing, Android Spyware and More",
@@ -89,92 +297,6 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "linux",
     "android"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Google Disrupts 1.3 Million-Device Android Botnet, Says TV Box Maker Sold Criminal Access",
-   "link": "https://thehackernews.com/2026/11/google-disrupts-13-million-device.html",
-   "summary": "A botnet of more than 1.3 million Android devices, mostly TV set-top boxes, lost control of its servers in late October in a takedown led by Google. Google says it is highly confident that device maker Videostrong intentionally put a backdo…",
-   "date": "2026-11-02T15:50:26+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "android"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment",
-   "link": "https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html",
-   "summary": "Cybersecurity researchers have disclosed details of a cyber espionage campaign targeting Israel and the Kurdistan Region of Iraq by an Iran state-aligned threat actor between August and October 2026. According to a report published by Dream…",
-   "date": "2026-11-02T14:46:05+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers",
-   "link": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
-   "summary": "Two critical flaws in Langflow could let a remote attacker with no account bypass authentication or run arbitrary code, IBM said last week. Langflow is an open-source tool for building AI agents and workflows, and its vulnerability reports…",
-   "date": "2026-11-02T11:50:00+00:00",
-   "cvss": null,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Is Your SOC Ready for AI Agents? A Maturity Check Before You Deploy",
-   "link": "https://thehackernews.com/2026/11/is-your-soc-ready-for-ai-agents.html",
-   "summary": "Forty percent of security teams now use AI every day, and another 56% are testing it. Only 4% have no plans to adopt it, according to Prophet Security's State of AI in Security Operations 2026 survey of more than 250 CISOs, SOC leaders and…",
-   "date": "2026-11-02T11:30:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
-   "link": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
-   "summary": "Attackers posing as IT support on Microsoft Teams talked employees into giving them remote control of their PCs. They then used insecure Active Directory Certificate Services (AD CS) settings to obtain login certificates for privileged acco…",
-   "date": "2026-11-02T11:08:45+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "windows"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Government Linux Servers Targeted With SysGoRAT and Suspected AI-Generated Scripts",
-   "link": "https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html",
-   "summary": "Cybersecurity researchers have disclosed details of a cyber espionage campaign specifically targeting Linux infrastructure associated with government entities and state-affiliated infrastructure. The activity, observed by Palo Alto Networks…",
-   "date": "2026-11-02T10:49:59+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "linux",
-    "réseau"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value",
-   "link": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html",
-   "summary": "Cybersecurity researchers have discovered a new Windows infostealer malware called VOLTA-AUTODOXER (aka VOLTA) that makes use of a large language model (LLM) to rank a victim's stolen data by their monetization value. Like other typical ste…",
-   "date": "2026-11-02T05:51:07+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "windows"
    ]
   },
   {
@@ -296,63 +418,6 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key",
-   "link": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
-   "summary": "A critical flaw in Canonical's LXD and MicroCloud let an attacker log in as a trusted client without holding that client's private key. To do it, the attacker had to reach their HTTPS API over the network and have the trusted client's publi…",
-   "date": "2026-11-01T08:51:31+00:00",
-   "cvss": 10.0,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
-   "link": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
-   "summary": "Malicious code on the website of prediction market Polymarket sold some signed-in traders' positions and moved their funds to the hackers on October 29. The code had replaced a page-speed script that the site loaded from an outside company.…",
-   "date": "2026-11-01T07:25:40+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
-   "link": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
-   "summary": "The U.S. Federal Bureau of Investigation (FBI) has officially attributed the theft of more than $6 billion in virtual assets from Binance to TraderTraitor, a North Korea-aligned elite hacking group also tracked as Jade Sleet, Pressure Choll…",
-   "date": "2026-11-01T07:03:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "NetamLoader Malware Targets Government Windows 10 Systems in Asia via .NET Injection",
-   "link": "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html",
-   "summary": "Cybersecurity researchers have disclosed details of what has been described as a \"highly sophisticated infection chain\" targeting government organizations in Asia. The activity, detailed by Kaspersky this week, targeted a custom Windows 10…",
-   "date": "2026-11-01T07:02:58+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "windows"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
-   "link": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
-   "summary": "American blockchain analysis firm Chainalysis said it was the target of a cybersecurity incident in which an external actor accessed non-sensitive customer data. However, the company noted that the breach did not result in unauthorized acce…",
-   "date": "2026-10-31T12:01:56+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
@@ -377,85 +442,6 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "macos"
    ]
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans Google Chrome (30 octobre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1422/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans Google Chrome. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
-   "date": "2026-10-30T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Vulnérabilité dans CPython (30 octobre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1423/",
-   "summary": "Une vulnérabilité a été découverte dans CPython. Elle permet à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
-   "date": "2026-10-30T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Vulnérabilité dans Ruby on Rails trilogy (30 octobre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1424/",
-   "summary": "Une vulnérabilité a été découverte dans Ruby on Rails trilogy. Elle permet à un attaquant de provoquer une injection SQL (SQLi).",
-   "date": "2026-10-30T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Vulnérabilité dans Tenable Nessus Plugin (30 octobre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1425/",
-   "summary": "Une vulnérabilité a été découverte dans Tenable Nessus Plugin. Elle permet à un attaquant de provoquer une atteinte à la confidentialité des données.",
-   "date": "2026-10-30T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans Veeam Management Pack (30 octobre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1426/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans Veeam Management Pack. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance.",
-   "date": "2026-10-30T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-18894",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-18894",
-   "summary": "IBM Langflow OSS 1.0.0 through 1.12.4 could allow a remote attacker to trigger pre-existing stored Python component code in a public workflow, executing it under the flow owner's runtime context within the server process. This bypasses the…",
-   "date": "2026-10-29T16:18:08.427000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-104317",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-104317",
-   "summary": "IBM Langflow OSS 1.0.0 through 1.12.3 could allow a remote attacker who could reach the message broker to execute arbitrary code on the system due to the deserialization of untrusted data.",
-   "date": "2026-10-29T16:17:43.907000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
   },
   {
    "source": "CISA · Advisories",
@@ -499,17 +485,6 @@ window.ARSENAL_FEEDS = {
    "date": "2026-10-29T12:00:00+00:00",
    "cvss": null,
    "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-117574",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-117574",
-   "summary": "A flaw was found in ai-gateway-payload-processing. An authenticated remote attacker can exploit this vulnerability by submitting a request specifying another tenant's model identifier in the request body or header. Because the service does…",
-   "date": "2026-10-28T20:17:21.417000+00:00",
-   "cvss": 9.1,
-   "sev": "crit",
    "platforms": []
   },
   {
@@ -579,6 +554,17 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-112352",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-112352",
+   "summary": "Sunhillo SureLine before 9.1.5 contains an authentication bypass vulnerability that allows an unauthenticated remote attacker to impersonate any user with an active web session by forging a session cookie containing only a cleartext usernam…",
+   "date": "2026-10-27T20:17:12.997000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
@@ -614,6 +600,34 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-113897",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-113897",
+   "summary": "This issue was addressed by removing the vulnerable code. This issue is fixed in Safari 27.2, iOS 27.2 and iPadOS 27.2, macOS Golden Gate 27.2, visionOS 27.2. A remote attacker may be able to break out of Web Content sandbox.",
+   "date": "2026-10-26T21:18:06.440000+00:00",
+   "cvss": 10.0,
+   "sev": "crit",
+   "platforms": [
+    "macos",
+    "ios"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-112690",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-112690",
+   "summary": "This issue was addressed with improved input validation. This issue is fixed in iOS 26.7.2 and iPadOS 26.7.2, iOS 27.2 and iPadOS 27.2, macOS Golden Gate 27.2, macOS Sequoia 15.8.2, macOS Tahoe 26.7.2, visionOS 27.2. A remote attacker may b…",
+   "date": "2026-10-26T21:18:03.507000+00:00",
+   "cvss": 10.0,
+   "sev": "crit",
+   "platforms": [
+    "macos",
+    "ios"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-115915",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115915",
    "summary": "vLLM is an inference and serving engine for large language models. Prior to 0.32.0, ImageMediaIO passes attacker-controlled image bytes to Pillow through Image.open(BytesIO(data)) without restricting decoder selection, and the MIME label do…",
@@ -631,6 +645,17 @@ window.ARSENAL_FEEDS = {
    "date": "2026-10-26T17:17:25.930000+00:00",
    "cvss": 9.6,
    "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-115912",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115912",
+   "summary": "vLLM is an inference and serving engine for large language models. Prior to 0.32.0, an authenticated caller can place forged shared-memory address and monotonic_id values in public multimodal features.kwargs_data. In scale-out deployments w…",
+   "date": "2026-10-26T17:17:18.910000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
    "platforms": []
   },
   {
@@ -704,17 +729,6 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-116178",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116178",
-   "summary": "vLLM from 0.20.0 before 0.30.0 contains a denial of service vulnerability that allows remote attackers to crash the engine by sending inconsistent multimodal metadata to the disaggregated /inference/v1/generate endpoint. Attackers can repla…",
-   "date": "2026-10-25T14:16:57.483000+00:00",
-   "cvss": 8.2,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
    "title": "CVE-2026-116176",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116176",
    "summary": "vLLM from 0.9.2 before 0.24.0 contains a server-side request forgery vulnerability that allows API callers to force outbound connections by embedding a decode address in the X-Request-Id header. Attackers can make a P2pNcclConnector prefill…",
@@ -764,17 +778,6 @@ window.ARSENAL_FEEDS = {
    "title": "Siemens RUGGEDCOM APE1808 Devices",
    "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18",
    "summary": "View CSAF Summary Nozomi Networks has published information on vulnerabilities in Nozomi Guardian/CMC. This advisory lists the related Siemens Industrial products affected by these vulnerabilities. Siemens recommends to contact customer sup…",
-   "date": "2026-10-22T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
-   "title": "Managing AI Token Consumption for Operational Resilience",
-   "link": "https://www.cisa.gov/resources-tools/resources/managing-ai-token-consumption-operational-resilience",
-   "summary": "CISA, the Canadian Centre for Cyber Security (Cyber Centre), and partners are releasing joint guidance, Managing AI Token Consumption for Operational Resilience , to help organizations understand and manage token usage in support of operati…",
    "date": "2026-10-22T12:00:00+00:00",
    "cvss": null,
    "sev": null,
