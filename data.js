@@ -54,7 +54,8 @@ const CATEGORIES = [
   { id: "method",    icon: "🧭", label: "Méthodologies & frameworks",   desc: "Cadres de test et référentiels." },
   { id: "forensic",  icon: "🔬", label: "Reverse & forensic",           desc: "Analyse de binaires, de mémoire et investigation numérique." },
   { id: "blue",      icon: "🛡️", label: "Blue Team / SOC & détection",   desc: "Supervision, détection, CTI, SIEM et réponse à incident." },
-  { id: "train",     icon: "🎯", label: "Entraînement & labs",          desc: "Plateformes et environnements vulnérables pour s'exercer légalement." }
+  { id: "train",     icon: "🎯", label: "Entraînement & labs",          desc: "Plateformes et environnements vulnérables pour s'exercer légalement." },
+  { id: "infra",     icon: "☁️", label: "Infra & plateformes jetables",  desc: "VPS éphémères, attack boxes cloud et scanners hébergés pour opérer depuis l'extérieur — cibles autorisées uniquement (CGU des hébergeurs)." }
 ];
 
 /* ------------------------------------------------------------------- TOOLS */
@@ -533,7 +534,29 @@ const TOOLS = [
   { name: "WebGoat", url: "https://owasp.org/www-project-webgoat/", cat: "train", platforms: ["multi"], phases: ["support"],
     desc: "Application d'apprentissage OWASP avec leçons guidées.", tags: "owasp vulnerable web lecon apprentissage" },
   { name: "PentesterLab", url: "https://pentesterlab.com/", cat: "train", platforms: ["web"], phases: ["support"],
-    desc: "Exercices ciblés sur des vulnérabilités précises, avec explications.", tags: "web exercice vulnerabilite apprentissage" }
+    desc: "Exercices ciblés sur des vulnérabilités précises, avec explications.", tags: "web exercice vulnerabilite apprentissage" },
+
+  /* ===== Infra & plateformes jetables ===== */
+  { name: "Hetzner Cloud", url: "https://www.hetzner.com/cloud", cat: "infra", platforms: ["linux"], phases: ["support"], star: true,
+    desc: "VPS Linux facturé à l'heure parmi les moins chers — idéal pour une machine d'attaque jetable (créer → scanner → détruire).", tags: "vps cloud jetable serveur droplet horaire europe ip externe" },
+  { name: "DigitalOcean", url: "https://www.digitalocean.com/", cat: "infra", platforms: ["linux"], phases: ["support"],
+    desc: "Droplets Linux simples, facturés à l'heure ; image Kali disponible. À détruire après usage.", tags: "vps cloud droplet kali jetable ip externe" },
+  { name: "Vultr", url: "https://www.vultr.com/", cat: "infra", platforms: ["linux"], phases: ["support"],
+    desc: "VPS à l'heure avec de nombreuses régions — utile pour choisir d'où part le scan.", tags: "vps cloud jetable region ip externe serveur" },
+  { name: "Kali Linux Cloud", url: "https://www.kali.org/get-kali/#kali-cloud", cat: "infra", platforms: ["linux"], phases: ["support"], star: true,
+    desc: "Images Kali officielles prêtes à déployer sur AWS, Azure, Linode et DigitalOcean. Machine d'attaque sans aucune installation.", tags: "kali cloud aws azure linode image attaque offsec jetable" },
+  { name: "HTB Pwnbox", url: "https://www.hackthebox.com/", cat: "infra", platforms: ["web"], phases: ["support"],
+    desc: "Attack box Parrot OS dans le navigateur, jetable à la déconnexion — pensée pour les cibles des labs Hack The Box.", tags: "pwnbox parrot navigateur jetable htb lab attack box" },
+  { name: "TryHackMe AttackBox", url: "https://tryhackme.com/", cat: "infra", platforms: ["web"], phases: ["support"],
+    desc: "VM Kali dans le navigateur, lancée pour les salles TryHackMe — rien à installer.", tags: "attackbox kali navigateur jetable thm lab attack box" },
+  { name: "Google Cloud Shell", url: "https://cloud.google.com/shell", cat: "infra", platforms: ["web"], phases: ["support"],
+    desc: "Terminal Linux éphémère et gratuit (installation ponctuelle de nmap possible). IP Google — respecter strictement les CGU.", tags: "cloud shell google terminal ephemere sandbox gratuit" },
+  { name: "GitHub Codespaces", url: "https://github.com/features/codespaces", cat: "infra", platforms: ["web"], phases: ["support"],
+    desc: "Conteneur Linux jetable dans le navigateur ; apt install d'outils pour un besoin ponctuel (alternative : Gitpod).", tags: "codespaces github gitpod conteneur devcontainer sandbox ephemere" },
+  { name: "Pentest-Tools.com", url: "https://pentest-tools.com/", cat: "infra", platforms: ["web"], phases: ["recon"], star: true,
+    desc: "Scanners hébergés (nmap, découverte réseau, vulnérabilités) lancés depuis leur infrastructure — aucun paquet depuis ton IP.", tags: "scanner heberge nmap ligne saas externe recon vulnerabilite" },
+  { name: "HackerTarget", url: "https://hackertarget.com/", cat: "infra", platforms: ["web"], phases: ["recon"],
+    desc: "Nmap et outils de reconnaissance en ligne, lancés depuis leurs serveurs (quota gratuit limité).", tags: "nmap en ligne recon heberge gratuit externe" }
 ];
 
 /* ------------------------------------------------- CHEATS (cas d'usage) ---
