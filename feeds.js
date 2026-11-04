@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-03T19:32:04+00:00",
+ "updated": "2026-11-04T06:34:35+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -133,6 +133,19 @@ window.ARSENAL_FEEDS = {
    "cvss": null,
    "sev": null,
    "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog",
+   "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-119977 WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability This type o…",
+   "date": "2026-11-03T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "web"
+   ]
   },
   {
    "source": "The Hacker News",
@@ -446,9 +459,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Hitachi Energy CoreTec Product",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-03",
-   "summary": "View CSAF Summary Hitachi Energy is aware of OS command injection and Dirty Frag vulnerabilities that affect CoreTec product versions listed in this document. Successful exploitation of these vulnerabilities could result in impact on confid…",
+   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-97229 GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound vulnerabil…",
    "date": "2026-10-29T12:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -479,9 +492,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-   "link": "https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-97229 GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound vulnerabil…",
+   "title": "Hitachi Energy CoreTec Product",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-03",
+   "summary": "View CSAF Summary Hitachi Energy is aware of OS command injection and Dirty Frag vulnerabilities that affect CoreTec product versions listed in this document. Successful exploitation of these vulnerabilities could result in impact on confid…",
    "date": "2026-10-29T12:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -532,7 +545,7 @@ window.ARSENAL_FEEDS = {
    "kind": "cve",
    "title": "CVE-2026-118337",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-118337",
-   "summary": "Improper access control in Forms in Google Chrome prior to 156.0.8078.73 allowed a remote attacker to bypass web origin policy via a crafted HTML page. (Chromium security severity: High)",
+   "summary": "Use after free in Forms in Google Chrome prior to 156.0.8078.73 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
    "date": "2026-10-27T23:17:02.067000+00:00",
    "cvss": 9.3,
    "sev": "crit",
@@ -545,7 +558,7 @@ window.ARSENAL_FEEDS = {
    "kind": "cve",
    "title": "CVE-2026-118333",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-118333",
-   "summary": "Missing authorization in Video in Google Chrome prior to 156.0.8078.73 allowed a remote attacker to bypass web origin policy via a crafted HTML page. (Chromium security severity: High)",
+   "summary": "Buffer overflow in Video in Google Chrome prior to 156.0.8078.73 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
    "date": "2026-10-27T23:17:01.580000+00:00",
    "cvss": 9.3,
    "sev": "crit",
@@ -562,17 +575,6 @@ window.ARSENAL_FEEDS = {
    "date": "2026-10-27T20:17:12.997000+00:00",
    "cvss": 9.8,
    "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
-   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-   "link": "https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-48356 Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability…",
-   "date": "2026-10-27T12:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
    "platforms": []
   },
   {
@@ -595,6 +597,17 @@ window.ARSENAL_FEEDS = {
    "date": "2026-10-27T12:00:00+00:00",
    "cvss": null,
    "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-48356 Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability…",
+   "date": "2026-10-27T12:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
    "platforms": []
   },
   {
@@ -764,23 +777,12 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Siemens RUGGEDCOM CROSSBOW",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12",
-   "summary": "View CSAF Summary RUGGEDCOM CROSSBOW contains multiple vulnerabilities that could allow an attacker to execute arbitrary SQL commands on the underlying database, retrieve sensitive administrative credentials, escalate privileges, and perfor…",
+   "title": "Siemens WinCC",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-13",
+   "summary": "View CSAF Summary Multiple SIMATIC WinCC versions are affected by a database privilege escalation vulnerability that could allow an authenticated user with access to the database to execute commands on the underlying host system. Siemens ha…",
    "date": "2026-10-22T12:00:00+00:00",
    "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
-   "title": "Siemens RUGGEDCOM APE1808 Devices",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18",
-   "summary": "View CSAF Summary Nozomi Networks has published information on vulnerabilities in Nozomi Guardian/CMC. This advisory lists the related Siemens Industrial products affected by these vulnerabilities. Siemens recommends to contact customer sup…",
-   "date": "2026-10-22T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
+   "sev": "high",
    "platforms": []
   },
   {
