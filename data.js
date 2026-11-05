@@ -242,6 +242,18 @@ const TOOLS = [
   { name: "Metasploit Unleashed", url: "https://www.offsec.com/metasploit-unleashed/", cat: "exploit", platforms: ["web"], phases: ["exploit"],
     desc: "Cours gratuit de référence pour maîtriser Metasploit de bout en bout.", tags: "cours metasploit apprentissage offsec" },
 
+  /* ----- Évasion AV / EDR (obfuscation de payloads) ----- */
+  { name: "Invoke-Obfuscation", url: "https://github.com/danielbohannon/Invoke-Obfuscation", cat: "exploit", platforms: ["windows"], phases: ["post"],
+    desc: "Obfuscateur de scripts PowerShell (tokenisation, encodage, réordonnancement) pour échapper à la détection par signature et AMSI.", tags: "powershell obfuscation amsi evasion av bypass detection" },
+  { name: "Veil", url: "https://github.com/Veil-Framework/Veil", cat: "exploit", platforms: ["linux"], phases: ["exploit"],
+    desc: "Génère des payloads (Meterpreter…) encodés/obfusqués pour contourner les antivirus classiques basés sur signatures.", tags: "payload evasion antivirus av bypass meterpreter generateur obfuscation" },
+  { name: "Shellter", url: "https://www.shellterproject.com/", cat: "exploit", platforms: ["windows"], phases: ["exploit"],
+    desc: "Injecteur dynamique de shellcode dans des exécutables Windows légitimes, pour l'évasion antivirus.", tags: "shellcode injection pe exe evasion av antivirus obfuscation" },
+  { name: "Donut", url: "https://github.com/TheWover/donut", cat: "exploit", platforms: ["multi"], phases: ["exploit","post"],
+    desc: "Génère du shellcode position-independent à partir de .NET/EXE/DLL pour une exécution en mémoire (évasion disque).", tags: "shellcode donut dotnet in-memory memoire evasion payload position-independent" },
+  { name: "ScareCrow", url: "https://github.com/optiv/ScareCrow", cat: "exploit", platforms: ["linux"], phases: ["exploit"],
+    desc: "Génère des loaders furtifs (évasion EDR : unhooking, syscalls directs) à partir de shellcode.", tags: "edr evasion loader unhook syscall shellcode bypass obfuscation" },
+
   /* ===== Mots de passe & cracking ===== */
   { name: "Hydra", url: "https://github.com/vanhauser-thc/thc-hydra", cat: "crack", platforms: ["multi"], phases: ["exploit"], star: true,
     desc: "Bruteforce d'authentification en ligne (SSH, FTP, HTTP, RDP, SMB…).", cmd: "hydra -l user -P rockyou.txt ssh://<ip>", tags: "bruteforce en ligne ssh ftp http login password" },
@@ -753,6 +765,16 @@ const CHEATS = [
       { tool: "Nuclei", cmd: "nuclei -u http://<ip> -tags cors,redirect" }
     ],
     note: "CORS permissif + credentials = vol de données. CRLF (%0d%0a) → injection d'en-têtes. Open redirect → chaînage SSRF / phishing / vol de token OAuth." },
+
+  { icon: "🥷", title: "Mon payload est bloqué → contourner un filtre / WAF",
+    phase: "exploit",
+    steps: [
+      { tool: "wafw00f", cmd: "wafw00f http://<ip>   # identifier le WAF avant de l'attaquer" },
+      { tool: "CyberChef", cmd: "Fabriquer la charge : URL / double-URL, Unicode, hex, base64, UTF-8 overlong" },
+      { tool: "Burp Suite", cmd: "Intruder : fuzzer les variantes d'encodage / de casse d'un payload bloqué" },
+      { tool: "PayloadsAllTheThings", cmd: "Dossiers « WAF Bypass » par type de faille (SQLi, XSS, RCE…)" }
+    ],
+    note: "Leviers de manipulation : encodage URL/double/Unicode, variation de casse, commentaires SQL /**/, concaténation, null-byte (%00), séparateurs alternatifs, représentation d'IP (décimal/hex/octal/IPv6). Identifier le WAF d'abord, puis adapter. Cible autorisée uniquement." },
 
   { icon: "🎯", title: "J'ai une version de service précise",
     phase: "vuln",
