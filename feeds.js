@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-04T19:50:00+00:00",
+ "updated": "2026-11-05T06:55:52+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -57,6 +57,32 @@ window.ARSENAL_FEEDS = {
   {
    "source": "The Hacker News",
    "kind": "news",
+   "title": "Hackers Exploit Patched Apple Flaw to Deliver Info-Stealing Malware, CISA Says",
+   "link": "https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html",
+   "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a medium-severity security flaw impacting multiple Apple operating systems to its Known Exploited Vulnerabilities (KEV) catalog, following reports of active…",
+   "date": "2026-11-05T05:17:04+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "macos"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run",
+   "link": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html",
+   "summary": "OpenAI on Wednesday detailed a pipeline that employed an upcoming cyber-focused artificial intelligence (AI) model to validate and patch 948 local privilege escalation vulnerabilities in Linux for $1.2 million in API costs. \"Our prototype i…",
+   "date": "2026-11-05T04:31:16+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "linux"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
    "title": "Debian and Ubuntu APT Flaw Lets MitM Attackers Swap Verified Packages and Run Code as Root",
    "link": "https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html",
    "summary": "A flaw in APT, the package manager for Debian and Ubuntu, allows an attacker who can modify package downloads to swap a checked package for their own. The attacker's code then runs as root, according to advisories that Debian, Ubuntu, and A…",
@@ -96,7 +122,7 @@ window.ARSENAL_FEEDS = {
    "kind": "news",
    "title": "APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits",
    "link": "https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html",
-   "summary": "The Russia-linked threat actor known as APT29 is said to be behind a large-scale watering hole campaign targeting iOS and Android users through compromised websites, fake domains, and a supply chain attack involving a Ukrainian web analytic…",
+   "summary": "The Russia-linked threat actor known as APT29 is presumed to be behind a large-scale watering hole campaign targeting iOS and Android users through compromised websites, fake domains, and a supply chain attack involving a Ukrainian web anal…",
    "date": "2026-11-04T14:27:52+00:00",
    "cvss": null,
    "sev": null,
@@ -377,30 +403,6 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Binance Reveals How Fake Job Interviews and AI Tool Abuse Led to $6.43 Billion Theft",
-   "link": "https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html",
-   "summary": "Binance on Tuesday said the record-setting theft of $6.43 billion in assets from the world's largest cryptocurrency exchange was the culmination of a \"sophisticated, multi-stage campaign\" that involved the use of a tampered Homebrew install…",
-   "date": "2026-11-03T16:55:58+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "windows"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access",
-   "link": "https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html",
-   "summary": "Barracuda has disclosed details of two vulnerabilities affecting its products that, if chained together, could allow an attacker to bypass authorization controls and gain root access to a susceptible device. The vulnerabilities, a pre-authe…",
-   "date": "2026-11-03T15:59:19+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": []
-  },
-  {
    "source": "CERT-FR · Avis",
    "kind": "avis",
    "title": "Multiples vulnérabilités dans Google Android (03 novembre 2026)",
@@ -422,6 +424,42 @@ window.ARSENAL_FEEDS = {
    "date": "2026-11-02T00:00:00+00:00",
    "cvss": null,
    "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-64618",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-64618",
+   "summary": "Improper Neutralization of Special Elements used in an SQL Command (\"SQL Injection\") vulnerability exists in Apache Fineract (through version 1.15.0). The vulnerability affects the outStandingAmountPercentageCondition parameter of the /fine…",
+   "date": "2026-10-30T09:17:15.337000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": [
+    "linux",
+    "web"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-18894",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-18894",
+   "summary": "IBM Langflow OSS 1.0.0 through 1.12.4 could allow a remote attacker to trigger pre-existing stored Python component code in a public workflow, executing it under the flow owner's runtime context within the server process. This bypasses the…",
+   "date": "2026-10-29T16:18:08.427000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-104317",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-104317",
+   "summary": "IBM Langflow OSS 1.0.0 through 1.12.3 could allow a remote attacker who could reach the message broker to execute arbitrary code on the system due to the deserialization of untrusted data.",
+   "date": "2026-10-29T16:17:43.907000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
    "platforms": []
   },
   {
@@ -518,6 +556,20 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-112470",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-112470",
+   "summary": "An out-of-bounds write issue was addressed with improved bounds checking. This issue is fixed in iOS 26.7.2 and iPadOS 26.7.2, iOS 27.2 and iPadOS 27.2, macOS Golden Gate 27.2, macOS Sequoia 15.8.2, macOS Tahoe 26.7.2, tvOS 27.2, visionOS 2…",
+   "date": "2026-10-26T21:17:37.197000+00:00",
+   "cvss": 7.8,
+   "sev": "high",
+   "platforms": [
+    "macos",
+    "ios"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-112430",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-112430",
    "summary": "An authentication issue was addressed with improved validation of user attributes. This issue is fixed in macOS Golden Gate 27.2, macOS Sequoia 15.8.2, macOS Tahoe 26.7.2. An app may be able to gain root privileges.",
@@ -557,50 +609,6 @@ window.ARSENAL_FEEDS = {
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115912",
    "summary": "vLLM is an inference and serving engine for large language models. Prior to 0.32.0, an authenticated caller can place forged shared-memory address and monotonic_id values in public multimodal features.kwargs_data. In scale-out deployments w…",
    "date": "2026-10-26T17:17:18.910000+00:00",
-   "cvss": 8.8,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-112346",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-112346",
-   "summary": "OpenHands Software Agent SDK before 1.52.0 contains an unauthenticated remote code execution vulnerability where the DockerWorkspace and Apptainer workspace launchers bind the sandbox agent server to all network interfaces (0.0.0.0) with an…",
-   "date": "2026-10-26T16:17:14.110000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-116214",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116214",
-   "summary": "MacCMS v10 before 2026.1000.4054 contains an authentication bypass vulnerability that allows unauthenticated attackers to reset any member's password because check_msg() never compares msg_to. Attackers can request a recovery code to their…",
-   "date": "2026-10-26T14:16:34.173000+00:00",
-   "cvss": 9.3,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-116111",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116111",
-   "summary": "A vulnerability was determined in 2K Games Civilization V 1.0.3.144. Impacted is the function loadstring of the component Lua Sandbox. Executing a manipulation can lead to type confusion. The attack may be performed from remote. The exploit…",
-   "date": "2026-10-26T03:17:11.603000+00:00",
-   "cvss": 9.6,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-116099",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116099",
-   "summary": "A flaw has been found in Fusion Creators Studio SCP Containment Breach Multiplayer up to 1.295. This issue affects the function BlitzBanks of the component Skynet++ Virtual Machine. Executing a manipulation can lead to out-of-bounds write.…",
-   "date": "2026-10-26T00:17:14.613000+00:00",
    "cvss": 8.8,
    "sev": "high",
    "platforms": []
