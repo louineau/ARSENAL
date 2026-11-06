@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-05T20:02:00+00:00",
+ "updated": "2026-11-06T06:55:51+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -27,9 +27,8 @@ window.ARSENAL_FEEDS = {
    "name": "CISA · Advisories",
    "kind": "cve",
    "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
-   "ok": false,
-   "count": 0,
-   "error": "HTTP Error 403: Forbidden"
+   "ok": true,
+   "count": 15
   },
   {
    "name": "Exploit-DB",
@@ -54,6 +53,30 @@ window.ARSENAL_FEEDS = {
   }
  ],
  "items": [
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "OpenSSH Issues Emergency Fix for Flaw Letting Long Passwords Bypass SSH Auth on Alpine Linux",
+   "link": "https://thehackernews.com/2026/11/openssh-issues-emergency-fix-for-flaw.html",
+   "summary": "Attackers can log in to accounts that have no password, such as SSH key-only accounts, on some Alpine Linux servers running the standard openssh-server package. They need network access to the server, an account name, and a password between…",
+   "date": "2026-11-05T16:42:46+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "linux"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Researchers Bypass ChatGPT Lockdown Mode to Exfiltrate Chats Without User Interaction",
+   "link": "https://thehackernews.com/2026/11/researchers-bypass-chatgpt-lockdown.html",
+   "summary": "Cybersecurity researchers have disclosed details of a now-patched vulnerability that could be exploited to bypass Lockdown Mode protections in OpenAI ChatGPT. Lockdown Mode was introduced by the artificial intelligence (AI) company in June…",
+   "date": "2026-11-05T16:42:32+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
   {
    "source": "The Hacker News",
    "kind": "news",
@@ -90,6 +113,28 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "linux"
    ]
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "Post-Quantum Questions to Ask Your Vendors",
+   "link": "https://www.cisa.gov/resources-tools/resources/post-quantum-questions-ask-your-vendors",
+   "summary": "CISA, the Australian Signals Directorate’s Australian Cyber Security Centre (ASD’s ACSC) and the National Security Agency (NSA) released joint guidance and an accompanying quick-reference list to help organizations assess vendor readiness f…",
+   "date": "2026-11-05T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "US Government Partners Urge Hardening Industrial Refrigeration and Cold Chain Monitoring Systems",
+   "link": "https://www.cisa.gov/resources-tools/resources/us-government-partners-urge-hardening-industrial-refrigeration-and-cold-chain-monitoring-systems",
+   "summary": "Overview The Cybersecurity and Infrastructure Security Agency (CISA), Federal Bureau of Investigation (FBI), Health and Human Services (HHS), U.S. Department of Agriculture (USDA), and the Department of Transportation (DoT)—hereafter referr…",
+   "date": "2026-11-05T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
   },
   {
    "source": "The Hacker News",
@@ -310,28 +355,17 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Xen Hypervisor Flaws Let One Malicious VM Read and Write Any Other VM's Memory",
-   "link": "https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html",
-   "summary": "Two flaws in the Xen hypervisor allow a malicious guest virtual machine (VM) to read and write the memory of other VMs on the same host, including dom0. Dom0 is the VM that, by default, has full permissions and manages the others. Patches a…",
-   "date": "2026-11-04T11:46:27+00:00",
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/11/04/cisa-adds-one-known-exploited-vulnerability-catalog",
+   "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2024-27834 Apple Multiple Products Improper Authentication Vulnerability This type of vulnerability is…",
+   "date": "2026-11-04T12:00:00+00:00",
    "cvss": null,
    "sev": null,
    "platforms": [
-    "vmware"
+    "macos"
    ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Radio With No Radar: Why Agent Runtime Security Fails Without the Layers Beneath It",
-   "link": "https://thehackernews.com/2026/11/radio-with-no-radar-why-agent-runtime.html",
-   "summary": "Nearly every agent security pitch now ends on the same promise: the product stops the bad action in real time. The promise holds for one kind of agent, the kind whose traffic passes through a gateway the enterprise owns. Most agents never t…",
-   "date": "2026-11-04T11:34:20+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
   },
   {
    "source": "CERT-FR · Avis",
@@ -430,6 +464,30 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog",
+   "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-119977 WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability This type o…",
+   "date": "2026-11-03T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "Subnet Solutions PowerSYSTEM Center",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-307-01",
+   "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to execute unauthorized SQL commands and gain access to unauthorized resources. The following versions of Subnet Solutions PowerSYSTEM Center are aff…",
+   "date": "2026-11-03T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
    "source": "CERT-FR · Actualités",
    "kind": "actu",
    "title": "Bulletin d'actualité CERTFR-2026-ACT-046 (02 novembre 2026)",
@@ -443,10 +501,34 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-119660",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-119660",
-   "summary": "MuseBot before 2.0.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge admin sessions by using the hard-coded default session_key 'muse_bot_session_key'. Attackers can sign a MuseBot-session cook…",
-   "date": "2026-10-30T15:16:50.197000+00:00",
+   "title": "CVE-2026-116244",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116244",
+   "summary": "When a pgAdmin 4 connection was not meant to use a Kerberos user's delegated credentials, pgAdmin removed KRB5CCNAME from its environment, so the Kerberos library fell back to the default credential cache, or a client keytab, of the operati…",
+   "date": "2026-10-30T20:17:04.327000+00:00",
+   "cvss": 9.6,
+   "sev": "crit",
+   "platforms": [
+    "windows"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-116242",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-116242",
+   "summary": "pgAdmin 4 opens SSH tunnels with the sshtunnel library but gave it neither host_pkey_directories nor ssh_config_file, so it always loaded the unencrypted private keys in ~/.ssh of the operating-system account running pgAdmin, read that acco…",
+   "date": "2026-10-30T20:17:03.983000+00:00",
+   "cvss": 9.6,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-119716",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-119716",
+   "summary": "pybars3 through 0.9.7 and pybars4 through 0.9.13 contain a code injection vulnerability in pybars/_compiler.py that allows template authors to execute Python code via unescaped bracketed path segments. Attackers can supply Handlebars templa…",
+   "date": "2026-10-30T16:17:55.013000+00:00",
    "cvss": 9.8,
    "sev": "crit",
    "platforms": []
@@ -454,13 +536,26 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-119597",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-119597",
-   "summary": "OpenDeepWiki through 2.0.6 contains a hard-coded JWT signing key vulnerability that allows unauthenticated attackers to forge administrator tokens using the publicly known Jwt:SecretKey in appsettings.json. Attackers can mint HS256 bearer t…",
-   "date": "2026-10-30T14:16:47.770000+00:00",
+   "title": "CVE-2026-119706",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-119706",
+   "summary": "InternLM LMDeploy 0.9.0 through 0.18.0 contains an unauthenticated remote code execution vulnerability that allows remote attackers to run OS commands by sending pickled data to the /update_weights endpoint. Attackers can submit a base64-en…",
+   "date": "2026-10-30T16:17:51.673000+00:00",
    "cvss": 9.8,
    "sev": "crit",
    "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-111357 Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability CVE-202…",
+   "date": "2026-10-30T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "réseau"
+   ]
   },
   {
    "source": "NVD · CVE notés CVSS",
@@ -499,6 +594,83 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "Hitachi Energy CoreTec Product",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-03",
+   "summary": "View CSAF Summary Hitachi Energy is aware of OS command injection and Dirty Frag vulnerabilities that affect CoreTec product versions listed in this document. Successful exploitation of these vulnerabilities could result in impact on confid…",
+   "date": "2026-10-29T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-97229 GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound vulnerabil…",
+   "date": "2026-10-29T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "Siemens Mendix SAML Module",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-01",
+   "summary": "View CSAF Summary Mendix SAML module contains an authentication bypass vulnerability that could allow an unauthenticated remote attacker to gain unauthorized access by replaying a valid SAML assertion in IdP-initiated authentication flows.…",
+   "date": "2026-10-29T12:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "Hitachi Energy TRO600 series products",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02",
+   "summary": "View CSAF Summary Hitachi Energy is aware of multiple vulnerabilities that affect the TRO600 series product versions listed in this document. These vulnerabilities can be exploited for remote code execution (RCE) to carry out further attack…",
+   "date": "2026-10-29T12:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-117616",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-117616",
+   "summary": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier provides an HTTP endpoint that loads agents by name without validating the name, allowing attackers with Overall/Read permission to load any config.xml file on the controller file system as…",
+   "date": "2026-10-28T17:18:20.937000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-117614",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-117614",
+   "summary": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier converts the launch commands in older agent configurations into launchers provided by the Command Agent Launcher Plugin without checking whether they have been approved by an administrator,…",
+   "date": "2026-10-28T17:18:20.737000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-117612",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-117612",
+   "summary": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier does not apply its deserialization filter to classes referenced by the `resolves-to` attribute during XStream deserialization.",
+   "date": "2026-10-28T17:18:20.533000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
+   "platforms": []
+  },
+  {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
    "title": "CVE-2026-103409",
@@ -522,6 +694,20 @@ window.ARSENAL_FEEDS = {
    "sev": "crit",
    "platforms": [
     "réseau"
+   ]
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/10/28/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-41709 Broadcom VMWare ESX Insufficient Logging Vulnerability CVE-2026-46300 Linux Kernel Missin…",
+   "date": "2026-10-28T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "linux",
+    "vmware"
    ]
   },
   {
@@ -562,71 +748,49 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "NVD · CVE notés CVSS",
+   "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "CVE-2026-113897",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-113897",
-   "summary": "This issue was addressed by removing the vulnerable code. This issue is fixed in Safari 27.2, iOS 27.2 and iPadOS 27.2, macOS Golden Gate 27.2, visionOS 27.2. A remote attacker may be able to break out of Web Content sandbox.",
-   "date": "2026-10-26T21:18:06.440000+00:00",
-   "cvss": 10.0,
-   "sev": "crit",
-   "platforms": [
-    "macos",
-    "ios"
-   ]
+   "title": "Mitsubishi Electric and Mitsubishi Electric Iconics Digital Solutions GENESIS, GENESIS64, ICONICS Suite, Hyper Historian, AnalytiX, MobileHMI, IoTWorX, MC Works64, GENESIS32 and Bi…",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02",
+   "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to execute arbitrary code (CVE-2023-4863), bypass authentication (CVE-2026-16436 and CVE-2026-16437), or perform arbitrary operations (CVE-2026-16438…",
+   "date": "2026-10-27T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
   },
   {
-   "source": "NVD · CVE notés CVSS",
+   "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "CVE-2026-112690",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-112690",
-   "summary": "This issue was addressed with improved input validation. This issue is fixed in iOS 26.7.2 and iPadOS 26.7.2, iOS 27.2 and iPadOS 27.2, macOS Golden Gate 27.2, macOS Sequoia 15.8.2, macOS Tahoe 26.7.2, visionOS 27.2. A remote attacker may b…",
-   "date": "2026-10-26T21:18:03.507000+00:00",
-   "cvss": 10.0,
-   "sev": "crit",
-   "platforms": [
-    "macos",
-    "ios"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-112485",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-112485",
-   "summary": "The issue was addressed with improved memory handling. This issue is fixed in iOS 27.2 and iPadOS 27.2, macOS Golden Gate 27.2, macOS Sequoia 15.8.2, macOS Tahoe 26.7.2, tvOS 27.2, visionOS 27.2. Processing a maliciously crafted 3D model ma…",
-   "date": "2026-10-26T21:17:39.440000+00:00",
-   "cvss": 7.8,
+   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-48356 Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability…",
+   "date": "2026-10-27T12:00:00+00:00",
+   "cvss": null,
    "sev": "high",
-   "platforms": [
-    "macos",
-    "ios"
-   ]
+   "platforms": []
   },
   {
-   "source": "NVD · CVE notés CVSS",
+   "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "CVE-2026-112482",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-112482",
-   "summary": "An out-of-bounds write issue was addressed with improved bounds checking. This issue is fixed in macOS Golden Gate 27.2, macOS Sequoia 15.8.2, macOS Tahoe 26.7.2. An attacker on the local network may be able to corrupt process memory.",
-   "date": "2026-10-26T21:17:38.947000+00:00",
-   "cvss": 8.1,
-   "sev": "high",
-   "platforms": [
-    "macos"
-   ]
+   "title": "EPICS Base",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01",
+   "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to cause a denial-of-service condition, corrupt memory, disclose sensitive information, or potentially execute arbitrary code. The following versions…",
+   "date": "2026-10-27T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
   },
   {
-   "source": "NVD · CVE notés CVSS",
+   "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "CVE-2026-112430",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-112430",
-   "summary": "An authentication issue was addressed with improved validation of user attributes. This issue is fixed in macOS Golden Gate 27.2, macOS Sequoia 15.8.2, macOS Tahoe 26.7.2. An app may be able to gain root privileges.",
-   "date": "2026-10-26T21:17:32.953000+00:00",
-   "cvss": 8.4,
-   "sev": "high",
+   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog and updated the PHP Alert, Critical Vulnerabilities in PHP Require Immediate Patching : CVE-2026-109618 – PHP Memory Corruption Vulnerability CVE-20…",
+   "date": "2026-10-26T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
    "platforms": [
-    "macos"
+    "web"
    ]
   },
   {
