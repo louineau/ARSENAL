@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-06T19:28:26+00:00",
+ "updated": "2026-11-07T06:06:20+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -117,6 +117,19 @@ window.ARSENAL_FEEDS = {
    "sev": null,
    "platforms": [
     "web"
+   ]
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/11/06/cisa-adds-one-known-exploited-vulnerability-catalog",
+   "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-19868 SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability This type of vul…",
+   "date": "2026-11-06T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "réseau"
    ]
   },
   {
@@ -375,9 +388,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Post-Quantum Questions to Ask Your Vendors",
-   "link": "https://www.cisa.gov/resources-tools/resources/post-quantum-questions-ask-your-vendors",
-   "summary": "CISA, the Australian Signals Directorate’s Australian Cyber Security Centre (ASD’s ACSC) and the National Security Agency (NSA) released joint guidance and an accompanying quick-reference list to help organizations assess vendor readiness f…",
+   "title": "US Government Partners Urge Hardening Industrial Refrigeration and Cold Chain Monitoring Systems",
+   "link": "https://www.cisa.gov/resources-tools/resources/us-government-partners-urge-hardening-industrial-refrigeration-and-cold-chain-monitoring-systems",
+   "summary": "Overview The Cybersecurity and Infrastructure Security Agency (CISA), Federal Bureau of Investigation (FBI), Health and Human Services (HHS), U.S. Department of Agriculture (USDA), and the Department of Transportation (DoT)—hereafter referr…",
    "date": "2026-11-05T12:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -386,9 +399,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "US Government Partners Urge Hardening Industrial Refrigeration and Cold Chain Monitoring Systems",
-   "link": "https://www.cisa.gov/resources-tools/resources/us-government-partners-urge-hardening-industrial-refrigeration-and-cold-chain-monitoring-systems",
-   "summary": "Overview The Cybersecurity and Infrastructure Security Agency (CISA), Federal Bureau of Investigation (FBI), Health and Human Services (HHS), U.S. Department of Agriculture (USDA), and the Department of Transportation (DoT)—hereafter referr…",
+   "title": "Post-Quantum Questions to Ask Your Vendors",
+   "link": "https://www.cisa.gov/resources-tools/resources/post-quantum-questions-ask-your-vendors",
+   "summary": "CISA, the Australian Signals Directorate’s Australian Cyber Security Centre (ASD’s ACSC) and the National Security Agency (NSA) released joint guidance and an accompanying quick-reference list to help organizations assess vendor readiness f…",
    "date": "2026-11-05T12:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -465,6 +478,39 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-121606",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-121606",
+   "summary": "A vulnerability has been found in Qihoo 360 D621-2, D603-2, D600-2, D619, D606-6 and D706 up to 6.4.9. Affected by this issue is the function verify_sign of the file fs2/bin/iscm of the component Firmware Signature Verification. Such manipu…",
+   "date": "2026-11-04T01:17:23.880000+00:00",
+   "cvss": 10.0,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-121600",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-121600",
+   "summary": "A flaw has been found in TOTOLINK A950RG 4.1.2cu.5268_B20221104. Affected by this vulnerability is the function setMacFilterRules of the file /cgi-bin/cstecgi.cgi of the component MAC Filter Handler. This manipulation of the argument addEff…",
+   "date": "2026-11-04T01:17:23.647000+00:00",
+   "cvss": 9.9,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-121597",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-121597",
+   "summary": "A weakness has been identified in TOTOLINK A950RG 4.1.2cu.5268_B20221104. This affects the function setAppEasyWizardConfig of the file /cgi-bin/cstecgi.cgi of the component Easy Setup Wizard Handler. Executing a manipulation of the argument…",
+   "date": "2026-11-04T00:17:27.410000+00:00",
+   "cvss": 9.9,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
@@ -491,13 +537,15 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-120281",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-120281",
-   "summary": "A vulnerability was found in WAVLINK WN536AX6-A V260507. This affects the function strcpy of the file /protocol.csp of the component OpenVPN Handler. The manipulation of the argument openvpn_ip results in stack-based buffer overflow. The at…",
-   "date": "2026-11-02T01:17:27.070000+00:00",
-   "cvss": 10.0,
+   "title": "CVE-2026-86596",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-86596",
+   "summary": "The s2Member plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, <= 260927 via the 'item_name' parameter parameter. This is due to insufficient sanitization in strip_php_tags_deep(), which only…",
+   "date": "2026-11-02T22:17:23.490000+00:00",
+   "cvss": 9.8,
    "sev": "crit",
-   "platforms": []
+   "platforms": [
+    "web"
+   ]
   },
   {
    "source": "CERT-FR · Actualités",
@@ -617,6 +665,17 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-103092",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-103092",
+   "summary": "IBM Langflow OSS 1.0.0 through 1.12.3 could allow a remote authenticated attacker to execute arbitrary SQL commands due to improper access control.",
+   "date": "2026-10-29T16:17:41.547000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
+   "platforms": []
+  },
+  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "Hitachi Energy CoreTec Product",
@@ -683,17 +742,6 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-117616",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-117616",
-   "summary": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier provides an HTTP endpoint that loads agents by name without validating the name, allowing attackers with Overall/Read permission to load any config.xml file on the controller file system as…",
-   "date": "2026-10-28T17:18:20.937000+00:00",
-   "cvss": 8.8,
-   "sev": "high",
-   "platforms": []
-  },
-  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
@@ -706,43 +754,6 @@ window.ARSENAL_FEEDS = {
     "linux",
     "vmware"
    ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-118337",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-118337",
-   "summary": "Use after free in Forms in Google Chrome prior to 156.0.8078.73 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-   "date": "2026-10-27T23:17:02.067000+00:00",
-   "cvss": 9.3,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-118333",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-118333",
-   "summary": "Buffer overflow in Video in Google Chrome prior to 156.0.8078.73 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)",
-   "date": "2026-10-27T23:17:01.580000+00:00",
-   "cvss": 9.3,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-112352",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-112352",
-   "summary": "Sunhillo SureLine before 9.1.5 contains an authentication bypass vulnerability that allows an unauthenticated remote attacker to impersonate any user with an active web session by forging a session cookie containing only a cleartext usernam…",
-   "date": "2026-10-27T20:17:12.997000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
   },
   {
    "source": "CISA · Advisories",
@@ -776,19 +787,6 @@ window.ARSENAL_FEEDS = {
    "cvss": null,
    "sev": null,
    "platforms": []
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
-   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-   "link": "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog and updated the PHP Alert, Critical Vulnerabilities in PHP Require Immediate Patching : CVE-2026-109618 – PHP Memory Corruption Vulnerability CVE-20…",
-   "date": "2026-10-26T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "web"
-   ]
   },
   {
    "source": "CERT-FR · Actualités",
