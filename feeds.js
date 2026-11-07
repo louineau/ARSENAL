@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-07T13:11:56+00:00",
+ "updated": "2026-11-07T21:55:55+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -656,23 +656,45 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-104317",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-104317",
-   "summary": "IBM Langflow OSS 1.0.0 through 1.12.3 could allow a remote attacker who could reach the message broker to execute arbitrary code on the system due to the deserialization of untrusted data.",
-   "date": "2026-10-29T16:17:43.907000+00:00",
-   "cvss": 9.8,
+   "title": "CVE-2026-107329",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-107329",
+   "summary": "IBM Langflow OSS 1.0.0 through 1.12.4 could allow a remote authenticated attacker to execute arbitrary code due to improper control of code generation.",
+   "date": "2026-10-29T16:17:50.633000+00:00",
+   "cvss": 9.9,
    "sev": "crit",
    "platforms": []
   },
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-103092",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-103092",
-   "summary": "IBM Langflow OSS 1.0.0 through 1.12.3 could allow a remote authenticated attacker to execute arbitrary SQL commands due to improper access control.",
-   "date": "2026-10-29T16:17:41.547000+00:00",
-   "cvss": 8.8,
-   "sev": "high",
+   "title": "CVE-2026-107328",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-107328",
+   "summary": "IBM Langflow OSS 1.0.0 through 1.12.4 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of code in eval/exec.",
+   "date": "2026-10-29T16:17:50.480000+00:00",
+   "cvss": 9.9,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-107327",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-107327",
+   "summary": "IBM Langflow OSS 1.0.0 through 1.12.4 could allow a remote authenticated attacker to execute arbitrary code due to missing authorization.",
+   "date": "2026-10-29T16:17:50.330000+00:00",
+   "cvss": 9.9,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-104317",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-104317",
+   "summary": "IBM Langflow OSS 1.0.0 through 1.12.3 could allow a remote attacker who could reach the message broker to execute arbitrary code on the system due to the deserialization of untrusted data.",
+   "date": "2026-10-29T16:17:43.907000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
    "platforms": []
   },
   {
@@ -716,28 +738,6 @@ window.ARSENAL_FEEDS = {
    "summary": "View CSAF Summary Hitachi Energy is aware of multiple vulnerabilities that affect the TRO600 series product versions listed in this document. These vulnerabilities can be exploited for remote code execution (RCE) to carry out further attack…",
    "date": "2026-10-29T12:00:00+00:00",
    "cvss": null,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-117624",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-117624",
-   "summary": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier does not consistently enforce the restriction on deserializing objects of types marked as storing their configuration in independent top-level configuration files as nested values, allowing…",
-   "date": "2026-10-28T17:18:21.740000+00:00",
-   "cvss": 8.8,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-117620",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-117620",
-   "summary": "Jenkins 2.587 and earlier, LTS 2.580.1 and earlier allows attackers with Overall/Read permission to trigger warnings in the \"Manage Old Data\" feature that can be acted on by administrators to inject attacker-controlled data, overriding exis…",
-   "date": "2026-10-28T17:18:21.330000+00:00",
-   "cvss": 8.8,
    "sev": "high",
    "platforms": []
   },
