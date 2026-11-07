@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-07T06:06:20+00:00",
+ "updated": "2026-11-07T13:11:56+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -53,6 +53,17 @@ window.ARSENAL_FEEDS = {
   }
  ],
  "items": [
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Claude Code's “Don't Ask Again” File Exposes Passwords and Keys in 1,122 Public Copies on GitHub",
+   "link": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
+   "summary": "Passwords and API keys that developers typed into commands they approved in Claude Code are sitting in public GitHub repositories, where anyone can read them. When a user selects \"Yes, and don't ask again,\" Anthropic's AI coding assistant c…",
+   "date": "2026-11-07T06:44:17+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
   {
    "source": "The Hacker News",
    "kind": "news",
@@ -403,17 +414,6 @@ window.ARSENAL_FEEDS = {
    "link": "https://www.cisa.gov/resources-tools/resources/post-quantum-questions-ask-your-vendors",
    "summary": "CISA, the Australian Signals Directorate’s Australian Cyber Security Centre (ASD’s ACSC) and the National Security Agency (NSA) released joint guidance and an accompanying quick-reference list to help organizations assess vendor readiness f…",
    "date": "2026-11-05T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "5 Active Cyber Threats That Put US Enterprises at Risk in October 2026",
-   "link": "https://thehackernews.com/2026/11/5-active-cyber-threats-that-put-us.html",
-   "summary": "October 2026 brought another wave of cyber threats targeting US businesses, with attackers exploiting trusted platforms, legitimate authentication processes, and everyday business workflows. For enterprises, these campaigns raise the stakes…",
-   "date": "2026-11-05T10:06:19+00:00",
    "cvss": null,
    "sev": null,
    "platforms": []
