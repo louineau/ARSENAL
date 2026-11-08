@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-08T13:32:55+00:00",
+ "updated": "2026-11-08T22:12:36+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -480,6 +480,41 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-121615",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-121615",
+   "summary": "A vulnerability was determined in Linksys E5600 1.1.0.26. Affected is an unknown function of the file /cgi-bin/mesh_login.cgi of the component Login Handler. Executing a manipulation can lead to improper authentication. The attack can be la…",
+   "date": "2026-11-04T03:17:14.810000+00:00",
+   "cvss": 10.0,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-121609",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-121609",
+   "summary": "A vulnerability was identified in Qihoo 360 Whole Home Router M5 4.0.17.1566. This issue affects the function Home of the file /etc/init.d/mpt of the component Boot Script. The manipulation leads to hard-coded credentials. Remote exploitati…",
+   "date": "2026-11-04T02:17:20.243000+00:00",
+   "cvss": 10.0,
+   "sev": "crit",
+   "platforms": [
+    "réseau"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-121607",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-121607",
+   "summary": "A vulnerability was found in Qihoo 360 D603-2, D600-2, D606-6 and D706 up to 6.4.9. This affects the function testspeed_command of the file /fs2/bin/iscm. Performing a manipulation of the argument host results in os command injection. The a…",
+   "date": "2026-11-04T02:17:19.753000+00:00",
+   "cvss": 10.0,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-121606",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-121606",
    "summary": "A vulnerability has been found in Qihoo 360 D621-2, D603-2, D600-2, D619, D606-6 and D706 up to 6.4.9. Affected by this issue is the function verify_sign of the file fs2/bin/iscm of the component Firmware Signature Verification. Such manipu…",
@@ -533,19 +568,6 @@ window.ARSENAL_FEEDS = {
    "cvss": null,
    "sev": null,
    "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-86596",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-86596",
-   "summary": "The s2Member plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, <= 260927 via the 'item_name' parameter parameter. This is due to insufficient sanitization in strip_php_tags_deep(), which only…",
-   "date": "2026-11-02T22:17:23.490000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
   },
   {
    "source": "CERT-FR · Actualités",
@@ -616,6 +638,43 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-119562",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-119562",
+   "summary": "phpMyAdmin through 5.2.3 contains an sql injection vulnerability that allows authenticated users to inject SQL by supplying unescaped col_extra and col_attribute values to /database/central-columns. Attackers can inject SQL into pma__centra…",
+   "date": "2026-10-30T12:16:43.667000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-119427",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-119427",
+   "summary": "phpMyAdmin through 5.2.3 contains an sql injection vulnerability in Designer saveSetting() that allows authenticated users to inject SQL via unescaped json_encode() output. Attackers can send crafted index or value parameters with operation…",
+   "date": "2026-10-30T12:16:39.843000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-119426",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-119426",
+   "summary": "phpMyAdmin through 5.2.3 contains a cross-site request forgery vulnerability that allows remote attackers to execute arbitrary SQL by bypassing CSRF token checks on non-AJAX POST requests. Attackers can lure authenticated victims into submi…",
+   "date": "2026-10-30T12:16:39.683000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
+   "platforms": []
+  },
+  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
@@ -641,61 +700,6 @@ window.ARSENAL_FEEDS = {
     "linux",
     "web"
    ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-18894",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-18894",
-   "summary": "IBM Langflow OSS 1.0.0 through 1.12.4 could allow a remote attacker to trigger pre-existing stored Python component code in a public workflow, executing it under the flow owner's runtime context within the server process. This bypasses the…",
-   "date": "2026-10-29T16:18:08.427000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-107329",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-107329",
-   "summary": "IBM Langflow OSS 1.0.0 through 1.12.4 could allow a remote authenticated attacker to execute arbitrary code due to improper control of code generation.",
-   "date": "2026-10-29T16:17:50.633000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-107328",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-107328",
-   "summary": "IBM Langflow OSS 1.0.0 through 1.12.4 could allow a remote authenticated attacker to execute arbitrary code due to improper neutralization of code in eval/exec.",
-   "date": "2026-10-29T16:17:50.480000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-107327",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-107327",
-   "summary": "IBM Langflow OSS 1.0.0 through 1.12.4 could allow a remote authenticated attacker to execute arbitrary code due to missing authorization.",
-   "date": "2026-10-29T16:17:50.330000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-104317",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-104317",
-   "summary": "IBM Langflow OSS 1.0.0 through 1.12.3 could allow a remote attacker who could reach the message broker to execute arbitrary code on the system due to the deserialization of untrusted data.",
-   "date": "2026-10-29T16:17:43.907000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
   },
   {
    "source": "CISA · Advisories",
