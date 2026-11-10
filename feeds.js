@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-09T22:27:26+00:00",
+ "updated": "2026-11-10T07:25:43+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -53,6 +53,43 @@ window.ARSENAL_FEEDS = {
   }
  ],
  "items": [
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
+   "link": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
+   "summary": "Google on Monday released updates to patch nine security vulnerabilities, including one that has come under active exploitation in the wild. The high-severity vulnerability, assigned the CVE identifier CVE-2026-125350 (CVSS score: N/A), has…",
+   "date": "2026-11-10T06:52:54+00:00",
+   "cvss": null,
+   "sev": "crit",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "N-able Takes N-central Cloud Offline After Researcher Discloses 33 Zero-Days with PoC Exploits",
+   "link": "https://thehackernews.com/2026/11/n-able-takes-hosted-n-central-offline.html",
+   "summary": "N-able said it has taken N-central Hosted Environments offline and is urging on-premises customers to shut down their servers until further notice following the public disclosure of over 30 vulnerabilities collectively tracked as Able2Shell…",
+   "date": "2026-11-10T06:44:36+00:00",
+   "cvss": null,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "CISA Warns of Active Exploitation of OpenSSH, GPUStack, FreeSWITCH, and IBM Flaws",
+   "link": "https://thehackernews.com/2026/11/cisa-warns-of-active-exploitation-of.html",
+   "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added four security flaws impacting GPUStack, SignalWire FreeSwitch, OpenBSD OpenSSH, and IBM Aspera Faspex to its Known Exploited Vulnerabilities (KEV) catalog, cit…",
+   "date": "2026-11-10T06:31:42+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "linux"
+   ]
+  },
   {
    "source": "The Hacker News",
    "kind": "news",
@@ -286,6 +323,32 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-17146",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17146",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary JavaScript and obtain sensitive information due to improper input validation.",
+   "date": "2026-11-07T05:18:27.843000+00:00",
+   "cvss": 9.9,
+   "sev": "crit",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-17134",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17134",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary SQL commands due to SQL injection.",
+   "date": "2026-11-07T05:18:26.630000+00:00",
+   "cvss": 9.9,
+   "sev": "crit",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-17132",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17132",
    "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary SQL commands due to improper neutralization of special elements used in an SQL command.",
@@ -374,17 +437,6 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-123218",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123218",
-   "summary": "IBM Aspera Faspex 5.0.0 through 5.0.19 could allow an authorized user to craft a specific message to bypass user authorization and gain full administrative privileges.",
-   "date": "2026-11-07T04:17:28.900000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
    "title": "CVE-2026-109469",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-109469",
    "summary": "Authorization bypass through user-controlled key in Entra Device Registration allows an unauthorized attacker to elevate privileges over a network.",
@@ -392,59 +444,6 @@ window.ARSENAL_FEEDS = {
    "cvss": 10.0,
    "sev": "crit",
    "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
-   "link": "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html",
-   "summary": "Some WordPress sites can still be attacked while they install the fix for an actively exploited flaw, according to Umut Bayram, the Picus Security researcher who found it. The update that installs the fix still unpacks its files using the s…",
-   "date": "2026-11-06T16:08:38+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
-   "link": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
-   "summary": "Threat actors are attempting to exploit a recently disclosed security flaw impacting OpenSSH that can enable sign-ins to accounts that have no password set, according to Previdian. The vulnerability, tracked as CVE-2026-123158 (CVSS score:…",
-   "date": "2026-11-06T15:21:49+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "linux"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-123488",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123488",
-   "summary": "Craft CMS 4.0.0 before 4.18.9 and 5.0.0 before 5.11.2 contains an unauthenticated SQL injection vulnerability in the element search endpoint because the attribute parameter is concatenated into the query unsanitized and emulated PDO prepare…",
-   "date": "2026-11-06T15:17:18.133000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "OpenAI Launches GPT-6 Cyber After AI Helps Find 81 Firefox Flaws, 948 Linux Exploits",
-   "link": "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html",
-   "summary": "OpenAI on Thursday unveiled GPT‑6 Cyber, which it described as a major step forward in security research that brings together stronger cybersecurity capabilities with a step-change improvement in model alignment. The new model is \"more capa…",
-   "date": "2026-11-06T14:58:32+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "linux",
-    "web"
-   ]
   },
   {
    "source": "CISA · Advisories",
