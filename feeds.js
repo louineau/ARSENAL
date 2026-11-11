@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-10T19:48:38+00:00",
+ "updated": "2026-11-11T06:35:23+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -53,6 +53,30 @@ window.ARSENAL_FEEDS = {
   }
  ],
  "items": [
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
+   "link": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
+   "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) Tuesday added two security flaws impacting Cisco BroadWorks and Openwave Messaging Webtop Media Transcoder to its Known Exploited Vulnerabilities (KEV) catalog, citing evidenc…",
+   "date": "2026-11-11T06:04:02+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "réseau"
+   ]
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] Ruflo MCP Bridge 3.16.2 - Remote Code Execution",
+   "link": "https://www.exploit-db.com/exploits/52705",
+   "summary": "Ruflo MCP Bridge 3.16.2 - Remote Code Execution",
+   "date": "2026-11-11T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
   {
    "source": "The Hacker News",
    "kind": "news",
@@ -145,6 +169,19 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds Six Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/11/10/cisa-adds-six-known-exploited-vulnerabilities-catalog",
+   "summary": "CISA has added six new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-20320 Cisco BroadWorks Improper Restriction of XML External Entity Reference Vulnerability CVE-…",
+   "date": "2026-11-10T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "réseau"
+   ]
+  },
+  {
    "source": "The Hacker News",
    "kind": "news",
    "title": "Beyond the Alert: The Case for Rich Network Data",
@@ -213,19 +250,6 @@ window.ARSENAL_FEEDS = {
    "cvss": null,
    "sev": null,
    "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
-   "link": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
-   "summary": "Google on Monday released updates to patch nine security vulnerabilities, including one that has come under active exploitation in the wild. The high-severity vulnerability, assigned the CVE identifier CVE-2026-125350 (CVSS score: N/A), has…",
-   "date": "2026-11-10T06:52:54+00:00",
-   "cvss": null,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
   },
   {
    "source": "CERT-FR · Avis",
@@ -427,6 +451,50 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-17360",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17360",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to gain full administrative control due to the use of hard-coded credentials.",
+   "date": "2026-11-07T05:18:48.197000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-17344",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17344",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to server-side request forgery. A service that can be reached without authentication could be made to send requests to unintended de…",
+   "date": "2026-11-07T05:18:46.317000+00:00",
+   "cvss": 9.3,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-17329",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17329",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to improper validation of endpoint URLs.",
+   "date": "2026-11-07T05:18:43.273000+00:00",
+   "cvss": 9.3,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-17301",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17301",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow an unauthenticated attacker to bypass authentication due to improper verification of a cryptographic signature.",
+   "date": "2026-11-07T05:18:37.913000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-17291",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17291",
    "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to perform account takeover due to an open redirect vulnerability. The redirect address used during OAuth 2.0 sign-in is no…",
@@ -449,35 +517,11 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-17146",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17146",
-   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary JavaScript and obtain sensitive information due to improper input validation.",
-   "date": "2026-11-07T05:18:27.843000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
    "title": "CVE-2026-17131",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17131",
    "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to server-side request forgery. Restrictions on outbound requests can be bypassed, so the server could be made to contact unintended…",
    "date": "2026-11-07T05:18:26.230000+00:00",
    "cvss": 9.3,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-16920",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-16920",
-   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to bypass security restrictions due to a confused deputy vulnerability.",
-   "date": "2026-11-07T05:18:22.990000+00:00",
-   "cvss": 9.9,
    "sev": "crit",
    "platforms": []
   },
@@ -495,33 +539,11 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-16884",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-16884",
-   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to an XML external entity (XXE) injection.",
-   "date": "2026-11-07T05:18:22.440000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
    "title": "CVE-2026-16720",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-16720",
    "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain valid access tokens for other users due to improper authentication. Authentication against a connected directory service is not…",
    "date": "2026-11-07T05:18:21.883000+00:00",
    "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-109469",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-109469",
-   "summary": "Authorization bypass through user-controlled key in Entra Device Registration allows an unauthorized attacker to elevate privileges over a network.",
-   "date": "2026-11-06T23:17:20.557000+00:00",
-   "cvss": 10.0,
    "sev": "crit",
    "platforms": []
   },
@@ -607,19 +629,6 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-121957",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-121957",
-   "summary": "FreeRDP before 3.32.2 contains a use-after-free vulnerability that allows malicious RDP servers to corrupt client memory by racing the RDPGFX ResetGraphics handler against the planar bitmap decoder. Attackers can send ResetGraphics while co…",
-   "date": "2026-11-04T16:17:48.423000+00:00",
-   "cvss": 8.7,
-   "sev": "high",
-   "platforms": [
-    "windows"
-   ]
-  },
-  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
@@ -670,6 +679,17 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-77878",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-77878",
+   "summary": "Control Web Panel (CWP) before webpanel_version 1.29 contains an OS command injection vulnerability in the loopback API database restore route /v1/restoredatabase/, where the restoreDBBackup() handler passes an attacker-controlled file path…",
+   "date": "2026-11-02T16:17:43.640000+00:00",
+   "cvss": 8.5,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-73696",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-73696",
    "summary": "Control Web Panel (CWP) before webpanel_version 1.12 contains an execution after redirect vulnerability in the user panel authentication flow (CWPUserIndex) that allows unauthenticated attackers to bypass authentication by exploiting a miss…",
@@ -705,23 +725,23 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-   "link": "https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-97229 GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound vulnerabil…",
-   "date": "2026-10-29T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
    "title": "Hitachi Energy TRO600 series products",
    "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02",
    "summary": "View CSAF Summary Hitachi Energy is aware of multiple vulnerabilities that affect the TRO600 series product versions listed in this document. These vulnerabilities can be exploited for remote code execution (RCE) to carry out further attack…",
    "date": "2026-10-29T12:00:00+00:00",
    "cvss": null,
    "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-97229 GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound vulnerabil…",
+   "date": "2026-10-29T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
    "platforms": []
   },
   {
@@ -769,17 +789,6 @@ window.ARSENAL_FEEDS = {
    "date": "2026-10-27T12:00:00+00:00",
    "cvss": null,
    "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
-   "title": "Mitsubishi Electric and Mitsubishi Electric Iconics Digital Solutions GENESIS, GENESIS64, ICONICS Suite, Hyper Historian, AnalytiX, MobileHMI, IoTWorX, MC Works64, GENESIS32 and Bi…",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02",
-   "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to execute arbitrary code (CVE-2023-4863), bypass authentication (CVE-2026-16436 and CVE-2026-16437), or perform arbitrary operations (CVE-2026-16438…",
-   "date": "2026-10-27T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
    "platforms": []
   },
   {
@@ -1020,17 +1029,6 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "web"
    ]
-  },
-  {
-   "source": "Exploit-DB",
-   "kind": "exploit",
-   "title": "[webapps] Food-Ordering 1.0 - LFI",
-   "link": "https://www.exploit-db.com/exploits/52689",
-   "summary": "Food-Ordering 1.0 - LFI",
-   "date": "2026-10-01T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
   },
   {
    "source": "CERT-FR · Alertes",
