@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-11T19:40:31+00:00",
+ "updated": "2026-11-12T07:19:04+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -53,6 +53,30 @@ window.ARSENAL_FEEDS = {
   }
  ],
  "items": [
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Critical Apache HTTP/2 Flaw Could Let Unauthenticated Attackers Execute Code Remotely",
+   "link": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html",
+   "summary": "A critical flaw in Apache HTTP Server's HTTP/2 module, mod_http2, can let a remote attacker run code on the server. Tracked as CVE-2026-119618, it affects versions 2.4.55 through 2.4.70 and is fixed in version 2.4.71, released yesterday. On…",
+   "date": "2026-11-12T05:12:26+00:00",
+   "cvss": null,
+   "sev": "crit",
+   "platforms": [
+    "linux"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "ScreenConnect Attacks Target at Least 288 Endpoints Across 48 Organizations With Rogue Clients",
+   "link": "https://thehackernews.com/2026/11/screenconnect-attacks-target-at-least.html",
+   "summary": "ConnectWise has taken the precautionary step of disabling five third-party extensions in partner environments following reports of unauthorized access. In an advisory posted on its site, the company said there is no evidence that the incide…",
+   "date": "2026-11-12T04:39:48+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
   {
    "source": "The Hacker News",
    "kind": "news",
@@ -213,28 +237,6 @@ window.ARSENAL_FEEDS = {
    "date": "2026-11-10T18:12:21+00:00",
    "cvss": null,
    "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Three China-Nexus Espionage Campaigns Linked Through Sparrow Malware Ecosystem",
-   "link": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
-   "summary": "Three distinct threat activity clusters with shared infrastructure and malware code similarities have been observed targeting telecommunications providers, government organizations, military entities, research institutions, and critical inf…",
-   "date": "2026-11-10T17:43:23+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Attackers Exploit AhsayCBS Flaws to Deploy Sandbox-Evading Python Backdoor",
-   "link": "https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html",
-   "summary": "Cybersecurity researchers have disclosed details of an attack that exploited two now-patched vulnerabilities in AhsayCBS to deliver a Python-based implant. The activity, observed by Huntress in early October 2026, involves the exploitation…",
-   "date": "2026-11-10T16:00:55+00:00",
-   "cvss": null,
-   "sev": null,
    "platforms": []
   },
   {
