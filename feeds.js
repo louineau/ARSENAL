@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-12T20:00:23+00:00",
+ "updated": "2026-11-13T06:52:43+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -53,6 +53,17 @@ window.ARSENAL_FEEDS = {
   }
  ],
  "items": [
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Hackers Exploit N-central Flaws to Infect 21 Servers, Including 19 Running Hotfix 2",
+   "link": "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html",
+   "summary": "N-able on Thursday said it's taking additional precautions in the wake of public disclosure of a new set of flaws tracked as 4EverAble2Shell and Agent2Shell. \"We are restricting certain N-central features and integrations,\" the company said…",
+   "date": "2026-11-13T05:43:28+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
   {
    "source": "The Hacker News",
    "kind": "news",
@@ -285,19 +296,6 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Critical Apache HTTP/2 Flaw Could Let Unauthenticated Attackers Execute Code Remotely",
-   "link": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html",
-   "summary": "A critical flaw in Apache HTTP Server's HTTP/2 module, mod_http2, can let a remote attacker run code on the server. Tracked as CVE-2026-119618, it affects versions 2.4.55 through 2.4.70 and is fixed in version 2.4.71, released yesterday. On…",
-   "date": "2026-11-12T05:12:26+00:00",
-   "cvss": null,
-   "sev": "crit",
-   "platforms": [
-    "linux"
-   ]
-  },
-  {
    "source": "CERT-FR · Avis",
    "kind": "avis",
    "title": "Multiples vulnérabilités dans Google Chrome (12 novembre 2026)",
@@ -505,6 +503,39 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-125370",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-125370",
+   "summary": "Kubero 3.0.0 through 3.1.1 contains an authentication bypass vulnerability that allows unauthenticated remote attackers to forge administrative JWTs by using a hardcoded fallback signing secret when JWT_SECRET is unset. Attackers can sign t…",
+   "date": "2026-11-10T00:17:09.237000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-56712",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-56712",
+   "summary": "Replicate Cog through 0.23.1 contains a server-side request forgery vulnerability that allows attackers to cause the Cog process to make server-side HTTP requests by submitting prediction inputs with attacker-controlled URLs that are not va…",
+   "date": "2026-11-09T22:18:52.290000+00:00",
+   "cvss": 9.3,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-124079",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-124079",
+   "summary": "rConfig Core 8.0.0 before 8.2.19 and rConfig Pro before 8.4.1 contain a deserialization of untrusted data vulnerability that allows unauthenticated network attackers to execute arbitrary code by pushing a crafted serialized job onto the Red…",
+   "date": "2026-11-09T13:17:07.503000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
@@ -529,30 +560,6 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-124445",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-124445",
-   "summary": "OpenEMR from 7.0.1 before 8.4.0 contains a flaw in src/Common/Auth/OneTimeAuth.php that ignores the enforce_onetime_use and max_access_count flags, never revokes consumed service_auth tokens, and checks login_pin without rate limiting or st…",
-   "date": "2026-11-08T14:18:11.487000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-123551",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123551",
-   "summary": "OpenAM from 14.0.0 before 16.1.4 contains an information disclosure vulnerability that allows unauthenticated attackers to read live session tokens from the notification WebSocket. Attackers can bypass the agent-only check through an unvali…",
-   "date": "2026-11-08T02:16:46.603000+00:00",
-   "cvss": 10.0,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
    "title": "CVE-2026-17410",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17410",
    "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to access and modify other tenants' portal data due to improper neutralization of argument delimiters.",
@@ -560,19 +567,6 @@ window.ARSENAL_FEEDS = {
    "cvss": 9.9,
    "sev": "crit",
    "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-17396",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17396",
-   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive information due to SQL injection.",
-   "date": "2026-11-07T05:18:55.103000+00:00",
-   "cvss": 9.6,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
   },
   {
    "source": "NVD · CVE notés CVSS",
@@ -610,10 +604,10 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-16918",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-16918",
-   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to access internal network resources due to server-side request forgery.",
-   "date": "2026-11-07T05:18:22.803000+00:00",
+   "title": "CVE-2026-17131",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17131",
+   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to server-side request forgery. Restrictions on outbound requests can be bypassed, so the server could be made to contact unintended…",
+   "date": "2026-11-07T05:18:26.230000+00:00",
    "cvss": 9.3,
    "sev": "crit",
    "platforms": []
@@ -662,6 +656,17 @@ window.ARSENAL_FEEDS = {
    "date": "2026-11-05T21:18:36.713000+00:00",
    "cvss": 9.1,
    "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-69135",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-69135",
+   "summary": "SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the Project module interpolates the authenticated caller's duplicateId POST parameter directly into a SQL…",
+   "date": "2026-11-05T19:17:24.753000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
    "platforms": []
   },
   {
@@ -730,17 +735,6 @@ window.ARSENAL_FEEDS = {
    "date": "2026-11-04T20:18:56.750000+00:00",
    "cvss": 9.1,
    "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-121958",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-121958",
-   "summary": "FreeRDP through 3.32.1 has a heap out-of-bounds write in the RDPGFX client because the delete_surface callback truncates surface hash keys to 16 bits, leaving the surface table inconsistent so HashTable_GetKeys writes past its allocated key…",
-   "date": "2026-11-04T16:17:48.610000+00:00",
-   "cvss": 8.8,
-   "sev": "high",
    "platforms": []
   },
   {
