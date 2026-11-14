@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-13T19:48:50+00:00",
+ "updated": "2026-11-14T06:35:02+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -93,6 +93,17 @@ window.ARSENAL_FEEDS = {
    "link": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html",
    "summary": "Three Trezor Safe 5 wallets bought from the reseller CryptoBilis contain an implant, an extra circuit board that can copy their recovery phrases, hardware wallet maker Trezor said yesterday. The implant reads the phrase from the wallet's sc…",
    "date": "2026-11-13T13:54:20+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-114713 UnrealIRCd Improper Neutralization of Delimiters Vulnerability CVE-2026-123039 Check Poi…",
+   "date": "2026-11-13T12:00:00+00:00",
    "cvss": null,
    "sev": null,
    "platforms": []
@@ -490,6 +501,17 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-118383",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-118383",
+   "summary": "A use-after-free in the replication component of MongoDB Server can occur when a newly elected replica set primary completes catch-up. The condition can be caused by requests that do not require authentication, and may result in the server…",
+   "date": "2026-11-10T21:18:58.980000+00:00",
+   "cvss": 10.0,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-120779",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-120779",
    "summary": "Improper control of generation of code ('code injection') in Visual Studio Code allows an unauthorized attacker to execute code over a network.",
@@ -532,17 +554,6 @@ window.ARSENAL_FEEDS = {
    "summary": "Replicate Cog through 0.23.1 contains a server-side request forgery vulnerability that allows attackers to cause the Cog process to make server-side HTTP requests by submitting prediction inputs with attacker-controlled URLs that are not va…",
    "date": "2026-11-09T22:18:52.290000+00:00",
    "cvss": 9.3,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-124079",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-124079",
-   "summary": "rConfig Core 8.0.0 before 8.2.19 and rConfig Pro before 8.4.1 contain a deserialization of untrusted data vulnerability that allows unauthenticated network attackers to execute arbitrary code by pushing a crafted serialized job onto the Red…",
-   "date": "2026-11-09T13:17:07.503000+00:00",
-   "cvss": 9.8,
    "sev": "crit",
    "platforms": []
   },
@@ -628,6 +639,17 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-123281",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123281",
+   "summary": "In JetBrains Datalore before 2026.4 notebook code could execute commands in the sidecar container via the mount broker",
+   "date": "2026-11-06T11:17:06.390000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-123280",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123280",
    "summary": "In JetBrains Datalore before 2026.2.4 unauthenticated users could execute code via published interactive reports",
@@ -672,17 +694,6 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-69135",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-69135",
-   "summary": "SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the Project module interpolates the authenticated caller's duplicateId POST parameter directly into a SQL…",
-   "date": "2026-11-05T19:17:24.753000+00:00",
-   "cvss": 8.8,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
    "title": "CVE-2026-100358",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-100358",
    "summary": "SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the Studio Dropdown Editor passes $dropdown_name through html_entity_decode() and writes the result verbat…",
@@ -694,9 +705,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Post-Quantum Questions to Ask Your Vendors",
-   "link": "https://www.cisa.gov/resources-tools/resources/post-quantum-questions-ask-your-vendors",
-   "summary": "CISA, the Australian Signals Directorate’s Australian Cyber Security Centre (ASD’s ACSC) and the National Security Agency (NSA) released joint guidance and an accompanying quick-reference list to help organizations assess vendor readiness f…",
+   "title": "US Government Partners Urge Hardening Industrial Refrigeration and Cold Chain Monitoring Systems",
+   "link": "https://www.cisa.gov/resources-tools/resources/us-government-partners-urge-hardening-industrial-refrigeration-and-cold-chain-monitoring-systems",
+   "summary": "Overview The Cybersecurity and Infrastructure Security Agency (CISA), Federal Bureau of Investigation (FBI), Health and Human Services (HHS), U.S. Department of Agriculture (USDA), and the Department of Transportation (DoT)—hereafter referr…",
    "date": "2026-11-05T12:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -705,9 +716,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "US Government Partners Urge Hardening Industrial Refrigeration and Cold Chain Monitoring Systems",
-   "link": "https://www.cisa.gov/resources-tools/resources/us-government-partners-urge-hardening-industrial-refrigeration-and-cold-chain-monitoring-systems",
-   "summary": "Overview The Cybersecurity and Infrastructure Security Agency (CISA), Federal Bureau of Investigation (FBI), Health and Human Services (HHS), U.S. Department of Agriculture (USDA), and the Department of Transportation (DoT)—hereafter referr…",
+   "title": "Post-Quantum Questions to Ask Your Vendors",
+   "link": "https://www.cisa.gov/resources-tools/resources/post-quantum-questions-ask-your-vendors",
+   "summary": "CISA, the Australian Signals Directorate’s Australian Cyber Security Centre (ASD’s ACSC) and the National Security Agency (NSA) released joint guidance and an accompanying quick-reference list to help organizations assess vendor readiness f…",
    "date": "2026-11-05T12:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -797,17 +808,6 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "réseau"
    ]
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
-   "title": "Hitachi Energy TRO600 series products",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02",
-   "summary": "View CSAF Summary Hitachi Energy is aware of multiple vulnerabilities that affect the TRO600 series product versions listed in this document. These vulnerabilities can be exploited for remote code execution (RCE) to carry out further attack…",
-   "date": "2026-10-29T12:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": []
   },
   {
    "source": "CERT-FR · Actualités",
