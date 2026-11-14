@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-14T18:12:27+00:00",
+ "updated": "2026-11-14T22:31:02+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -611,6 +611,17 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-17117",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17117",
+   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to improperly controlled modification of object attributes. A user could set a field that sho…",
+   "date": "2026-11-07T05:18:25.647000+00:00",
+   "cvss": 9.9,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
@@ -734,17 +745,6 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "linux"
    ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-113373",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-113373",
-   "summary": "Sonatype Nexus Repository 3 Pro does not check the local account status when a user signs in through a configured SAML or OAuth2/OpenID Connect identity provider. A user whose account was disabled or locked by an administrator in Nexus Repo…",
-   "date": "2026-11-04T20:18:56.750000+00:00",
-   "cvss": 9.1,
-   "sev": "crit",
-   "platforms": []
   },
   {
    "source": "CISA · Advisories",
