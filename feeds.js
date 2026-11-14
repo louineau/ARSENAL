@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-14T06:35:02+00:00",
+ "updated": "2026-11-14T18:12:27+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -53,6 +53,17 @@ window.ARSENAL_FEEDS = {
   }
  ],
  "items": [
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection",
+   "link": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html",
+   "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added a high-severity security flaw impacting UnrealIRCd, an open-source Internet Relay Chat (IRC) server, to its Known Exploited Vulnerabilities (KEV) catalog, foll…",
+   "date": "2026-11-14T12:38:35+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
   {
    "source": "The Hacker News",
    "kind": "news",
@@ -399,19 +410,6 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "186 Fake AI Domains Redirect Users to ClickFix Lures, Browser Malware, and Search Hijackers",
-   "link": "https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html",
-   "summary": "Cybersecurity researchers have found that lookalike domains masquerading as artificial intelligence (AI) tools are being used to serve ClickFix-style lures, browser-hijacking malware, and a set of extensions that hijack user searches. This…",
-   "date": "2026-11-12T15:15:40+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "web"
-   ]
-  },
-  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "Siemens Desigo, Gridscale",
@@ -628,23 +626,23 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-123285",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123285",
+   "summary": "In JetBrains Datalore before 2026.3 command execution was possible in the database task container via JVM options injection",
+   "date": "2026-11-06T11:17:06.907000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-123282",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123282",
    "summary": "In JetBrains Datalore before 2026.4 missing expiration validation of account tokens allowed a new authenticated session",
    "date": "2026-11-06T11:17:06.520000+00:00",
    "cvss": 9.1,
    "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-123281",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123281",
-   "summary": "In JetBrains Datalore before 2026.4 notebook code could execute commands in the sidecar container via the mount broker",
-   "date": "2026-11-06T11:17:06.390000+00:00",
-   "cvss": 8.8,
-   "sev": "high",
    "platforms": []
   },
   {
