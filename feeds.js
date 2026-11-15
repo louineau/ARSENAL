@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-15T06:42:35+00:00",
+ "updated": "2026-11-15T18:56:02+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -50,10 +50,34 @@ window.ARSENAL_FEEDS = {
    "url": "https://nvd.nist.gov/",
    "ok": false,
    "count": 0,
-   "error": "HTTP Error 503: Service Unavailable"
+   "error": "The read operation timed out"
   }
  ],
  "items": [
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Italy Fines Meta €805 Million Over Facebook's Android Gallery Access Without Explicit Consent",
+   "link": "https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html",
+   "summary": "Meta was fined €805 million in Italy yesterday over a Facebook for Android feature that suggests photos and videos from users' phone galleries for them to post. The Garante, Italy's data protection authority, found that the feature was enab…",
+   "date": "2026-11-15T11:27:31+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "android"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Cursor Says Stolen Fireworks AI Key Led to Trojanized Claude Code Extension Incident",
+   "link": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+   "summary": "The compromise of Anthropic's official Claude Code extension on Cursor's extension marketplace was the result of the theft of an access key that was exposed in the wake of a breach targeting Fireworks AI. \"An attacker obtained an access key…",
+   "date": "2026-11-15T08:22:04+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
   {
    "source": "The Hacker News",
    "kind": "news",
@@ -382,32 +406,6 @@ window.ARSENAL_FEEDS = {
    "sev": "crit",
    "platforms": [
     "windows"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Critical Red Hat Quay Flaw Lets Attackers Read and Overwrite All Private Container Images in a Registry",
-   "link": "https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html",
-   "summary": "A critical flaw in Red Hat Quay allows an attacker who can access a Quay registry to read and overwrite private container images in every repository. Quay enables anonymous access by default, and while it is enabled, the attacker needs no a…",
-   "date": "2026-11-12T16:27:01+00:00",
-   "cvss": null,
-   "sev": "crit",
-   "platforms": [
-    "linux"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Citrix Patches 12 NetScaler and Secure Access Client Flaws, Including Authentication Bypass",
-   "link": "https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html",
-   "summary": "Citrix has released patches for multiple critical security flaws impacting NetScaler ADC, Citrix NetScaler Gateway, and NetScaler Console that could lead to denial-of-service (DoS) or an authentication bypass. The critical vulnerabilities t…",
-   "date": "2026-11-12T15:38:49+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "réseau"
    ]
   },
   {
