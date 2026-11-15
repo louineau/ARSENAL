@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-14T22:31:02+00:00",
+ "updated": "2026-11-15T06:42:35+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -48,8 +48,9 @@ window.ARSENAL_FEEDS = {
    "name": "NVD · CVE notés CVSS",
    "kind": "cve",
    "url": "https://nvd.nist.gov/",
-   "ok": true,
-   "count": 15
+   "ok": false,
+   "count": 0,
+   "error": "HTTP Error 503: Service Unavailable"
   }
  ],
  "items": [
@@ -497,41 +498,6 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-118383",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-118383",
-   "summary": "A use-after-free in the replication component of MongoDB Server can occur when a newly elected replica set primary completes catch-up. The condition can be caused by requests that do not require authentication, and may result in the server…",
-   "date": "2026-11-10T21:18:58.980000+00:00",
-   "cvss": 10.0,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-120779",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-120779",
-   "summary": "Improper control of generation of code ('code injection') in Visual Studio Code allows an unauthorized attacker to execute code over a network.",
-   "date": "2026-11-10T19:20:27.040000+00:00",
-   "cvss": 9.6,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-120002",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-120002",
-   "summary": "Incorrect authorization in Microsoft Office SharePoint allows an authorized attacker to elevate privileges over a network.",
-   "date": "2026-11-10T19:20:26.080000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": [
-    "windows"
-   ]
-  },
-  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds Six Known Exploited Vulnerabilities to Catalog",
@@ -543,17 +509,6 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "réseau"
    ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-56712",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-56712",
-   "summary": "Replicate Cog through 0.23.1 contains a server-side request forgery vulnerability that allows attackers to cause the Cog process to make server-side HTTP requests by submitting prediction inputs with attacker-controlled URLs that are not va…",
-   "date": "2026-11-09T22:18:52.290000+00:00",
-   "cvss": 9.3,
-   "sev": "crit",
-   "platforms": []
   },
   {
    "source": "CISA · Advisories",
@@ -578,50 +533,6 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-17291",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17291",
-   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to perform account takeover due to an open redirect vulnerability. The redirect address used during OAuth 2.0 sign-in is no…",
-   "date": "2026-11-07T05:18:36.097000+00:00",
-   "cvss": 9.0,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-17280",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17280",
-   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote attacker to perform unauthenticated brute-force attacks to obtain valid credentials due to improper restriction of excessive authentication attemp…",
-   "date": "2026-11-07T05:18:33.853000+00:00",
-   "cvss": 9.1,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-17131",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17131",
-   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to obtain sensitive information due to server-side request forgery. Restrictions on outbound requests can be bypassed, so the server could be made to contact unintended…",
-   "date": "2026-11-07T05:18:26.230000+00:00",
-   "cvss": 9.3,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-17117",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17117",
-   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to improperly controlled modification of object attributes. A user could set a field that sho…",
-   "date": "2026-11-07T05:18:25.647000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
@@ -633,83 +544,6 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "réseau"
    ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-123285",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123285",
-   "summary": "In JetBrains Datalore before 2026.3 command execution was possible in the database task container via JVM options injection",
-   "date": "2026-11-06T11:17:06.907000+00:00",
-   "cvss": 8.8,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-123282",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123282",
-   "summary": "In JetBrains Datalore before 2026.4 missing expiration validation of account tokens allowed a new authenticated session",
-   "date": "2026-11-06T11:17:06.520000+00:00",
-   "cvss": 9.1,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-123280",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123280",
-   "summary": "In JetBrains Datalore before 2026.2.4 unauthenticated users could execute code via published interactive reports",
-   "date": "2026-11-06T11:17:06.270000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-123279",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123279",
-   "summary": "In JetBrains Datalore before 2026.4 code execution was possible in a notebook's computation by view-only collaborators",
-   "date": "2026-11-06T11:17:06.140000+00:00",
-   "cvss": 9.0,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-119757",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-119757",
-   "summary": "BTCPay Server before 2.4.2, including 2.4.2 release candidates, contains an information disclosure vulnerability that allows unauthenticated remote attackers to retrieve .macaroon credential files for an LND (Lightning Network Daemon) node.…",
-   "date": "2026-11-05T22:17:53.203000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-112902",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-112902",
-   "summary": "Pillow is a Python imaging library. In versions through 12.3.0, the libtiff TIFF encoder can pass arguments to TIFFSetField() that do not match libtiff’s definition of the corresponding tag. When an application saves attacker-controlled ima…",
-   "date": "2026-11-05T21:18:36.713000+00:00",
-   "cvss": 9.1,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-100358",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-100358",
-   "summary": "SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the Studio Dropdown Editor passes $dropdown_name through html_entity_decode() and writes the result verbat…",
-   "date": "2026-11-05T19:16:55.400000+00:00",
-   "cvss": 9.4,
-   "sev": "crit",
-   "platforms": []
   },
   {
    "source": "CISA · Advisories",
