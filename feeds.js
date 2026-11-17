@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-16T22:12:44+00:00",
+ "updated": "2026-11-17T08:00:58+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -53,6 +53,41 @@ window.ARSENAL_FEEDS = {
   }
  ],
  "items": [
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Hijacked Optimizely Scripts Served Card Skimmer and iOS Exploit Kits to CNN, BBC and Zoom Visitors",
+   "link": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html",
+   "summary": "An attacker exploited a flaw in Optimizely Web Experimentation to plant malicious code in some of the scripts that customers' websites load from the service, Optimizely said early today. Visitors to sites run by at least 178 organizations,…",
+   "date": "2026-11-17T07:12:13+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "ios"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "ConnectWise Warns ScreenConnect Attacks Continue as SCKit Targets Unpatched Systems",
+   "link": "https://thehackernews.com/2026/11/connectwise-warns-screenconnect-attacks.html",
+   "summary": "ConnectWise on Monday said it completed its investigation into unauthorized access targeting partner ScreenConnect environments, and recommended customers to ensure that the technician client is running version 26.6.5 or later. The company…",
+   "date": "2026-11-17T06:29:27+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "N-able Patches 17 N-central Flaws as Attackers Exploit Earlier Bugs to Deploy Crypto Miners",
+   "link": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
+   "summary": "N-able has released a new security update to address additional critical security flaws impacting N-central. Describing N-central 2026.4 Hotfix 3 as a critical security update, the company said it includes a number of security patches and f…",
+   "date": "2026-11-17T05:00:34+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
   {
    "source": "The Hacker News",
    "kind": "news",
@@ -269,6 +304,30 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-82504",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-82504",
+   "summary": "VITEC EZ TV Platform Server before 8.5.0 contains an unrestricted file upload vulnerability in the upload handler that allows unauthenticated remote attackers to upload arbitrary files by supplying a target filename in the X-FILENAME reques…",
+   "date": "2026-11-13T21:17:48.030000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-129171",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-129171",
+   "summary": "NginxPulse 1.5.0 before 1.6.26 contains an unauthenticated sql injection vulnerability that allows remote attackers to append SQL via the id and locationType parameters of /api/stats/:type. Attackers can close the quoted table-name identifi…",
+   "date": "2026-11-13T18:17:42.530000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
    "source": "The Hacker News",
    "kind": "news",
    "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
@@ -291,25 +350,14 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "FBI Says North Korean Hackers Stole Over $400 Million in Crypto Using Deepfake Video Calls",
-   "link": "https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html",
-   "summary": "The U.S. Federal Bureau of Investigation (FBI) has established that threat actors tied to the Democratic People's Republic of Korea (DPRK aka North Korea) have stolen more than $400 million worth of cryptocurrency as part of a social engine…",
-   "date": "2026-11-13T14:28:58+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Trezor Confirms Hidden Implants in CryptoBilis-Sold Wallets That Can Steal Recovery Phrases",
-   "link": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html",
-   "summary": "Three Trezor Safe 5 wallets bought from the reseller CryptoBilis contain an implant, an extra circuit board that can copy their recovery phrases, hardware wallet maker Trezor said yesterday. The implant reads the phrase from the wallet's sc…",
-   "date": "2026-11-13T13:54:20+00:00",
-   "cvss": null,
-   "sev": null,
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-109445",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-109445",
+   "summary": "PLANET GS-5220-8P2T2S (hardware version 3.0) firmware versions before 3.2412b261008 contains a stack-based buffer overflow vulnerability that allows unauthenticated attackers to corrupt stack memory by submitting an oversized webstax_auth H…",
+   "date": "2026-11-13T15:17:30.290000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
    "platforms": []
   },
   {
@@ -319,17 +367,6 @@ window.ARSENAL_FEEDS = {
    "link": "https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-114713 UnrealIRCd Improper Neutralization of Delimiters Vulnerability CVE-2026-123039 Check Poi…",
    "date": "2026-11-13T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "When an AI Agent Goes Wrong, Can You Stop It?",
-   "link": "https://thehackernews.com/2026/11/when-ai-agent-goes-wrong-can-you-stop-it.html",
-   "summary": "Suppose an AI agent is asked to sort support tickets and look up account details. A ticket contains instructions that lead the agent to export records to an unfamiliar destination. The agent can make the request because its identity has acc…",
-   "date": "2026-11-13T11:52:31+00:00",
    "cvss": null,
    "sev": null,
    "platforms": []
@@ -544,6 +581,17 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-85632",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-85632",
+   "summary": "Missing authentication for critical function and Improper validation of integrity check value vulnerability in Sipay Electronic Money and Payment Services Inc. WooCommerce Virtual POS Module allows Authentication Bypass and Application API…",
+   "date": "2026-11-11T15:17:25.163000+00:00",
+   "cvss": 9.1,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
    "source": "Exploit-DB",
    "kind": "exploit",
    "title": "[remote] Ruflo MCP Bridge 3.16.2 - Remote Code Execution",
@@ -590,6 +638,32 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-119908",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-119908",
+   "summary": "Integer underflow (wrap or wraparound) in Windows Storage Spaces Controller allows an unauthorized attacker to execute code over a network.",
+   "date": "2026-11-10T19:20:11.630000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
+   "platforms": [
+    "windows"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-109491",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-109491",
+   "summary": "Use after free in Microsoft Office Word allows an unauthorized attacker to execute code over a network.",
+   "date": "2026-11-10T19:18:17.767000+00:00",
+   "cvss": 8.8,
+   "sev": "high",
+   "platforms": [
+    "windows"
+   ]
+  },
+  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds Six Known Exploited Vulnerabilities to Catalog",
@@ -601,6 +675,17 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "réseau"
    ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-56712",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-56712",
+   "summary": "Replicate Cog through 0.23.1 contains a server-side request forgery vulnerability that allows attackers to cause the Cog process to make server-side HTTP requests by submitting prediction inputs with attacker-controlled URLs that are not va…",
+   "date": "2026-11-09T22:18:52.290000+00:00",
+   "cvss": 9.3,
+   "sev": "crit",
+   "platforms": []
   },
   {
    "source": "CISA · Advisories",
@@ -627,91 +712,12 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-17299",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17299",
-   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to perform arbitrary file reads and server-side request forgery due to unrestricted resolution of external references. Exte…",
-   "date": "2026-11-07T05:18:37.700000+00:00",
-   "cvss": 9.6,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-17298",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17298",
-   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to obtain sensitive information due to server-side request forgery.",
-   "date": "2026-11-07T05:18:37.510000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-17278",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17278",
-   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to gain unauthorized access to sensitive API catalog and runtime configuration data due to improper authentication. Information supplied by the client is not sufficient…",
-   "date": "2026-11-07T05:18:33.440000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-17239",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17239",
-   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to a path traversal vulnerability.",
-   "date": "2026-11-07T05:18:32.657000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-17147",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17147",
-   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code and perform unauthorized administrative actions due to a path traversal vulnerability.",
-   "date": "2026-11-07T05:18:28.037000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-17134",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17134",
-   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary SQL commands due to SQL injection.",
-   "date": "2026-11-07T05:18:26.630000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-17132",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17132",
-   "summary": "IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary SQL commands due to improper neutralization of special elements used in an SQL command.",
-   "date": "2026-11-07T05:18:26.430000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-17117",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-17117",
-   "summary": "IBM API Connect 10.0.8.0 through 10.0.8.12 and 12.1.0.0 through 12.1.1.2 could allow a remote authenticated attacker to execute arbitrary code due to improperly controlled modification of object attributes. A user could set a field that sho…",
-   "date": "2026-11-07T05:18:25.647000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
+   "title": "CVE-2026-114713",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-114713",
+   "summary": "The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 \"label\" message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server command…",
+   "date": "2026-11-08T03:16:33.410000+00:00",
+   "cvss": 8.6,
+   "sev": "high",
    "platforms": []
   },
   {
