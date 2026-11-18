@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-18T07:37:24+00:00",
+ "updated": "2026-11-18T20:37:50+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -56,9 +56,138 @@ window.ARSENAL_FEEDS = {
   {
    "source": "The Hacker News",
    "kind": "news",
+   "title": "10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers",
+   "link": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html",
+   "summary": "A flaw in NGINX's HTTP/2 support can allow an attacker to run code on servers with HTTP/2 enabled, without needing to log in. The decade-old flaw, CVE-2026-123007, dubbed \"nginx2root,\" has been present in NGINX's open-source code since vers…",
+   "date": "2026-11-18T18:31:17+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "linux"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "F5 Warns 6 Critical BIG-IP Flaws Can Crash Traffic in Specific Setups, May Allow RCE",
+   "link": "https://thehackernews.com/2026/11/f5-warns-6-critical-big-ip-flaws-can.html",
+   "summary": "Six critical vulnerabilities in F5 BIG-IP allow an attacker to crash the Traffic Management Microkernel (TMM) without logging in, disrupting traffic until the TMM restarts. Each flaw needs a specific setup on a virtual server: an iRule that…",
+   "date": "2026-11-18T18:15:39+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "réseau"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required",
+   "link": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html",
+   "summary": "A critical security flaw in Apache Roller, an open-source, Java-based blogging platform, has come under active exploitation in the wild, according to the Apache Software Foundation (ASF) The vulnerability, tracked as CVE-2026-129448 (CVSS s…",
+   "date": "2026-11-18T17:10:45+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "linux"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
+   "link": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
+   "summary": "The suspected Chinese advanced persistent threat (APT) group behind the sophisticated EggStreme malware has rebuilt its toolkit as it continues to target government organizations in the Philippines. \"When attackers are exposed, the cheap re…",
+   "date": "2026-11-18T14:11:28+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "New Attack Bypasses TPM Lockout to Crack Windows Hello and BitLocker PINs in Days, Not Years",
+   "link": "https://thehackernews.com/2026/11/flash-chip-attack-bypasses-tpm-lockout.html",
+   "summary": "On AMD-based PCs and some Intel PCs, the TPM lockout for Windows Hello and BitLocker PINs can be reset by someone who opens the PC's case, researchers at Technische Universität Berlin say. That leaves short PINs open to guessing. In lab tes…",
+   "date": "2026-11-18T12:28:30+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "windows"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "AI Pentesting Checklist for Web Apps: 15 Questions to Ask Before Choosing a Vendor",
+   "link": "https://thehackernews.com/2026/11/ai-pentesting-checklist-for-web-apps-15.html",
+   "summary": "TL;DR Attackers move first. On average, exploitation now starts before a patch exists (Mandiant M-Trends 2026). In 1H 2026, 23% of vulnerabilities VulnCheck added to its exploited list were hit on or before disclosure day. AI pentesting ven…",
+   "date": "2026-11-18T12:15:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+   "summary": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2024-10441 Synology DiskStation Manager (DSM) Improper Encoding or Escaping of Output Vulnerability…",
+   "date": "2026-11-18T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Java4Shell Flaw (CVE-2026-114938) Enables Pre-Auth RCE in Jira, Jenkins, Keycloak and More",
+   "link": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html",
+   "summary": "A Java flaw called Java4Shell can let attackers without an account run their own code on Jira, Jenkins, Keycloak, and three other widely used applications, says Calif, the security research firm that disclosed it this week. The flaw is pres…",
+   "date": "2026-11-18T11:55:49+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Quality Isn’t The Main Worry About AI Pentesting — Data Privacy and Production Safety Are",
+   "link": "https://thehackernews.com/2026/11/quality-isnt-main-worry-about-ai.html",
+   "summary": "AI is speeding up how software is built, which means more code, more changes, and more chances for vulnerabilities to reach production. It's speeding up how attackers find and exploit them too, with time-to-exploit now down to a single day.…",
+   "date": "2026-11-18T11:03:57+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Hackers Exploiting Critical Puppet RCE Flaw Affecting Enterprise Management Servers",
+   "link": "https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html",
+   "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a critical security flaw impacting Perforce Puppet, an enterprise infrastructure-as-code (IaC) and configuration management platform, to its Known Exploited V…",
+   "date": "2026-11-18T08:24:31+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "CISA Urges Immediate Patching of Java4Shell Flaw That Could Allow Remote Code Execution",
+   "link": "https://thehackernews.com/2026/11/cisa-urges-immediate-patching-of.html",
+   "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has urged organizations to immediately patch a newly disclosed critical security flaw impacting Oracle Java. The flaw, tracked as CVE-2026-114938 (CVSS score: 8.1), refers to…",
+   "date": "2026-11-18T08:24:23+00:00",
+   "cvss": 8.1,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
    "title": "Attackers Compromise Microsoft's Agent Framework PyPI Package to Steal Cloud Credentials",
    "link": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
-   "summary": "Threat actors have compromised Microsoft's agent-framework package to push a credential stealer, according to reports from Aikido, Endor Labs, OX Security, SafeDep, Socket, StepSecurity, and Google-owned Wiz. The malicious versions, 1.26.1…",
+   "summary": "Threat actors have compromised Microsoft's agent-framework package to push a credential stealer, according to reports from Aikido, Chainguard, Endor Labs, OX Security, SafeDep, Socket, StepSecurity, and Google-owned Wiz. The malicious versi…",
    "date": "2026-11-18T06:45:26+00:00",
    "cvss": null,
    "sev": null,
@@ -78,14 +207,229 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Critical Java4Shell Flaw (CVE-2026-114938) Enables Pre-Auth RCE in Jira, Jenkins, Keycloak and More",
-   "link": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html",
-   "summary": "A Java flaw called Java4Shell can let attackers without an account run their own code on Jira, Jenkins, Keycloak, and three other widely used applications, says Calif, the security research firm that disclosed it this week. The flaw is pres…",
-   "date": "2026-11-18T04:27:41+00:00",
+   "source": "CERT-FR · Alertes",
+   "kind": "alerte",
+   "title": "Vulnérabilité dans Oracle Java SE (18 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-016/",
+   "summary": "Le 17 novembre 2026, Oracle a publié un avis de sécurité concernant la vulnérabilité CVE-2026-114938, surnommée *java4shell*, qui affecte le décodeur Base64 de OpenJDK sur les processeurs x86-64 supportant AVX-512 VBMI. Celle-ci permet à un…",
+   "date": "2026-11-18T00:00:00+00:00",
    "cvss": null,
    "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Alertes",
+   "kind": "alerte",
+   "title": "Multiples vulnérabilités dans F5 NGINX (18 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-017/",
+   "summary": "Le 18 novembre 2026, F5 a publié deux avis de sécurité concernant les vulnérabilités CVE-2026-123633 et CVE-2026-123007. Celles-ci affectent NGINX Open Source et NGINX Plus permettent à un attaquant non authentifié d'exécuter du code à dist…",
+   "date": "2026-11-18T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "linux"
+   ]
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans les produits Tenable (18 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1556/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans les produits Tenable. Elles permettent à un attaquant de provoquer un déni de service à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données.",
+   "date": "2026-11-18T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans Netgate pfSense (18 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1557/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans Netgate pfSense. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+   "date": "2026-11-18T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Vulnérabilité dans FreeBSD (18 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1558/",
+   "summary": "Une vulnérabilité a été découverte dans FreeBSD. Elle permet à un attaquant de provoquer une atteinte à la confidentialité des données et un déni de service.",
+   "date": "2026-11-18T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans Google Chrome (18 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1559/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans Google Chrome. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+   "date": "2026-11-18T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans Mozilla Firefox (18 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1560/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans Mozilla Firefox. Elles permettent à un attaquant de provoquer une élévation de privilèges et un problème de sécurité non spécifié par l'éditeur.",
+   "date": "2026-11-18T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans Oracle Database Server (18 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1561/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans Oracle Database Server. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la conf…",
+   "date": "2026-11-18T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans Oracle Java SE (18 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1562/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans Oracle Java SE. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidential…",
+   "date": "2026-11-18T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans Oracle MySQL (18 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1563/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans Oracle MySQL. Elles permettent à un attaquant de provoquer un déni de service à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données.",
+   "date": "2026-11-18T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans Oracle PeopleSoft (18 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1564/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans Oracle PeopleSoft. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité de…",
+   "date": "2026-11-18T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans Oracle Weblogic (18 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1565/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans Oracle Weblogic. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentia…",
+   "date": "2026-11-18T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans Oracle Virtualization (18 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1566/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans Oracle Virtualization. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confi…",
+   "date": "2026-11-18T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans les produits F5 (18 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1567/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans les produits F5. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et un contournement de la politique de sécurité.",
+   "date": "2026-11-18T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-115139",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115139",
+   "summary": "Vulnerability in the Oracle Hyperion Infrastructure Technology product of Oracle Hyperion (component: Installation and Configuration). The supported version that is affected is 11.2.26.0.000. Easily exploitable vulnerability allows unauthen…",
+   "date": "2026-11-17T22:18:47.437000+00:00",
+   "cvss": 9.3,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-114956",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-114956",
+   "summary": "Vulnerability in the Oracle Hyperion Planning product of Oracle Hyperion (component: Security). The supported version that is affected is 11.2.26.0.000. Easily exploitable vulnerability allows unauthenticated attacker with network access vi…",
+   "date": "2026-11-17T22:18:26.023000+00:00",
+   "cvss": 9.3,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-114934",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-114934",
+   "summary": "Vulnerability in the PeopleSoft Enterprise PeopleTools product of Oracle PeopleSoft (component: Integration Broker). Supported versions that are affected are 8.61-8.63. Easily exploitable vulnerability allows unauthenticated attacker with n…",
+   "date": "2026-11-17T22:18:23.437000+00:00",
+   "cvss": 9.3,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-114881",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-114881",
+   "summary": "Vulnerability in the Document Management and Collaboration product of Oracle E-Business Suite (component: Attachments). Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows unauthenticated attacke…",
+   "date": "2026-11-17T22:18:17.107000+00:00",
+   "cvss": 9.1,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-101691",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-101691",
+   "summary": "Vulnerability in the Oracle Mobile Field Service product of Oracle E-Business Suite (component: Admin UI). Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows unauthenticated attacker with networ…",
+   "date": "2026-11-17T22:18:04.460000+00:00",
+   "cvss": 9.3,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-130849",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130849",
+   "summary": "BZFlag bzfs before 2.4.32 contains a heap out-of-bounds write vulnerability in NetHandler::tcpReceive() that allows remote unauthenticated attackers to corrupt heap memory by sending a TCP message with a body length of exactly 1024. Attacke…",
+   "date": "2026-11-17T20:17:50.113000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
    "platforms": []
   },
   {
@@ -124,28 +468,16 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
-   "link": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
-   "summary": "Pinning GitHub Actions to an exact version of their code, known as SHA pinning, has become the go-to defense against software supply chain attacks. Attackers have already found a way around it. In March 2026, the hackers who hijacked Trivy,…",
-   "date": "2026-11-17T12:25:06+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Researchers Detail iPhone Flaw That Let Apps Record Audio Despite Denied Microphone Permission",
-   "link": "https://thehackernews.com/2026/11/researchers-detail-iphone-flaw-that-let.html",
-   "summary": "A now-patched flaw in Apple's audio service let apps on iPhones and iPads record audio even after the user tapped \"Don't Allow\" on the microphone prompt. The first security updates with the fix came out on August 17. Neither Apple nor the t…",
-   "date": "2026-11-17T12:14:36+00:00",
-   "cvss": null,
-   "sev": null,
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-130583",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130583",
+   "summary": "Rootways Authorize.net CIM Pro extension for Magento 2 before 4.1.5 contains an unauthenticated server-side request forgery vulnerability in the Apple Pay merchant validation controller. Attackers can supply file://, gopher://, or dict:// U…",
+   "date": "2026-11-17T14:17:44.847000+00:00",
+   "cvss": 9.3,
+   "sev": "crit",
    "platforms": [
-    "macos",
-    "ios"
+    "macos"
    ]
   },
   {
@@ -269,17 +601,6 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Siemens SIMATIC WinCC",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-09",
-   "summary": "View CSAF Summary Graphics Designer of SIMATIC WinCC before V8.2 contains an implicit active content execution vulnerability upon opening files, which could allow an attacker to cause arbitrary code execution on the device. Siemens is prepa…",
-   "date": "2026-11-17T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
    "link": "https://www.cisa.gov/news-events/alerts/2026/11/17/cisa-adds-one-known-exploited-vulnerability-catalog",
    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-115731 Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability This type of vu…",
@@ -291,71 +612,21 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Siemens meta-iot2050",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-11",
-   "summary": "View CSAF Summary meta-iot2050 (https://github.com/siemens/meta-iot2050) from V01.03.01 contains a Command Injection vulnerability in the firmware update tool that could allow an attacker which is able to manipulate a configuration file to…",
+   "title": "Siemens SIMATIC WinCC",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-09",
+   "summary": "View CSAF Summary Graphics Designer of SIMATIC WinCC before V8.2 contains an implicit active content execution vulnerability upon opening files, which could allow an attacker to cause arbitrary code execution on the device. Siemens is prepa…",
    "date": "2026-11-17T12:00:00+00:00",
    "cvss": null,
    "sev": null,
    "platforms": []
   },
   {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "New GitDoor and GraphDoor Backdoors Turn GitHub and SharePoint Into Covert C2 Channels",
-   "link": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html",
-   "summary": "Government sectors in Asia and Africa have been targeted by an active cyber intrusion campaign that delivers to previously undocumented backdoors that leverage legitimate services like Microsoft SharePoint and GitHub for command‑and‑control…",
-   "date": "2026-11-17T11:20:18+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "windows"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Apple Tightens macOS App Permissions to Limit Data Access Amid AI Agent Security Risks",
-   "link": "https://thehackernews.com/2026/11/apple-tightens-macos-app-permissions-to.html",
-   "summary": "Apple on Monday introduced new controls that allow Mac users to give more granular access to data they give to apps, including those that use artificial intelligence (AI) agents. The changes, currently previewed in macOS 27.3 beta 2, relate…",
-   "date": "2026-11-17T11:07:31+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "macos"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Hijacked Optimizely Scripts Served Card Skimmer and iOS Exploit Kits to CNN, BBC and Zoom Visitors",
-   "link": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html",
-   "summary": "An attacker exploited a flaw in Optimizely Web Experimentation to plant malicious code in some of the scripts that customers' websites load from the service, Optimizely said early today. Visitors to sites run by at least 178 organizations,…",
-   "date": "2026-11-17T07:12:13+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "ios"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "ConnectWise Warns ScreenConnect Attacks Continue as SCKit Targets Unpatched Systems",
-   "link": "https://thehackernews.com/2026/11/connectwise-warns-screenconnect-attacks.html",
-   "summary": "ConnectWise on Monday said it completed its investigation into unauthorized access targeting partner ScreenConnect environments, and recommended customers to ensure that the technician client is running version 26.6.5 or later. The company…",
-   "date": "2026-11-17T06:29:27+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "N-able Patches 17 N-central Flaws as Attackers Exploit Earlier Bugs to Deploy Crypto Miners",
-   "link": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
-   "summary": "N-able has released a new security update to address additional critical security flaws impacting N-central. Describing N-central 2026.4 Hotfix 3 as a critical security update, the company said it includes a number of security patches and f…",
-   "date": "2026-11-17T05:00:34+00:00",
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "Siemens meta-iot2050",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-11",
+   "summary": "View CSAF Summary meta-iot2050 (https://github.com/siemens/meta-iot2050) from V01.03.01 contains a Command Injection vulnerability in the firmware update tool that could allow an attacker which is able to manipulate a configuration file to…",
+   "date": "2026-11-17T12:00:00+00:00",
    "cvss": null,
    "sev": null,
    "platforms": []
@@ -394,195 +665,6 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans Tenable Identity Exposure (17 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1550/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans Tenable Identity Exposure. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
-   "date": "2026-11-17T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Vulnérabilité dans Juniper Networks Junos OS Evolved (17 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1551/",
-   "summary": "Une vulnérabilité a été découverte dans Juniper Networks Junos OS Evolved. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance et un déni de service à distance.",
-   "date": "2026-11-17T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": [
-    "réseau"
-   ]
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans GitLab (17 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1552/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans GitLab. Certaines d'entre elles permettent à un attaquant de provoquer un déni de service à distance, une atteinte à la confidentialité des données et une falsification de requêtes côté s…",
-   "date": "2026-11-17T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans Typo3 (17 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1553/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans Typo3. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des d…",
-   "date": "2026-11-17T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans OpenSSL (17 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1554/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans OpenSSL. Elles permettent à un attaquant de provoquer un déni de service à distance.",
-   "date": "2026-11-17T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans Microsoft SharePoint (17 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1555/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans Microsoft SharePoint. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et une élévation de privilèges.",
-   "date": "2026-11-17T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": [
-    "windows"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-130071",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130071",
-   "summary": "TridotsTech go1cms master branch through commit 7f68d05 and version-3 branch before commit ead8da3 contains a missing authentication vulnerability in the guest-whitelisted update_doc method that allows unauthenticated attackers to modify an…",
-   "date": "2026-11-16T22:18:22.373000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-129955",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-129955",
-   "summary": "NodePress through 8.5.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to gain administrator access by using the hardcoded default password 'root'. Attackers can send base64-encoded 'root' to POST /adm…",
-   "date": "2026-11-16T15:17:31.030000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
-   "link": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html",
-   "summary": "Google on Monday revealed that adversarial use of artificial intelligence (AI) by threat actors has gone beyond manual prompting to deploying autonomous multi-agent offensive frameworks like ARTEX, CAIRN, CyberStrikeAI, and PentAGI to execu…",
-   "date": "2026-11-16T14:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "⚡ Weekly Recap: N-able 0-Days, Windows 0-Days, Chrome 0-Days, Fridge 0-Days, and More Bad Days",
-   "link": "https://thehackernews.com/2026/11/weekly-recap-n-able-0-days-windows-0.html",
-   "summary": "A default password opened doors it never should have. A trusted update delivered malware. Even a security feature became a way to break in. Different stories, same problem: the things meant to protect us aren't always doing their job. Meanw…",
-   "date": "2026-11-16T13:27:20+00:00",
-   "cvss": null,
-   "sev": "crit",
-   "platforms": [
-    "windows",
-    "web"
-   ]
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans Kerberos (16 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1540/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans Kerberos. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité de…",
-   "date": "2026-11-16T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": [
-    "windows"
-   ]
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Vulnérabilité dans Git (16 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1541/",
-   "summary": "Une vulnérabilité a été découverte dans Git. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance.",
-   "date": "2026-11-16T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans les produits Trend Micro (16 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1542/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans les produits Trend Micro. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la conf…",
-   "date": "2026-11-16T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Vulnérabilité dans VMware Tanzu (16 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1543/",
-   "summary": "Une vulnérabilité a été découverte dans VMware Tanzu. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance.",
-   "date": "2026-11-16T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": [
-    "vmware"
-   ]
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans MongoDB (16 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1544/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans MongoDB. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et un contournement de l…",
-   "date": "2026-11-16T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Vulnérabilité dans Citrix App Layering (16 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1545/",
-   "summary": "Une vulnérabilité a été découverte dans Citrix App Layering. Elle permet à un attaquant de provoquer un contournement de la politique de sécurité.",
-   "date": "2026-11-16T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "réseau"
-   ]
-  },
-  {
    "source": "CERT-FR · Actualités",
    "kind": "actu",
    "title": "Bulletin d'actualité CERTFR-2026-ACT-048 (16 novembre 2026)",
@@ -591,74 +673,6 @@ window.ARSENAL_FEEDS = {
    "date": "2026-11-16T00:00:00+00:00",
    "cvss": null,
    "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-129483",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-129483",
-   "summary": "Cyrus SASL through 2.1.28 contains an authentication bypass vulnerability in the SRP server mechanism because srp_server_mech_step2 does not reject client public values A that are multiples of N. Unauthenticated network clients can send A e…",
-   "date": "2026-11-15T14:17:27.530000+00:00",
-   "cvss": 9.3,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-129452",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-129452",
-   "summary": "A vulnerability has been found in DrayTek Vigor2960 1.5.1.6. This vulnerability affects the function set_table of the file /cgi-bin/mainfunction.cgi. Such manipulation of the argument jsondata leads to command injection. The attack can be l…",
-   "date": "2026-11-15T13:16:59.703000+00:00",
-   "cvss": 9.1,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-129451",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-129451",
-   "summary": "A flaw has been found in DrayTek Vigor2960 up to 1.5.1.6. This affects the function app_guest_export of the file /cgi-bin/mainfunction.cgi. This manipulation of the argument filename causes path traversal. The attack can be initiated remote…",
-   "date": "2026-11-15T13:16:58.600000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-129351",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-129351",
-   "summary": "A security vulnerability has been detected in TRENDnet TEW-657BRM 1.00.1. This vulnerability affects the function sprintf of the file /setup.cgi of the component mini_httpd. Such manipulation leads to out-of-bounds write. The attack can be…",
-   "date": "2026-11-14T23:16:47.753000+00:00",
-   "cvss": 10.0,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-129171",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-129171",
-   "summary": "NginxPulse 1.5.0 before 1.6.26 contains an unauthenticated sql injection vulnerability that allows remote attackers to append SQL via the id and locationType parameters of /api/stats/:type. Attackers can close the quoted table-name identifi…",
-   "date": "2026-11-13T18:17:42.530000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-109445",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-109445",
-   "summary": "PLANET GS-5220-8P2T2S (hardware version 3.0) firmware versions before 3.2412b261008 contains a stack-based buffer overflow vulnerability that allows unauthenticated attackers to corrupt stack memory by submitting an oversized webstax_auth H…",
-   "date": "2026-11-13T15:17:30.290000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
    "platforms": []
   },
   {
@@ -671,19 +685,6 @@ window.ARSENAL_FEEDS = {
    "cvss": null,
    "sev": null,
    "platforms": []
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
-   "title": "Siemens RUGGEDCOM APE1808",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-05",
-   "summary": "View CSAF Summary Palo Alto Networks has published information on vulnerabilities in PAN-OS related to PHP2Shell vulnerabilities. This advisory lists the related Siemens Industrial products affected by these vulnerabilities. Customers are a…",
-   "date": "2026-11-12T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "réseau"
-   ]
   },
   {
    "source": "Exploit-DB",
@@ -734,10 +735,10 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-119908",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-119908",
-   "summary": "Integer underflow (wrap or wraparound) in Windows Storage Spaces Controller allows an unauthorized attacker to execute code over a network.",
-   "date": "2026-11-10T19:20:11.630000+00:00",
+   "title": "CVE-2026-118148",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-118148",
+   "summary": "Incorrect authorization in Active Directory Domain Services allows an authorized attacker to elevate privileges over a network.",
+   "date": "2026-11-10T19:19:35.093000+00:00",
    "cvss": 8.8,
    "sev": "high",
    "platforms": [
@@ -747,11 +748,11 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-119907",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-119907",
-   "summary": "Untrusted pointer dereference in Windows Function Discovery Resource Publication allows an authorized attacker to elevate privileges locally.",
-   "date": "2026-11-10T19:20:11.420000+00:00",
-   "cvss": 7.8,
+   "title": "CVE-2026-111286",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-111286",
+   "summary": "Use after free in Microsoft Office allows an unauthorized attacker to execute code over a network.",
+   "date": "2026-11-10T19:18:25.443000+00:00",
+   "cvss": 8.8,
    "sev": "high",
    "platforms": [
     "windows"
@@ -778,6 +779,17 @@ window.ARSENAL_FEEDS = {
    "summary": "Replicate Cog through 0.23.1 contains a server-side request forgery vulnerability that allows attackers to cause the Cog process to make server-side HTTP requests by submitting prediction inputs with attacker-controlled URLs that are not va…",
    "date": "2026-11-09T22:18:52.290000+00:00",
    "cvss": 9.3,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-115338",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115338",
+   "summary": "Insufficient protection of communications in Progress WS_FTP Server versions prior to 2025.0.5 could allow a network attacker to intercept sensitive information or modify requests when unencrypted connections are used.",
+   "date": "2026-11-09T17:17:11.240000+00:00",
+   "cvss": 9.8,
    "sev": "crit",
    "platforms": []
   },
@@ -1255,32 +1267,6 @@ window.ARSENAL_FEEDS = {
    "cvss": null,
    "sev": "high",
    "platforms": []
-  },
-  {
-   "source": "CERT-FR · Alertes",
-   "kind": "alerte",
-   "title": "[MàJ] Vulnérabilité dans Cisco Catalyst SD-WAN (25 février 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-002/",
-   "summary": "Une vulnérabilité a été découverte dans Cisco Catalyst SD-WAN. Elle permet à un attaquant de provoquer un contournement de la politique de sécurité. Cisco indique que la vulnérabilité CVE-2026-20127 est activement exploitée.",
-   "date": "2026-02-25T00:00:00+00:00",
-   "cvss": null,
-   "sev": "crit",
-   "platforms": [
-    "réseau"
-   ]
-  },
-  {
-   "source": "CERT-FR · Alertes",
-   "kind": "alerte",
-   "title": "[MàJ] Multiples vulnérabilités dans Ivanti Endpoint Manager Mobile (30 janvier 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-001/",
-   "summary": "[Mise à jour du 09 février 2026] Le 6 février 2026, Ivanti a mis à disposition des scripts RPM de détection d'indicateurs de compromission, à utiliser en fonction de la version d'EPMM installée. L'éditeur a également mis son guide d'analyse…",
-   "date": "2026-01-30T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": [
-    "réseau"
-   ]
   }
  ]
 };
