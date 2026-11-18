@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-17T21:00:19+00:00",
+ "updated": "2026-11-18T07:37:24+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -53,6 +53,41 @@ window.ARSENAL_FEEDS = {
   }
  ],
  "items": [
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Attackers Compromise Microsoft's Agent Framework PyPI Package to Steal Cloud Credentials",
+   "link": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
+   "summary": "Threat actors have compromised Microsoft's agent-framework package to push a credential stealer, according to reports from Aikido, Endor Labs, OX Security, SafeDep, Socket, StepSecurity, and Google-owned Wiz. The malicious versions, 1.26.1…",
+   "date": "2026-11-18T06:45:26+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "windows"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization",
+   "link": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html",
+   "summary": "The Russia-linked cyber espionage group known as Cold Relic (formerly COLDRIVER and UNC4057) has been observed weaponizing a single cloud compromise into a launchpad for a series of linked intrusions resulting in third-party compromise. Goo…",
+   "date": "2026-11-18T05:58:04+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Critical Java4Shell Flaw (CVE-2026-114938) Enables Pre-Auth RCE in Jira, Jenkins, Keycloak and More",
+   "link": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html",
+   "summary": "A Java flaw called Java4Shell can let attackers without an account run their own code on Jira, Jenkins, Keycloak, and three other widely used applications, says Calif, the security research firm that disclosed it this week. The flaw is pres…",
+   "date": "2026-11-18T04:27:41+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
   {
    "source": "The Hacker News",
    "kind": "news",
@@ -116,6 +151,28 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
+   "title": "Siemens ROS#",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06",
+   "summary": "View CSAF Summary ROS# before version 2.3.1 contains a code injection vulnerability that could allow an attacker that is able to pass a crafted message definition file to the user to inject arbitrary code into the generated program. Siemens…",
+   "date": "2026-11-17T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "Dorsett Controls InfoScan",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-01",
+   "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to retrieve sensitive system information, access application data without authorization, recover stored credentials, or intercept and manipulate netw…",
+   "date": "2026-11-17T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
    "title": "Siemens Mendix Studio Pro",
    "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-05",
    "summary": "View CSAF Summary Mendix Studio Pro contains multiple vulnerabilities in the MCP Server, that could allow an attacker with network access to interact with the server remotely or trick a user's browser into sending unauthorized requests, pot…",
@@ -140,44 +197,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Siemens meta-iot2050",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-11",
-   "summary": "View CSAF Summary meta-iot2050 (https://github.com/siemens/meta-iot2050) from V01.03.01 contains a Command Injection vulnerability in the firmware update tool that could allow an attacker which is able to manipulate a configuration file to…",
-   "date": "2026-11-17T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
-   "title": "Siemens SIMATIC WinCC",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-09",
-   "summary": "View CSAF Summary Graphics Designer of SIMATIC WinCC before V8.2 contains an implicit active content execution vulnerability upon opening files, which could allow an attacker to cause arbitrary code execution on the device. Siemens is prepa…",
-   "date": "2026-11-17T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
-   "title": "Siemens RUGGEDCOM APE1808",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-07",
-   "summary": "View CSAF Summary Fortinet has published information on a Double Free vulnerability in FortiOS. This advisory lists the related Siemens Industrial products. Siemens recommends to update Fortigate NGFW to V7.6.9 or later following the secure…",
-   "date": "2026-11-17T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "réseau"
-   ]
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
-   "title": "Dorsett Controls InfoScan",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-01",
-   "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to retrieve sensitive system information, access application data without authorization, recover stored credentials, or intercept and manipulate netw…",
+   "title": "Critical Java Vulnerability Requires Immediate Patching",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/11/17/critical-java-vulnerability-requires-immediate-patching",
+   "summary": "Purpose CISA strongly urges organizations to immediately patch the recently disclosed Oracle Java vulnerability CVE-2026-114938 . This critical memory-corruption vulnerability, known as “Java4Shell,” affects the Base64 decoder of the x86-64…",
    "date": "2026-11-17T12:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -199,15 +221,13 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Siemens Industrial Automation Software Products",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-03",
-   "summary": "View CSAF Summary On October 21, 2026, the Node.js project released security updates addressing a critical vulnerability in the Brotli decoder bundled with Node.js, commonly referred to as \"Node2Shell\" (tracked as CVE-2026-111497). The vuln…",
+   "title": "Siemens Simcenter Femap",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-10",
+   "summary": "View CSAF Summary Simcenter Femap is affected by an out of bounds read vulnerability that could be triggered when the application reads files in X_T format. This could allow an attacker to crash the application or execute arbitrary code. Si…",
    "date": "2026-11-17T12:00:00+00:00",
    "cvss": null,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
+   "sev": null,
+   "platforms": []
   },
   {
    "source": "CISA · Advisories",
@@ -223,9 +243,35 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Siemens ROS#",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06",
-   "summary": "View CSAF Summary ROS# before version 2.3.1 contains a code injection vulnerability that could allow an attacker that is able to pass a crafted message definition file to the user to inject arbitrary code into the generated program. Siemens…",
+   "title": "Siemens Industrial Automation Software Products",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-03",
+   "summary": "View CSAF Summary On October 21, 2026, the Node.js project released security updates addressing a critical vulnerability in the Brotli decoder bundled with Node.js, commonly referred to as \"Node2Shell\" (tracked as CVE-2026-111497). The vuln…",
+   "date": "2026-11-17T12:00:00+00:00",
+   "cvss": null,
+   "sev": "crit",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "Siemens RUGGEDCOM APE1808",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-07",
+   "summary": "View CSAF Summary Fortinet has published information on a Double Free vulnerability in FortiOS. This advisory lists the related Siemens Industrial products. Siemens recommends to update Fortigate NGFW to V7.6.9 or later following the secure…",
+   "date": "2026-11-17T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "réseau"
+   ]
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "Siemens SIMATIC WinCC",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-09",
+   "summary": "View CSAF Summary Graphics Designer of SIMATIC WinCC before V8.2 contains an implicit active content execution vulnerability upon opening files, which could allow an attacker to cause arbitrary code execution on the device. Siemens is prepa…",
    "date": "2026-11-17T12:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -234,9 +280,20 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Siemens Simcenter Femap",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-10",
-   "summary": "View CSAF Summary Simcenter Femap is affected by an out of bounds read vulnerability that could be triggered when the application reads files in X_T format. This could allow an attacker to crash the application or execute arbitrary code. Si…",
+   "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/11/17/cisa-adds-one-known-exploited-vulnerability-catalog",
+   "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-115731 Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability This type of vu…",
+   "date": "2026-11-17T12:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "Siemens meta-iot2050",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-11",
+   "summary": "View CSAF Summary meta-iot2050 (https://github.com/siemens/meta-iot2050) from V01.03.01 contains a Command Injection vulnerability in the firmware update tool that could allow an attacker which is able to manipulate a configuration file to…",
    "date": "2026-11-17T12:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -409,10 +466,21 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-129952",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-129952",
-   "summary": "NodePress through 8.5.1 contains an authentication bypass vulnerability that allows unauthenticated remote attackers to gain administrator access by forging JWTs with the hardcoded 'nodepress-secret' fallback key. Attackers can sign HS256 b…",
-   "date": "2026-11-16T15:17:30.573000+00:00",
+   "title": "CVE-2026-130071",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130071",
+   "summary": "TridotsTech go1cms master branch through commit 7f68d05 and version-3 branch before commit ead8da3 contains a missing authentication vulnerability in the guest-whitelisted update_doc method that allows unauthenticated attackers to modify an…",
+   "date": "2026-11-16T22:18:22.373000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-129955",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-129955",
+   "summary": "NodePress through 8.5.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to gain administrator access by using the hardcoded default password 'root'. Attackers can send base64-encoded 'root' to POST /adm…",
+   "date": "2026-11-16T15:17:31.030000+00:00",
    "cvss": 9.8,
    "sev": "crit",
    "platforms": []
@@ -440,41 +508,6 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "windows",
     "web"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Six Unpatched Danfoss Refrigeration Controller Flaws Could Allow Remote Takeover Without Login",
-   "link": "https://thehackernews.com/2026/11/six-unpatched-danfoss-refrigeration.html",
-   "summary": "Six flaws in Danfoss AK-SM800A refrigeration controllers could let a remote attacker take over a controller without logging in, Dutch security consultancy Midnight Blue said earlier this week. No patch is available, and the researchers say…",
-   "date": "2026-11-16T12:34:21+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Retadup Worm Resurfaces 7 Years After Takedown to Spread CoffeeLoader Malware",
-   "link": "https://thehackernews.com/2026/11/retadup-worm-resurfaces-7-years-after.html",
-   "summary": "Cybersecurity researchers have disclosed details of a new variant of CoffeeLoader, a malware designed to deliver additional payloads to infected machines. \"On launch, the NSIS-based installer executable dropped a file named '7z.dll' into a…",
-   "date": "2026-11-16T12:33:18+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "SANSAR Linux Cryptomining Malware Uses Modified NVIDIA Library to Hide GPU Activity",
-   "link": "https://thehackernews.com/2026/11/sansar-linux-cryptomining-malware-uses.html",
-   "summary": "A financially motivated threat activity cluster tracked as REF3364 has been attributed to a Linux-focused cryptocurrency mining operation that tampers with the readings used to detect high GPU workloads. Central to the intrusion is a toolki…",
-   "date": "2026-11-16T09:32:57+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "linux"
    ]
   },
   {
@@ -596,17 +629,6 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-129354",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-129354",
-   "summary": "A flaw has been found in D-Link DIR-600L 2.17b02. Affected by this issue is the function hnap_main of the file htdocs/cgibin of the component HNAP Handler. Executing a manipulation can lead to stack-based buffer overflow. The attack can be…",
-   "date": "2026-11-15T01:18:03.043000+00:00",
-   "cvss": 10.0,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
    "title": "CVE-2026-129351",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-129351",
    "summary": "A security vulnerability has been detected in TRENDnet TEW-657BRM 1.00.1. This vulnerability affects the function sprintf of the file /setup.cgi of the component mini_httpd. Such manipulation leads to out-of-bounds write. The attack can be…",
@@ -653,40 +675,14 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Siemens Desigo, Gridscale",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-02",
-   "summary": "View CSAF Summary On October 21, 2026, the Node.js project released security updates addressing a critical vulnerability in the Brotli decoder bundled with Node.js, commonly referred to as \"Node2Shell\" (tracked as CVE-2026-111497). The vuln…",
-   "date": "2026-11-12T12:00:00+00:00",
-   "cvss": null,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
    "title": "Siemens RUGGEDCOM APE1808",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-04",
-   "summary": "View CSAF Summary Palo Alto Networks has published information on a vulnerability in PAN-OS related to the Node2Shell vulnerability. This advisory lists the related Siemens Industrial products affected by this vulnerability. Customers are a…",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-05",
+   "summary": "View CSAF Summary Palo Alto Networks has published information on vulnerabilities in PAN-OS related to PHP2Shell vulnerabilities. This advisory lists the related Siemens Industrial products affected by these vulnerabilities. Customers are a…",
    "date": "2026-11-12T12:00:00+00:00",
    "cvss": null,
    "sev": null,
    "platforms": [
     "réseau"
-   ]
-  },
-  {
-   "source": "CISA · Advisories",
-   "kind": "cve",
-   "title": "Siemens Building Automation and Energy Products",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-01",
-   "summary": "View CSAF Summary On October 21, 2026, the PHP project and security researchers disclosed two critical, unauthenticated remote code execution vulnerabilities in the core PHP language runtime known as \"php2shell\" (tracked as CVE-2026-109618…",
-   "date": "2026-11-12T12:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": [
-    "web"
    ]
   },
   {
@@ -751,6 +747,19 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-119907",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-119907",
+   "summary": "Untrusted pointer dereference in Windows Function Discovery Resource Publication allows an authorized attacker to elevate privileges locally.",
+   "date": "2026-11-10T19:20:11.420000+00:00",
+   "cvss": 7.8,
+   "sev": "high",
+   "platforms": [
+    "windows"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-109491",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-109491",
    "summary": "Use after free in Microsoft Office Word allows an unauthorized attacker to execute code over a network.",
@@ -781,17 +790,6 @@ window.ARSENAL_FEEDS = {
    "date": "2026-11-09T00:00:00+00:00",
    "cvss": null,
    "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-114713",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-114713",
-   "summary": "The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 \"label\" message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server command…",
-   "date": "2026-11-08T03:16:33.410000+00:00",
-   "cvss": 8.6,
-   "sev": "high",
    "platforms": []
   },
   {
