@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-19T20:43:28+00:00",
+ "updated": "2026-11-20T07:25:02+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -34,9 +34,8 @@ window.ARSENAL_FEEDS = {
    "name": "Exploit-DB",
    "kind": "exploit",
    "url": "https://www.exploit-db.com/rss.xml",
-   "ok": false,
-   "count": 0,
-   "error": "HTTP Error 502: Bad Gateway"
+   "ok": true,
+   "count": 15
   },
   {
    "name": "The Hacker News",
@@ -49,11 +48,38 @@ window.ARSENAL_FEEDS = {
    "name": "NVD · CVE notés CVSS",
    "kind": "cve",
    "url": "https://nvd.nist.gov/",
-   "ok": true,
-   "count": 15
+   "ok": false,
+   "count": 0,
+   "error": "The read operation timed out"
   }
  ],
  "items": [
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data",
+   "link": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html",
+   "summary": "The suspected China-nexus cyber espionage group known as Armory Castle (formerly UNC5221) has been attributed to the zero-day exploitation of a critical security flaw in VMware vCenter Server in early September 2026. The vulnerability, trac…",
+   "date": "2026-11-20T06:33:31+00:00",
+   "cvss": null,
+   "sev": "crit",
+   "platforms": [
+    "vmware"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "New Unpatched Windows 0-Day FastUnlock Lets Someone Holding a Locked PC Run Programs on It",
+   "link": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html",
+   "summary": "A newly disclosed unpatched zero-day technique called FastUnlock lets someone with physical access to a locked Windows computer start programs without signing in. Whoever uses it gets only a limited account, not administrator control of the…",
+   "date": "2026-11-20T05:30:01+00:00",
+   "cvss": null,
+   "sev": "crit",
+   "platforms": [
+    "windows"
+   ]
+  },
   {
    "source": "The Hacker News",
    "kind": "news",
@@ -94,11 +120,11 @@ window.ARSENAL_FEEDS = {
   {
    "source": "The Hacker News",
    "kind": "news",
-   "title": "Critical VMware vCenter Flaw (CVSS 9.8) Lets Network Attackers Bypass Authentication",
+   "title": "Critical VMware vCenter Zero-Day Flaw Lets Network Attackers Bypass Authentication",
    "link": "https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html",
    "summary": "A critical flaw in VMware vCenter lets an attacker with network access bypass authentication and gain unauthorized access to the system, Broadcom, which owns VMware, said in an advisory published today. Fixed versions are out for all suppor…",
    "date": "2026-11-19T15:11:06+00:00",
-   "cvss": 9.8,
+   "cvss": null,
    "sev": "crit",
    "platforms": [
     "vmware"
@@ -379,39 +405,6 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-130786",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130786",
-   "summary": "Incus before 7.6.0 contains a configuration injection vulnerability that allows users who can launch instances from controlled images to inject LXC directives by embedding line breaks in OCI config.json values or oci.entrypoint and oci.cwd…",
-   "date": "2026-11-18T19:17:55.157000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-130778",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130778",
-   "summary": "Incus before 7.6.0 contains an authentication bypass vulnerability that allows remote attackers to authenticate as any trusted certificate by appending its public certificate to their presented TLS client chain. Attackers can append the ser…",
-   "date": "2026-11-18T19:17:53.607000+00:00",
-   "cvss": 10.0,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-130754",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130754",
-   "summary": "All versions of LaraDashboard contain an authentication bypass in SocialAuthService::findOrCreateUser(), which links a social login to an existing account by email without checking that the OAuth provider verified that email. Unauthenticate…",
-   "date": "2026-11-18T19:17:45.940000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
    "source": "The Hacker News",
    "kind": "news",
    "title": "10-Year-Old NGINX HTTP/2 Flaw Lets Unauthenticated Attackers Execute Code on Servers",
@@ -436,74 +429,6 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "réseau"
    ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required",
-   "link": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html",
-   "summary": "A critical security flaw in Apache Roller, an open-source, Java-based blogging platform, has come under active exploitation in the wild, according to the Apache Software Foundation (ASF) The vulnerability, tracked as CVE-2026-129448 (CVSS s…",
-   "date": "2026-11-18T17:10:45+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": [
-    "linux"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2012-20007",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2012-20007",
-   "summary": "ThinkPHP 2.0 through 2.2 and 3.0 Lite mode contains an eval injection vulnerability in the Dispatcher PATH_INFO parsing, which uses preg_replace with the /e modifier and a double-quoted replacement. Unauthenticated attackers can send crafte…",
-   "date": "2026-11-18T16:17:47.560000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "New EggStreme Malware Variant Goes Silent to Evade Security Tools in Government Attacks",
-   "link": "https://thehackernews.com/2026/11/eggstreme-hackers-rebuild-malware-with.html",
-   "summary": "The suspected Chinese advanced persistent threat (APT) group behind the sophisticated EggStreme malware has rebuilt its toolkit as it continues to target government organizations in the Philippines. \"When attackers are exposed, the cheap re…",
-   "date": "2026-11-18T14:11:28+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-130733",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130733",
-   "summary": "Grav from 2.0.0 before 2.2.18 contains an authorization bypass vulnerability that allows publishers to overwrite pages their per-page permissions deny by abusing FolderStorage key delimiter collisions and PageStorage folder reconstruction.…",
-   "date": "2026-11-18T12:17:19.627000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-130679",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130679",
-   "summary": "SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability in genAVValueHTML() that allows attackers who can store Attribute View asset values to inject script through an unescaped image src attribute. Attackers can store an…",
-   "date": "2026-11-18T12:17:11.450000+00:00",
-   "cvss": 9.4,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-130675",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130675",
-   "summary": "Craft CMS from 5.0.0 before 5.11.4 contains a remote code execution vulnerability in ImageTransforms::normalizeTransform() that allows attackers to instantiate arbitrary classes by supplying class:null with a __class key. Attackers can reac…",
-   "date": "2026-11-18T12:17:10.783000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
   },
   {
    "source": "CISA · Advisories",
@@ -560,17 +485,6 @@ window.ARSENAL_FEEDS = {
    "date": "2026-11-18T00:00:00+00:00",
    "cvss": null,
    "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-115139",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115139",
-   "summary": "Vulnerability in the Oracle Hyperion Infrastructure Technology product of Oracle Hyperion (component: Installation and Configuration). The supported version that is affected is 11.2.26.0.000. Easily exploitable vulnerability allows unauthen…",
-   "date": "2026-11-17T22:18:47.437000+00:00",
-   "cvss": 9.3,
-   "sev": "crit",
    "platforms": []
   },
   {
@@ -712,88 +626,14 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-118383",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-118383",
-   "summary": "A use-after-free in the replication component of MongoDB Server can occur when a newly elected replica set primary completes catch-up. The condition can be caused by requests that do not require authentication, and may result in the server…",
-   "date": "2026-11-10T21:18:58.980000+00:00",
-   "cvss": 10.0,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-120779",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-120779",
-   "summary": "Improper control of generation of code ('code injection') in Visual Studio Code allows an unauthorized attacker to execute code over a network.",
-   "date": "2026-11-10T19:20:27.040000+00:00",
-   "cvss": 9.6,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-120002",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-120002",
-   "summary": "Incorrect authorization in Microsoft Office SharePoint allows an authorized attacker to elevate privileges over a network.",
-   "date": "2026-11-10T19:20:26.080000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": [
-    "windows"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-118148",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-118148",
-   "summary": "Incorrect authorization in Active Directory Domain Services allows an authorized attacker to elevate privileges over a network.",
-   "date": "2026-11-10T19:19:35.093000+00:00",
-   "cvss": 8.8,
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] Ruflo MCP Bridge 3.16.2 - Remote Code Execution",
+   "link": "https://www.exploit-db.com/exploits/52705",
+   "summary": "Ruflo MCP Bridge 3.16.2 - Remote Code Execution",
+   "date": "2026-11-11T00:00:00+00:00",
+   "cvss": null,
    "sev": "high",
-   "platforms": [
-    "windows"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-111286",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-111286",
-   "summary": "Use after free in Microsoft Office allows an unauthorized attacker to execute code over a network.",
-   "date": "2026-11-10T19:18:25.443000+00:00",
-   "cvss": 8.8,
-   "sev": "high",
-   "platforms": [
-    "windows"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-109491",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-109491",
-   "summary": "Use after free in Microsoft Office Word allows an unauthorized attacker to execute code over a network.",
-   "date": "2026-11-10T19:18:17.767000+00:00",
-   "cvss": 8.8,
-   "sev": "high",
-   "platforms": [
-    "windows"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-56712",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-56712",
-   "summary": "Replicate Cog through 0.23.1 contains a server-side request forgery vulnerability that allows attackers to cause the Cog process to make server-side HTTP requests by submitting prediction inputs with attacker-controlled URLs that are not va…",
-   "date": "2026-11-09T22:18:52.290000+00:00",
-   "cvss": 9.3,
-   "sev": "crit",
    "platforms": []
   },
   {
@@ -843,6 +683,19 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] PHP2Shell (CVE-2026-109618) - PHP core versions after v5.4 - RCE",
+   "link": "https://www.exploit-db.com/exploits/52704",
+   "summary": "PHP2Shell (CVE-2026-109618) - PHP core versions after v5.4 - RCE",
+   "date": "2026-10-22T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
    "source": "CERT-FR · Alertes",
    "kind": "alerte",
    "title": "[Màj] Multiples vulnérabilités dans PHP (21 octobre 2026)",
@@ -854,6 +707,116 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "web"
    ]
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[webapps] pizzafy-1.0 - SQLi",
+   "link": "https://www.exploit-db.com/exploits/52703",
+   "summary": "pizzafy-1.0 - SQLi",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] South River Technologies Titan MFT Server 26.0.0 - code execution",
+   "link": "https://www.exploit-db.com/exploits/52701",
+   "summary": "South River Technologies Titan MFT Server 26.0.0 - code execution",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] Synametrics Syncrify 6.2 - command execution",
+   "link": "https://www.exploit-db.com/exploits/52700",
+   "summary": "Synametrics Syncrify 6.2 - command execution",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[webapps] Keycloak 26.7.2 - Unauthenticated Account Takeover",
+   "link": "https://www.exploit-db.com/exploits/52699",
+   "summary": "Keycloak 26.7.2 - Unauthenticated Account Takeover",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[webapps] Open eClass 3.15 - RCE",
+   "link": "https://www.exploit-db.com/exploits/52698",
+   "summary": "Open eClass 3.15 - RCE",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[webapps] Automotive Shop Management System 1.0 - SQLi",
+   "link": "https://www.exploit-db.com/exploits/52697",
+   "summary": "Automotive Shop Management System 1.0 - SQLi",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] Edimax BR-6478AC firmware v2.20 - authenticated command injection",
+   "link": "https://www.exploit-db.com/exploits/52696",
+   "summary": "Edimax BR-6478AC firmware v2.20 - authenticated command injection",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] Exasol Database 7.1.30 - command execution",
+   "link": "https://www.exploit-db.com/exploits/52695",
+   "summary": "Exasol Database 7.1.30 - command execution",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] Parasoft Continuous Testing Platform 10.7.5 - JSP command execution",
+   "link": "https://www.exploit-db.com/exploits/52694",
+   "summary": "Parasoft Continuous Testing Platform 10.7.5 - JSP command execution",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] ProSoft RLX-IFH24E v2.2.44 - Unsigned Firmware Upgrade Package Executed as Root",
+   "link": "https://www.exploit-db.com/exploits/52693",
+   "summary": "ProSoft RLX-IFH24E v2.2.44 - Unsigned Firmware Upgrade Package Executed as Root",
+   "date": "2026-10-21T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
   },
   {
    "source": "CERT-FR · Actualités",
@@ -911,6 +874,41 @@ window.ARSENAL_FEEDS = {
    "cvss": null,
    "sev": null,
    "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[remote] Teltonika_RutOS 00.07.06.21 - command injection",
+   "link": "https://www.exploit-db.com/exploits/52692",
+   "summary": "Teltonika_RutOS 00.07.06.21 - command injection",
+   "date": "2026-10-01T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[webapps] TigerGraph_Community_Edition 4.2.4 - arbitrary file write",
+   "link": "https://www.exploit-db.com/exploits/52691",
+   "summary": "TigerGraph_Community_Edition 4.2.4 - arbitrary file write",
+   "date": "2026-10-01T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "Exploit-DB",
+   "kind": "exploit",
+   "title": "[webapps] WordPress 7.0.2 - Path Travesal",
+   "link": "https://www.exploit-db.com/exploits/52690",
+   "summary": "WordPress 7.0.2 - Path Travesal",
+   "date": "2026-10-01T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "web"
+   ]
   },
   {
    "source": "CERT-FR · Alertes",
