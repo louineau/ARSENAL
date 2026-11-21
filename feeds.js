@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-20T20:27:49+00:00",
+ "updated": "2026-11-21T07:17:36+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -53,6 +53,19 @@ window.ARSENAL_FEEDS = {
   }
  ],
  "items": [
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-120539",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-120539",
+   "summary": "The Restrictions for BuddyPress plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.5.4 This is due to the plugin splicing the attacker-controlled request URI into a PHP expression inside a do…",
+   "date": "2026-11-21T06:16:33.227000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": [
+    "web"
+   ]
+  },
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
@@ -523,61 +536,6 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-130754",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130754",
-   "summary": "All versions of LaraDashboard contain an authentication bypass in SocialAuthService::findOrCreateUser(), which links a social login to an existing account by email without checking that the OAuth provider verified that email. Unauthenticate…",
-   "date": "2026-11-18T19:17:45.940000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2012-20007",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2012-20007",
-   "summary": "ThinkPHP 2.0 through 2.2 and 3.0 Lite mode contains an eval injection vulnerability in the Dispatcher PATH_INFO parsing, which uses preg_replace with the /e modifier and a double-quoted replacement. Unauthenticated attackers can send crafte…",
-   "date": "2026-11-18T16:17:47.560000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-130733",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130733",
-   "summary": "Grav from 2.0.0 before 2.2.18 contains an authorization bypass vulnerability that allows publishers to overwrite pages their per-page permissions deny by abusing FolderStorage key delimiter collisions and PageStorage folder reconstruction.…",
-   "date": "2026-11-18T12:17:19.627000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-130679",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130679",
-   "summary": "SiYuan before 3.8.10 contains a stored cross-site scripting vulnerability in genAVValueHTML() that allows attackers who can store Attribute View asset values to inject script through an unescaped image src attribute. Attackers can store an…",
-   "date": "2026-11-18T12:17:11.450000+00:00",
-   "cvss": 9.4,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-130675",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130675",
-   "summary": "Craft CMS from 5.0.0 before 5.11.4 contains a remote code execution vulnerability in ImageTransforms::normalizeTransform() that allows attackers to instantiate arbitrary classes by supplying class:null with a __class key. Attackers can reac…",
-   "date": "2026-11-18T12:17:10.783000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
@@ -744,11 +702,44 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-115501",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115501",
+   "summary": "IBM i 7.3 7.4, 7.5, and 7.6 is vulnerable to a stack buffer overflow, caused by improper bounds checking in the QFileSvr.400 file system. By sending a command in the QFileSvr.400 file system, a local authenticated attacker could cause undef…",
+   "date": "2026-11-13T22:17:21.593000+00:00",
+   "cvss": 7.8,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-128127",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-128127",
+   "summary": "AIOHTTP is an asynchronous HTTP client/server framework for asyncio and Python. Prior to 3.14.4, BodyPartReader.read_chunk() processing a multipart part with Content-Transfer-Encoding set to base64 keeps reading until the chunk length is a…",
+   "date": "2026-11-13T21:17:44.460000+00:00",
+   "cvss": 8.7,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-128126",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-128126",
    "summary": "AIOHTTP is an asynchronous HTTP client/server framework for asyncio and Python. Prior to 3.14.4, Request.post() does not limit the number of fields in a URL-encoded form body, and inserting many repeated keys into MultiDict takes quadratic…",
    "date": "2026-11-13T21:17:44.310000+00:00",
    "cvss": 8.7,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-128124",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-128124",
+   "summary": "AIOHTTP is an asynchronous HTTP client/server framework for asyncio and Python. Prior to 3.14.4, Application.add_domain() converts every asterisk wildcard in a domain mask into a greedy regular-expression fragment, so a mask containing two…",
+   "date": "2026-11-13T21:17:44.003000+00:00",
+   "cvss": 8.2,
    "sev": "high",
    "platforms": []
   },
@@ -777,6 +768,43 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-126444",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-126444",
+   "summary": "OpenEMR before 8.5.0 contains a missing authorization vulnerability in the Ensora eRx integration that allows authenticated staff without patients/rx permission to access prescription data by directly requesting eRx.php. Attackers can expos…",
+   "date": "2026-11-13T10:17:51.830000+00:00",
+   "cvss": 7.1,
+   "sev": "high",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-126440",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-126440",
+   "summary": "OpenEMR before 8.5.0 contains a missing authorization flaw in the Care Coordination CCDA and CCR import controllers, which move a document named by the document_id parameter into the import category without checking access to the source doc…",
+   "date": "2026-11-13T10:17:51.150000+00:00",
+   "cvss": 7.1,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-126418",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-126418",
+   "summary": "OpenEMR before 8.5.0 contains a stored cross-site scripting vulnerability in interface/billing/sl_eob_invoice.php, which escapes billing codes for HTML attributes but not for JavaScript strings in an inline onkeyup handler. Clinicians with…",
+   "date": "2026-11-13T10:17:47.500000+00:00",
+   "cvss": 7.6,
+   "sev": "high",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
    "source": "Exploit-DB",
    "kind": "exploit",
    "title": "[remote] Ruflo MCP Bridge 3.16.2 - Remote Code Execution",
@@ -784,28 +812,6 @@ window.ARSENAL_FEEDS = {
    "summary": "Ruflo MCP Bridge 3.16.2 - Remote Code Execution",
    "date": "2026-11-11T00:00:00+00:00",
    "cvss": null,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-118383",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-118383",
-   "summary": "A use-after-free in the replication component of MongoDB Server can occur when a newly elected replica set primary completes catch-up. The condition can be caused by requests that do not require authentication, and may result in the server…",
-   "date": "2026-11-10T21:18:58.980000+00:00",
-   "cvss": 10.0,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-113551",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-113551",
-   "summary": "Audition is affected by a Violation of Secure Design Principles vulnerability that could result in privilege escalation. A low-privileged attacker could leverage this vulnerability to gain elevated access. Exploitation of this issue does no…",
-   "date": "2026-11-10T21:18:48.963000+00:00",
-   "cvss": 8.8,
    "sev": "high",
    "platforms": []
   },
