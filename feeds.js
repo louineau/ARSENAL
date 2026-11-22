@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-21T19:23:11+00:00",
+ "updated": "2026-11-22T06:58:13+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -53,6 +53,30 @@ window.ARSENAL_FEEDS = {
   }
  ],
  "items": [
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
+   "link": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
+   "summary": "Attackers stole data from inside three AI inference providers for months, and none of the three knew until researchers told them, the industrial cybersecurity company Dragos said this week. Some of the stolen requests were flagged as Zero D…",
+   "date": "2026-11-22T05:06:55+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
+   "link": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
+   "summary": "A now-patched flaw in Ghostscript allows a crafted file to escape the program's security sandbox and run commands on the server that processes it. Ghostscript is the interpreter that many Linux servers use to convert uploaded PDFs, PostScri…",
+   "date": "2026-11-22T05:03:41+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "linux"
+   ]
+  },
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
@@ -300,19 +324,6 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "New Unpatched Windows 0-Day FastUnlock Lets Someone Holding a Locked PC Run Programs on It",
-   "link": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html",
-   "summary": "A newly disclosed unpatched zero-day technique called FastUnlock lets someone with physical access to a locked Windows computer start programs without signing in. Whoever uses it gets only a limited account, not administrator control of the…",
-   "date": "2026-11-20T05:30:01+00:00",
-   "cvss": null,
-   "sev": "crit",
-   "platforms": [
-    "windows"
-   ]
-  },
-  {
    "source": "CERT-FR · Avis",
    "kind": "avis",
    "title": "Multiples vulnérabilités dans Moodle (20 novembre 2026)",
@@ -490,17 +501,6 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "linux"
    ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "ThreatsDay: GPT-6.2 Jailbreak Flaws, BubbleLoader PNG Malware, $500M Ransom Demands + 17 More Stories",
-   "link": "https://thehackernews.com/2026/11/threatsday-gpt-62-jailbreak-flaws.html",
-   "summary": "The easiest way to fool someone is to give them something they already expect. A job offer. A message about a service outage. A familiar app. Nothing looks strange at first. And that's the problem. This week's stories show how ordinary thin…",
-   "date": "2026-11-19T18:47:58+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
   },
   {
    "source": "CISA · Advisories",
