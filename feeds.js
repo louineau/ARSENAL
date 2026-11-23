@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-23T07:47:45+00:00",
+ "updated": "2026-11-23T23:58:27+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -54,6 +54,332 @@ window.ARSENAL_FEEDS = {
  ],
  "items": [
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-50691",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-50691",
+   "summary": "Improper authorization in M365 Copilot allows an authorized attacker to elevate privileges over a network.",
+   "date": "2026-11-23T22:20:16.553000+00:00",
+   "cvss": 9.9,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-118286",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-118286",
+   "summary": "Improper access control in Azure Site Recovery allows an unauthorized attacker to elevate privileges over a network.",
+   "date": "2026-11-23T22:19:30.903000+00:00",
+   "cvss": 9.1,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-118285",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-118285",
+   "summary": "Server-side request forgery in Azure Machine Learning allows an authorized attacker to elevate privileges over a network.",
+   "date": "2026-11-23T22:19:30.710000+00:00",
+   "cvss": 9.6,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-113824",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-113824",
+   "summary": "Authorization bypass through user-controlled key in Microsoft Clarity allows an unauthorized attacker to elevate privileges over a network.",
+   "date": "2026-11-23T22:19:04.970000+00:00",
+   "cvss": 9.1,
+   "sev": "crit",
+   "platforms": [
+    "windows"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-109490",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-109490",
+   "summary": "Improper neutralization of input during web page generation ('cross-site scripting') in Authentication Methods Portal Extension allows an unauthorized attacker to elevate privileges over a network.",
+   "date": "2026-11-23T22:18:30.130000+00:00",
+   "cvss": 9.3,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-109480",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-109480",
+   "summary": "Server-side request forgery in Profile Data Roaming Service (PDRS) allows an authorized attacker to elevate privileges over a network.",
+   "date": "2026-11-23T22:18:29.133000+00:00",
+   "cvss": 9.6,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
+   "link": "https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html",
+   "summary": "The China-aligned threat actor known as Webworm is suspected to be using a custom version of the open-source SoftEther VPN Bridge tool in an attempt to remove recognizable detection fingerprints, while disguising it as network-monitoring so…",
+   "date": "2026-11-23T17:45:15+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "réseau"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-135208",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-135208",
+   "summary": "Kerberos Agent before 3.14.4 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge administrator tokens because JWTMiddleWare() falls back to the hard-coded key TOBECHANGED. Attackers can sign HS256…",
+   "date": "2026-11-23T16:17:38.250000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": [
+    "windows"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
+   "link": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
+   "summary": "A stolen key. A trusted message. A routine update. None of these looks like the start of a major security problem. That's partly why they work. Attackers don't always need to break down a door. Sometimes they just use one that's already ope…",
+   "date": "2026-11-23T15:10:48+00:00",
+   "cvss": null,
+   "sev": "crit",
+   "platforms": [
+    "vmware"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions",
+   "link": "https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html",
+   "summary": "A critical security flaw has been disclosed in the popular binary-parser library that could allow an attacker who controls parser definitions to execute arbitrary code. The vulnerability, tracked as CVE-2026-134814 (CVSS score: 9.2 / 8.1),…",
+   "date": "2026-11-23T13:22:20+00:00",
+   "cvss": 9.2,
+   "sev": "crit",
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
+   "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html",
+   "summary": "Threat actors are exploiting a now-patched security flaw in ConnectWise ScreenConnect to target managed service provider (MSP) servers. The activity revolves around CVE-2026-84869 (CVSS score: 9.9), a critical ScreenConnect client flaw that…",
+   "date": "2026-11-23T12:41:04+00:00",
+   "cvss": 9.9,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
+   "link": "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html",
+   "summary": "N-able yesterday disclosed a critical flaw it found while investigating the breach of its Mail Assure and SpamExperts Hosted Cloud, an email filtering service it runs for managed service providers. The bug, tracked as CVE-2026-134624, is a…",
+   "date": "2026-11-23T12:28:09+00:00",
+   "cvss": null,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "CISA · Advisories",
+   "kind": "cve",
+   "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+   "link": "https://www.cisa.gov/news-events/alerts/2026/11/23/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+   "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-133968 Project MONAI MONAI Label Path Traversal Vulnerability CVE-2026-134624 N-able Mail Assur…",
+   "date": "2026-11-23T12:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-134882",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-134882",
+   "summary": "A weakness has been identified in TOTOLINK A7100RU 7.4cu.2313_B20191024. This issue affects the function exportOvpn of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. This manipulation of the argument Username causes os command…",
+   "date": "2026-11-23T09:17:05.653000+00:00",
+   "cvss": 10.0,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
+   "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
+   "summary": "Cybersecurity researchers have urged users to discontinue using a legacy ASP.NET anti-CSRF library named Idunno.AntiCsrf (\"Idunno.AntiCsrf.dll\") following the discovery of a critical vulnerability that has been exploited in the wild. The vu…",
+   "date": "2026-11-23T09:11:56+00:00",
+   "cvss": null,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Hackers Exploited GL.iNet Cloud Flaw to Install Malware on Routers and KVM Devices",
+   "link": "https://thehackernews.com/2026/11/hackers-exploited-glinet-cloud-flaw-to.html",
+   "summary": "Hackers exploited a vulnerability in GL.iNet's GoodCloud remote management service to install malware on some customer routers and KVM devices, the maker of travel routers and remote-access KVM hardware said in a security notice updated tod…",
+   "date": "2026-11-23T09:04:08+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "AI-Assisted Cyber Attacks Trigger Unauthorized Payments at Indian Banks and Fintech Firms",
+   "link": "https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html",
+   "summary": "The Indian Computer Emergency Response Team (CERT-In) has warned that threat actors are carrying out artificial intelligence (AI)-assisted cyber attacks targeting information and communication technology (ICT) assets in the country. This un…",
+   "date": "2026-11-23T08:24:15+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-120382",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-120382",
+   "summary": "An improper neutralization of argument delimiters in a command vulnerability in the OAuth API in Synology DiskStation Manager (DSM) before 7.1.1-42962-10, 7.2.1-69057-14, 7.2.2-72806-11, 7.3.2-86009-6, and 7.4.1-90080-2 allows remote attack…",
+   "date": "2026-11-23T08:17:14.183000+00:00",
+   "cvss": 9.8,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans SPIP (23 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1599/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans SPIP. Elles permettent à un attaquant de provoquer une injection de code indirecte à distance (XSS) et une injection de requêtes illégitimes par rebond (CSRF).",
+   "date": "2026-11-23T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans les produits Palo Alto Networks (23 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1600/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans les produits Palo Alto Networks. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et un déni de service à distance.",
+   "date": "2026-11-23T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "réseau"
+   ]
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Vulnérabilité dans Laravel (23 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1601/",
+   "summary": "Une vulnérabilité a été découverte dans Laravel. Elle permet à un attaquant de provoquer un déni de service à distance.",
+   "date": "2026-11-23T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans Roundcube Webmail (23 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1602/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans Roundcube Webmail. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confident…",
+   "date": "2026-11-23T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans Microsoft Edge (23 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1603/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans Microsoft Edge. Elles permettent à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
+   "date": "2026-11-23T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "windows"
+   ]
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Vulnérabilité dans Microsoft Office (23 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1604/",
+   "summary": "Une vulnérabilité a été découverte dans Microsoft Office. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance.",
+   "date": "2026-11-23T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "windows"
+   ]
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Vulnérabilité dans Mattermost Server (23 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1605/",
+   "summary": "Une vulnérabilité a été découverte dans Mattermost Server. Elle permet à un attaquant de provoquer une atteinte à la confidentialité des données.",
+   "date": "2026-11-23T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans MongoDB (23 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1606/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans MongoDB. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une atteinte à la confidentialité des données et une atteinte à l'intégrité des d…",
+   "date": "2026-11-23T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Avis",
+   "kind": "avis",
+   "title": "Multiples vulnérabilités dans les produits Synology (23 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1607/",
+   "summary": "De multiples vulnérabilités ont été découvertes dans les produits Synology. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confi…",
+   "date": "2026-11-23T00:00:00+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "CERT-FR · Actualités",
+   "kind": "actu",
+   "title": "Bulletin d'actualité CERTFR-2026-ACT-049 (23 novembre 2026)",
+   "link": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-049/",
+   "summary": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le CERT-FR dans le cadre d'une…",
+   "date": "2026-11-23T00:00:00+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
    "source": "The Hacker News",
    "kind": "news",
    "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
@@ -80,19 +406,6 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-125294",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-125294",
-   "summary": "The Nexter Blocks Pro plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 5.0.10 via the `tpgb_ajax_register_user()` function. This is due to a byte-level denylist on the `tpgb_acf_key[]` and `tp…",
-   "date": "2026-11-21T19:16:31.403000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
    "title": "CVE-2026-133993",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-133993",
    "summary": "A security flaw has been discovered in D-Link DIR-600L 2.17b02. This affects the function FUN_0040efb0 of the file gena.cgi of the component GENA Subscription Handler. Performing a manipulation of the argument service results in stack-based…",
@@ -100,19 +413,6 @@ window.ARSENAL_FEEDS = {
    "cvss": 10.0,
    "sev": "crit",
    "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-134292",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-134292",
-   "summary": "SurrealDB 1.0.0 before 4.0.0 contains a capability check bypass in its embedded JavaScript scripting engine, where the surrealdb.functions bridge calls the internal fnc::synchronous() and fnc::asynchronous() dispatchers without enforcing fu…",
-   "date": "2026-11-21T17:16:48.897000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
   },
   {
    "source": "The Hacker News",
@@ -179,19 +479,6 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-120539",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-120539",
-   "summary": "The Restrictions for BuddyPress plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.5.4 This is due to the plugin splicing the attacker-controlled request URI into a PHP expression inside a do…",
-   "date": "2026-11-21T06:16:33.227000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
    "title": "CVE-2026-133680",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-133680",
    "summary": "A vulnerability was found in D-Link DCS-935L 1.10.01. This affects the function loginRouter of the file web/cgi-bin/localrecording/setconf.cgi of the component Local Recording CGI. Performing a manipulation of the argument account/password…",
@@ -199,46 +486,6 @@ window.ARSENAL_FEEDS = {
    "cvss": 9.9,
    "sev": "crit",
    "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
-   "link": "https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html",
-   "summary": "Meta-owned WhatsApp has addressed security vulnerabilities, including one impacting its Android app that it suspects may have been exploited in connection with scam messages. The vulnerability, tracked as CVE-2026-23871 (CVSS score: 3.5), h…",
-   "date": "2026-11-20T17:57:20+00:00",
-   "cvss": 3.5,
-   "sev": "low",
-   "platforms": [
-    "android"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Bazuka Android Malware Uses Fake Screen Overlays to Hide Credential Theft and Device Control",
-   "link": "https://thehackernews.com/2026/11/bazuka-android-malware-uses-fake-screen.html",
-   "summary": "Cybersecurity researchers have disclosed details of a previously unknown Android malware framework called Bazuka that offers large language model (LLM) integration for victim management and control at scale. Dutch mobile security company Th…",
-   "date": "2026-11-20T16:58:16+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "android"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
-   "link": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
-   "summary": "A flaw in KVM, the hypervisor built into the Linux kernel, let researchers read about 127 GB of a cloud server's memory from inside a virtual machine of their own on DigitalOcean. On a shared server, that memory can include other customers'…",
-   "date": "2026-11-20T12:20:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "linux",
-    "vmware"
-   ]
   },
   {
    "source": "CISA · Advisories",
@@ -252,56 +499,6 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "The Path to AI Autonomy in the SOC",
-   "link": "https://thehackernews.com/2026/11/the-path-to-ai-autonomy-in-soc.html",
-   "summary": "Security leaders are about to hand AI agents a lot more authority. In a recent a16z survey of CISOs at organizations with more than 1,000 employees, 36% said they are comfortable today letting AI agents act autonomously on low-risk security…",
-   "date": "2026-11-20T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "SonicWall Warns Gen 6 Firewalls Won't Get Security Patches, Even for Critical Flaws",
-   "link": "https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html",
-   "summary": "SonicWall has urged all customers still running Generation 6 firewalls to retire and replace them immediately and stop exposing the devices on the internet edge, citing security risks fueled by AI-assisted attacks. \"Attackers now use automa…",
-   "date": "2026-11-20T10:38:22+00:00",
-   "cvss": null,
-   "sev": "crit",
-   "platforms": [
-    "réseau"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
-   "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html",
-   "summary": "Threat actors have been observed exploiting a recently disclosed critical security flaw in Cisco Expressway to breach a Russian organization shortly after the public release of a proof-of-concept (PoC) exploit. The activity involves the exp…",
-   "date": "2026-11-20T10:32:50+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "réseau"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data",
-   "link": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html",
-   "summary": "The suspected China-nexus cyber espionage group known as Armory Castle (formerly UNC5221) has been attributed to the zero-day exploitation of a critical security flaw in VMware vCenter Server in early September 2026. The vulnerability, trac…",
-   "date": "2026-11-20T09:38:15+00:00",
-   "cvss": null,
-   "sev": "crit",
-   "platforms": [
-    "vmware"
-   ]
-  },
-  {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
    "title": "CVE-2026-133500",
@@ -310,17 +507,6 @@ window.ARSENAL_FEEDS = {
    "date": "2026-11-20T09:20:07.047000+00:00",
    "cvss": 9.1,
    "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users and Control PCs",
-   "link": "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html",
-   "summary": "Threat actors have been observed using the ROMULUS ClickFix malware delivery platform to deliver a previously undocumented remote access trojan (RAT) that shares similarities with CNCMachineRMS. \"ROMULUS likely operates as a delivery servic…",
-   "date": "2026-11-20T07:11:39+00:00",
-   "cvss": null,
-   "sev": null,
    "platforms": []
   },
   {
@@ -385,119 +571,12 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CERT-FR · Avis",
    "kind": "avis",
-   "title": "Vulnérabilité dans KeyCloak (20 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1586/",
-   "summary": "Une vulnérabilité a été découverte dans KeyCloak. Elle permet à un attaquant de provoquer un contournement de la politique de sécurité.",
-   "date": "2026-11-20T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
    "title": "Multiples vulnérabilités dans Apache Tomcat (20 novembre 2026)",
    "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1587/",
    "summary": "De multiples vulnérabilités ont été découvertes dans Apache Tomcat. Certaines d'entre elles permettent à un attaquant de provoquer un déni de service à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité de…",
    "date": "2026-11-20T00:00:00+00:00",
    "cvss": null,
    "sev": null,
-   "platforms": [
-    "linux"
-   ]
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans les produits Mattermost (20 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1588/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans les produits Mattermost. Certaines d'entre elles permettent à un attaquant de provoquer un déni de service à distance, une atteinte à la confidentialité des données et un contournement de…",
-   "date": "2026-11-20T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans les produits Moxa (20 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1589/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans les produits Moxa. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confident…",
-   "date": "2026-11-20T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans Siemens Industrial Edge (20 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1590/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans Siemens Industrial Edge. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance.",
-   "date": "2026-11-20T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Vulnérabilité dans GitLab (20 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1591/",
-   "summary": "Une vulnérabilité a été découverte dans GitLab. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance.",
-   "date": "2026-11-20T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans le noyau Linux de Red Hat (20 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1592/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de Red Hat. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à…",
-   "date": "2026-11-20T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": [
-    "linux"
-   ]
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans le noyau Linux de SUSE (20 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1593/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de SUSE. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une atteinte à la confidentialité des données et une atteinte à l'…",
-   "date": "2026-11-20T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": [
-    "linux"
-   ]
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans le noyau Linux de Debian (20 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1594/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de Debian. Elles permettent à un attaquant de provoquer une élévation de privilèges, une atteinte à la confidentialité des données et un déni de service.",
-   "date": "2026-11-20T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
-   "platforms": [
-    "linux"
-   ]
-  },
-  {
-   "source": "CERT-FR · Avis",
-   "kind": "avis",
-   "title": "Multiples vulnérabilités dans le noyau Linux de Debian LTS (20 novembre 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/avis/CERTFR-2026-AVI-1595/",
-   "summary": "De multiples vulnérabilités ont été découvertes dans le noyau Linux de Debian LTS. Elles permettent à un attaquant de provoquer une élévation de privilèges, une atteinte à la confidentialité des données et un déni de service.",
-   "date": "2026-11-20T00:00:00+00:00",
-   "cvss": null,
-   "sev": "high",
    "platforms": [
     "linux"
    ]
@@ -538,35 +617,26 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-132142",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-132142",
-   "summary": "A flaw has been found in DrayTek Vigor2960 up to 1.5.1.6. This affects the function dataflowstatus of the file /cgi-bin/mainfunction.cgi of the component CGI Process. This manipulation of the argument option causes stack-based buffer overfl…",
-   "date": "2026-11-18T22:17:20.160000+00:00",
-   "cvss": 9.1,
-   "sev": "crit",
+   "title": "CVE-2026-76430",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-76430",
+   "summary": "A vulnerability in the Ultimate Packer for eXecutables (UPX) unpacker of ClamAV could allow an unauthenticated, remote attacker to cause a DoS condition on an affected device. This vulnerability is due to improper length checks, when unpack…",
+   "date": "2026-11-18T17:17:50.917000+00:00",
+   "cvss": 7.5,
+   "sev": "high",
    "platforms": []
   },
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-130786",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130786",
-   "summary": "Incus before 7.6.0 contains a configuration injection vulnerability that allows users who can launch instances from controlled images to inject LXC directives by embedding line breaks in OCI config.json values or oci.entrypoint and oci.cwd…",
-   "date": "2026-11-18T19:17:55.157000+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-130778",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-130778",
-   "summary": "Incus before 7.6.0 contains an authentication bypass vulnerability that allows remote attackers to authenticate as any trusted certificate by appending its public certificate to their presented TLS client chain. Attackers can append the ser…",
-   "date": "2026-11-18T19:17:53.607000+00:00",
-   "cvss": 10.0,
-   "sev": "crit",
-   "platforms": []
+   "title": "CVE-2026-132224",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-132224",
+   "summary": "Optimizely Web Experimentation before 2026-11-17 mishandles the account signup flow, leading to presence of attacker-controlled code in the projectJS (aka Project JavaScript) field of certain cdn.optimizely.com assets.",
+   "date": "2026-11-18T16:18:15.627000+00:00",
+   "cvss": 8.7,
+   "sev": "high",
+   "platforms": [
+    "web"
+   ]
   },
   {
    "source": "CISA · Advisories",
@@ -604,11 +674,22 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-127337",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-127337",
+   "summary": "Vulnerability in the Oracle AutoVue product of Oracle Supply Chain (component: Security). The supported version that is affected is 21.1.0. Easily exploitable vulnerability allows unauthenticated attacker with logon to the infrastructure wh…",
+   "date": "2026-11-17T22:18:57.897000+00:00",
+   "cvss": 7.9,
+   "sev": "high",
+   "platforms": []
+  },
+  {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Siemens Simcenter Femap",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-10",
-   "summary": "View CSAF Summary Simcenter Femap is affected by an out of bounds read vulnerability that could be triggered when the application reads files in X_T format. This could allow an attacker to crash the application or execute arbitrary code. Si…",
+   "title": "Siemens ROS#",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06",
+   "summary": "View CSAF Summary ROS# before version 2.3.1 contains a code injection vulnerability that could allow an attacker that is able to pass a crafted message definition file to the user to inject arbitrary code into the generated program. Siemens…",
    "date": "2026-11-17T12:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -676,9 +757,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "CISA · Advisories",
    "kind": "cve",
-   "title": "Siemens ROS#",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06",
-   "summary": "View CSAF Summary ROS# before version 2.3.1 contains a code injection vulnerability that could allow an attacker that is able to pass a crafted message definition file to the user to inject arbitrary code into the generated program. Siemens…",
+   "title": "Siemens Simcenter Femap",
+   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-10",
+   "summary": "View CSAF Summary Simcenter Femap is affected by an out of bounds read vulnerability that could be triggered when the application reads files in X_T format. This could allow an attacker to crash the application or execute arbitrary code. Si…",
    "date": "2026-11-17T12:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -709,19 +790,6 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
-   "source": "CISA · Advisories",
-   "kind": "cve",
-   "title": "Siemens RUGGEDCOM APE1808",
-   "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-07",
-   "summary": "View CSAF Summary Fortinet has published information on a Double Free vulnerability in FortiOS. This advisory lists the related Siemens Industrial products. Siemens recommends to update Fortigate NGFW to V7.6.9 or later following the secure…",
-   "date": "2026-11-17T12:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "réseau"
-   ]
-  },
-  {
    "source": "CERT-FR · Actualités",
    "kind": "actu",
    "title": "Bulletin d'actualité CERTFR-2026-ACT-048 (16 novembre 2026)",
@@ -733,79 +801,11 @@ window.ARSENAL_FEEDS = {
    "platforms": []
   },
   {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-115501",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-115501",
-   "summary": "IBM i 7.3 7.4, 7.5, and 7.6 is vulnerable to a stack buffer overflow, caused by improper bounds checking in the QFileSvr.400 file system. By sending a command in the QFileSvr.400 file system, a local authenticated attacker could cause undef…",
-   "date": "2026-11-13T22:17:21.593000+00:00",
-   "cvss": 7.8,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-128127",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-128127",
-   "summary": "AIOHTTP is an asynchronous HTTP client/server framework for asyncio and Python. Prior to 3.14.4, BodyPartReader.read_chunk() processing a multipart part with Content-Transfer-Encoding set to base64 keeps reading until the chunk length is a…",
-   "date": "2026-11-13T21:17:44.460000+00:00",
-   "cvss": 8.7,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-128126",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-128126",
-   "summary": "AIOHTTP is an asynchronous HTTP client/server framework for asyncio and Python. Prior to 3.14.4, Request.post() does not limit the number of fields in a URL-encoded form body, and inserting many repeated keys into MultiDict takes quadratic…",
-   "date": "2026-11-13T21:17:44.310000+00:00",
-   "cvss": 8.7,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-128124",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-128124",
-   "summary": "AIOHTTP is an asynchronous HTTP client/server framework for asyncio and Python. Prior to 3.14.4, Application.add_domain() converts every asterisk wildcard in a domain mask into a greedy regular-expression fragment, so a mask containing two…",
-   "date": "2026-11-13T21:17:44.003000+00:00",
-   "cvss": 8.2,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-128337",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-128337",
-   "summary": "ExcelJS through 4.4.0 contains a prototype pollution vulnerability in mergeConditionalFormattings that allows attackers to modify Object.prototype by supplying an x14:cfRule id of __proto__. Attackers can craft an xlsx file that, when loade…",
-   "date": "2026-11-13T10:18:13.920000+00:00",
-   "cvss": 8.6,
-   "sev": "high",
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-126492",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-126492",
-   "summary": "OpenEMR before 8.5.0 contains a second-order sql injection vulnerability that allows low-privileged authenticated users to store malicious SQL via library/ajax/addlistitem.php. Attackers can persist a SQL fragment in the recent_patient_colu…",
-   "date": "2026-11-13T10:17:59.763000+00:00",
-   "cvss": 8.8,
-   "sev": "high",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
    "source": "Exploit-DB",
    "kind": "exploit",
-   "title": "[remote] Ruflo MCP Bridge 3.16.2 - Remote Code Execution",
+   "title": "[remote] Ruflo MCP Bridge 3.16.2 - Remote Code Execution (RCE)",
    "link": "https://www.exploit-db.com/exploits/52705",
-   "summary": "Ruflo MCP Bridge 3.16.2 - Remote Code Execution",
+   "summary": "Ruflo MCP Bridge 3.16.2 - Remote Code Execution (RCE)",
    "date": "2026-11-11T00:00:00+00:00",
    "cvss": null,
    "sev": "high",
@@ -860,9 +860,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "Exploit-DB",
    "kind": "exploit",
-   "title": "[remote] PHP2Shell (CVE-2026-109618) - PHP core versions after v5.4 - RCE",
+   "title": "[remote] PHP > 5.4 - 'PHP2Shell' Remote Code Execution (RCE)",
    "link": "https://www.exploit-db.com/exploits/52704",
-   "summary": "PHP2Shell (CVE-2026-109618) - PHP core versions after v5.4 - RCE",
+   "summary": "PHP > 5.4 - 'PHP2Shell' Remote Code Execution (RCE)",
    "date": "2026-10-22T00:00:00+00:00",
    "cvss": null,
    "sev": "high",
@@ -886,20 +886,22 @@ window.ARSENAL_FEEDS = {
   {
    "source": "Exploit-DB",
    "kind": "exploit",
-   "title": "[webapps] pizzafy-1.0 - SQLi",
+   "title": "[webapps] pizzafy-1.0 - SQL Injection (SQLi)",
    "link": "https://www.exploit-db.com/exploits/52703",
-   "summary": "pizzafy-1.0 - SQLi",
+   "summary": "pizzafy-1.0 - SQL Injection (SQLi)",
    "date": "2026-10-21T00:00:00+00:00",
    "cvss": null,
    "sev": null,
-   "platforms": []
+   "platforms": [
+    "web"
+   ]
   },
   {
    "source": "Exploit-DB",
    "kind": "exploit",
-   "title": "[remote] South River Technologies Titan MFT Server 26.0.0 - code execution",
+   "title": "[remote] South River Technologies Titan MFT Server 26.0.0 - Code Execution",
    "link": "https://www.exploit-db.com/exploits/52701",
-   "summary": "South River Technologies Titan MFT Server 26.0.0 - code execution",
+   "summary": "South River Technologies Titan MFT Server 26.0.0 - Code Execution",
    "date": "2026-10-21T00:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -908,9 +910,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "Exploit-DB",
    "kind": "exploit",
-   "title": "[remote] Synametrics Syncrify 6.2 - command execution",
+   "title": "[remote] Synametrics Syncrify 6.2 - Command Execution",
    "link": "https://www.exploit-db.com/exploits/52700",
-   "summary": "Synametrics Syncrify 6.2 - command execution",
+   "summary": "Synametrics Syncrify 6.2 - Command Execution",
    "date": "2026-10-21T00:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -930,9 +932,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "Exploit-DB",
    "kind": "exploit",
-   "title": "[webapps] Open eClass 3.15 - RCE",
+   "title": "[webapps] Open eClass 3.15 - Remote Code Execution (RCE)",
    "link": "https://www.exploit-db.com/exploits/52698",
-   "summary": "Open eClass 3.15 - RCE",
+   "summary": "Open eClass 3.15 - Remote Code Execution (RCE)",
    "date": "2026-10-21T00:00:00+00:00",
    "cvss": null,
    "sev": "high",
@@ -941,20 +943,22 @@ window.ARSENAL_FEEDS = {
   {
    "source": "Exploit-DB",
    "kind": "exploit",
-   "title": "[webapps] Automotive Shop Management System 1.0 - SQLi",
+   "title": "[webapps] Automotive Shop Management System 1.0 - SQL Injection (SQLi)",
    "link": "https://www.exploit-db.com/exploits/52697",
-   "summary": "Automotive Shop Management System 1.0 - SQLi",
+   "summary": "Automotive Shop Management System 1.0 - SQL Injection (SQLi)",
    "date": "2026-10-21T00:00:00+00:00",
    "cvss": null,
    "sev": null,
-   "platforms": []
+   "platforms": [
+    "web"
+   ]
   },
   {
    "source": "Exploit-DB",
    "kind": "exploit",
-   "title": "[remote] Edimax BR-6478AC firmware v2.20 - authenticated command injection",
+   "title": "[remote] Edimax BR-6478AC firmware 2.20 - Authenticated Command Injection",
    "link": "https://www.exploit-db.com/exploits/52696",
-   "summary": "Edimax BR-6478AC firmware v2.20 - authenticated command injection",
+   "summary": "Edimax BR-6478AC firmware 2.20 - Authenticated Command Injection",
    "date": "2026-10-21T00:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -963,9 +967,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "Exploit-DB",
    "kind": "exploit",
-   "title": "[remote] Exasol Database 7.1.30 - command execution",
+   "title": "[remote] Exasol Database 7.1.30 - Command Execution",
    "link": "https://www.exploit-db.com/exploits/52695",
-   "summary": "Exasol Database 7.1.30 - command execution",
+   "summary": "Exasol Database 7.1.30 - Command Execution",
    "date": "2026-10-21T00:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -974,9 +978,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "Exploit-DB",
    "kind": "exploit",
-   "title": "[remote] Parasoft Continuous Testing Platform 10.7.5 - JSP command execution",
+   "title": "[remote] Parasoft Continuous Testing Platform 10.7.5 - JSP Command Execution",
    "link": "https://www.exploit-db.com/exploits/52694",
-   "summary": "Parasoft Continuous Testing Platform 10.7.5 - JSP command execution",
+   "summary": "Parasoft Continuous Testing Platform 10.7.5 - JSP Command Execution",
    "date": "2026-10-21T00:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -985,9 +989,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "Exploit-DB",
    "kind": "exploit",
-   "title": "[remote] ProSoft RLX-IFH24E v2.2.44 - Unsigned Firmware Upgrade Package Executed as Root",
+   "title": "[remote] ProSoft RLX-IFH24E 2.2.44 - Unsigned Firmware Upgrade Package Executed as Root",
    "link": "https://www.exploit-db.com/exploits/52693",
-   "summary": "ProSoft RLX-IFH24E v2.2.44 - Unsigned Firmware Upgrade Package Executed as Root",
+   "summary": "ProSoft RLX-IFH24E 2.2.44 - Unsigned Firmware Upgrade Package Executed as Root",
    "date": "2026-10-21T00:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -1053,9 +1057,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "Exploit-DB",
    "kind": "exploit",
-   "title": "[remote] Teltonika_RutOS 00.07.06.21 - command injection",
+   "title": "[remote] Teltonika_RutOS 00.07.06.21 - Command Injection",
    "link": "https://www.exploit-db.com/exploits/52692",
-   "summary": "Teltonika_RutOS 00.07.06.21 - command injection",
+   "summary": "Teltonika_RutOS 00.07.06.21 - Command Injection",
    "date": "2026-10-01T00:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -1064,9 +1068,9 @@ window.ARSENAL_FEEDS = {
   {
    "source": "Exploit-DB",
    "kind": "exploit",
-   "title": "[webapps] TigerGraph_Community_Edition 4.2.4 - arbitrary file write",
+   "title": "[webapps] TigerGraph_Community_Edition 4.2.4 - Arbitrary File write",
    "link": "https://www.exploit-db.com/exploits/52691",
-   "summary": "TigerGraph_Community_Edition 4.2.4 - arbitrary file write",
+   "summary": "TigerGraph_Community_Edition 4.2.4 - Arbitrary File write",
    "date": "2026-10-01T00:00:00+00:00",
    "cvss": null,
    "sev": null,
@@ -1195,17 +1199,6 @@ window.ARSENAL_FEEDS = {
    "link": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-035/",
    "summary": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le CERT-FR dans le cadre d'une…",
    "date": "2026-08-17T00:00:00+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "CERT-FR · Actualités",
-   "kind": "actu",
-   "title": "Bulletin d'actualité CERTFR-2026-ACT-034 (10 août 2026)",
-   "link": "https://www.cert.cyber.gouv.fr/actualite/CERTFR-2026-ACT-034/",
-   "summary": "Ce bulletin d'actualité du CERT-FR revient sur les vulnérabilités significatives de la semaine passée pour souligner leurs criticités. Il ne remplace pas l'analyse de l'ensemble des avis et alertes publiés par le CERT-FR dans le cadre d'une…",
-   "date": "2026-08-10T00:00:00+00:00",
    "cvss": null,
    "sev": null,
    "platforms": []
