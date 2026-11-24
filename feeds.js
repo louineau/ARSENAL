@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-23T23:58:27+00:00",
+ "updated": "2026-11-24T09:59:50+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -53,6 +53,31 @@ window.ARSENAL_FEEDS = {
   }
  ],
  "items": [
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
+   "link": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html",
+   "summary": "OpenAI and Cisco have teamed up to launch Shirudo (meaning \"shield\" in Japanese), an open-source Linux runtime that allows artificial intelligence (AI) agents to defend systems without downtime. \"It lets agents write dynamic eBPF controls t…",
+   "date": "2026-11-24T06:02:57+00:00",
+   "cvss": null,
+   "sev": "high",
+   "platforms": [
+    "linux",
+    "réseau"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
+   "link": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+   "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The critica…",
+   "date": "2026-11-24T06:02:45+00:00",
+   "cvss": null,
+   "sev": "crit",
+   "platforms": []
+  },
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
@@ -446,35 +471,6 @@ window.ARSENAL_FEEDS = {
    "cvss": null,
    "sev": "crit",
    "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Signal Blocks AI Agents From Reading Private Chats via Screenshots on Android and iOS",
-   "link": "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html",
-   "summary": "Signal has announced that it will restrict screenshots by default to stop artificial intelligence (AI) agents from reading private chats on Android and iOS devices, but conceded that the protection is \"incomplete.\" The feature applies to ag…",
-   "date": "2026-11-21T08:49:20+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "android",
-    "ios"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
-   "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html",
-   "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added four flaws impacting Apache Roller, Cisco Expressway, SAP NetWeaver, and Broadcom VMware vCenter to its Known Exploited Vulnerabilities (KEV), citing evidence…",
-   "date": "2026-11-21T08:49:13+00:00",
-   "cvss": null,
-   "sev": null,
-   "platforms": [
-    "linux",
-    "réseau",
-    "vmware"
-   ]
   },
   {
    "source": "NVD · CVE notés CVSS",
