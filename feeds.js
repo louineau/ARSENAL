@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-24T22:31:34+00:00",
+ "updated": "2026-11-25T08:43:50+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -54,6 +54,65 @@ window.ARSENAL_FEEDS = {
  ],
  "items": [
   {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
+   "link": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html",
+   "summary": "An unknown threat actor has been using artificial intelligence (AI)-driven offensive tooling in a campaign targeting Check Point Security Management servers, impacting 22 distinct organizations across the world. The intrusion activity, trac…",
+   "date": "2026-11-25T06:50:19+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": []
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
+   "link": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
+   "summary": "Palo Alto Networks Unit 42 has disclosed that it's tracking and has responded to \"numerous waves of vishing attacks\" orchestrated by Com-affiliated threat actors since August 2026 that have led to data theft and extortion attempts. The atta…",
+   "date": "2026-11-25T06:37:06+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "réseau"
+   ]
+  },
+  {
+   "source": "The Hacker News",
+   "kind": "news",
+   "title": "WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live",
+   "link": "https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html",
+   "summary": "WordPress has removed six WordPress plugins developed by WP Connect after they were backdoored on November 22, 2026, to enable arbitrary code execution on sites that have them installed, following a suspected compromise of the developer's a…",
+   "date": "2026-11-25T06:21:12+00:00",
+   "cvss": null,
+   "sev": null,
+   "platforms": [
+    "web"
+   ]
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-136184",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-136184",
+   "summary": "compose-farm 0.19.0 before 1.22.0 contains a cross-site WebSocket hijacking and cross-site request forgery vulnerability because its unauthenticated web UI performs no Origin validation. Malicious websites visited by users can open /ws/shel…",
+   "date": "2026-11-24T17:18:46.180000+00:00",
+   "cvss": 9.6,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-135790",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-135790",
+   "summary": "A vulnerability was detected in Panabit Smart Application Gateway TANGr7p10. This affects an unknown part of the file /cgi-bin/dashboard/ajax_chart_dump. The manipulation of the argument isntmeye results in os command injection. The attack…",
+   "date": "2026-11-24T17:18:43.717000+00:00",
+   "cvss": 9.9,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
    "title": "CVE-2026-135789",
@@ -74,19 +133,6 @@ window.ARSENAL_FEEDS = {
    "cvss": 9.9,
    "sev": "crit",
    "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-123167",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123167",
-   "summary": "SolarWinds Serv-U is affected by a privilege escalation vulnerability that, when exploited, can allow a domain administrator to access files that otherwise would require elevated privileges. The risk is lower for Windows installations.",
-   "date": "2026-11-24T17:18:13.293000+00:00",
-   "cvss": 9.1,
-   "sev": "crit",
-   "platforms": [
-    "windows"
-   ]
   },
   {
    "source": "The Hacker News",
@@ -409,41 +455,6 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions",
-   "link": "https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html",
-   "summary": "A critical security flaw has been disclosed in the popular binary-parser library that could allow an attacker who controls parser definitions to execute arbitrary code. The vulnerability, tracked as CVE-2026-134814 (CVSS score: 9.2 / 8.1),…",
-   "date": "2026-11-23T13:22:20+00:00",
-   "cvss": 9.2,
-   "sev": "crit",
-   "platforms": [
-    "web"
-   ]
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
-   "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html",
-   "summary": "Threat actors are exploiting a now-patched security flaw in ConnectWise ScreenConnect to target managed service provider (MSP) servers. The activity revolves around CVE-2026-84869 (CVSS score: 9.9), a critical ScreenConnect client flaw that…",
-   "date": "2026-11-23T12:41:04+00:00",
-   "cvss": 9.9,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
-   "source": "The Hacker News",
-   "kind": "news",
-   "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
-   "link": "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html",
-   "summary": "N-able yesterday disclosed a critical flaw it found while investigating the breach of its Mail Assure and SpamExperts Hosted Cloud, an email filtering service it runs for managed service providers. The bug, tracked as CVE-2026-134624, is a…",
-   "date": "2026-11-23T12:28:09+00:00",
-   "cvss": null,
-   "sev": "crit",
-   "platforms": []
-  },
-  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
@@ -603,17 +614,6 @@ window.ARSENAL_FEEDS = {
    "date": "2026-11-20T12:00:00+00:00",
    "cvss": null,
    "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-133500",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-133500",
-   "summary": "A vulnerability was identified in Gladys Assistant up to 4.71.0. This affects an unknown function of the file gateway.downloadBackup.js of the component Backup Restore Endpoint. The manipulation of the argument file_url leads to os command…",
-   "date": "2026-11-20T09:20:07.047000+00:00",
-   "cvss": 9.1,
-   "sev": "crit",
    "platforms": []
   },
   {
