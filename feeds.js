@@ -1,6 +1,6 @@
 /* Généré automatiquement par scripts/build_feeds.py — NE PAS éditer à la main */
 window.ARSENAL_FEEDS = {
- "updated": "2026-11-27T21:24:05+00:00",
+ "updated": "2026-11-28T07:56:49+00:00",
  "sources": [
   {
    "name": "CERT-FR · Alertes",
@@ -429,22 +429,44 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-135789",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-135789",
-   "summary": "A security vulnerability has been detected in D-Link R95 101B06. Affected by this issue is the function GetBluetoothAdapterSettings/GetBluetoothBloodPressure/GetBluetoothDeviceList/GetBluetoothScanDeviceList/SetBluetoothAdapterSettings/SetB…",
-   "date": "2026-11-24T17:18:43.480000+00:00",
-   "cvss": 9.1,
+   "title": "CVE-2026-123987",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123987",
+   "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit…",
+   "date": "2026-11-24T18:18:53.753000+00:00",
+   "cvss": 9.9,
    "sev": "crit",
    "platforms": []
   },
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
-   "title": "CVE-2026-135788",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-135788",
-   "summary": "A weakness has been identified in D-Link DIR-X1860 4.5.2. Affected by this vulnerability is an unknown functionality of the file /usr/sbin/anweb. Executing a manipulation can lead to os command injection. It is possible to launch the attack…",
-   "date": "2026-11-24T17:18:43.250000+00:00",
+   "title": "CVE-2026-123986",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-123986",
+   "summary": "Adobe Campaign Classic (ACC) is affected by an Improper Control of Generation of Code ('Code Injection') vulnerability that could result in arbitrary code execution in the context of the current user. A low-privileged attacker could exploit…",
+   "date": "2026-11-24T18:18:53.603000+00:00",
    "cvss": 9.9,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-136184",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-136184",
+   "summary": "compose-farm 0.19.0 before 1.22.0 contains a cross-site WebSocket hijacking and cross-site request forgery vulnerability because its unauthenticated web UI performs no Origin validation. Malicious websites visited by users can open /ws/shel…",
+   "date": "2026-11-24T17:18:46.180000+00:00",
+   "cvss": 9.6,
+   "sev": "crit",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
+   "title": "CVE-2026-135789",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-135789",
+   "summary": "A security vulnerability has been detected in D-Link R95 101B06. Affected by this issue is the function GetBluetoothAdapterSettings/GetBluetoothBloodPressure/GetBluetoothDeviceList/GetBluetoothScanDeviceList/SetBluetoothAdapterSettings/SetB…",
+   "date": "2026-11-24T17:18:43.480000+00:00",
+   "cvss": 9.1,
    "sev": "crit",
    "platforms": []
   },
@@ -543,19 +565,6 @@ window.ARSENAL_FEEDS = {
    ]
   },
   {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-135208",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-135208",
-   "summary": "Kerberos Agent before 3.14.4 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge administrator tokens because JWTMiddleWare() falls back to the hard-coded key TOBECHANGED. Attackers can sign HS256…",
-   "date": "2026-11-23T16:17:38.250000+00:00",
-   "cvss": 9.8,
-   "sev": "crit",
-   "platforms": [
-    "windows"
-   ]
-  },
-  {
    "source": "CISA · Advisories",
    "kind": "cve",
    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
@@ -564,17 +573,6 @@ window.ARSENAL_FEEDS = {
    "date": "2026-11-23T12:00:00+00:00",
    "cvss": null,
    "sev": null,
-   "platforms": []
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-134882",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-134882",
-   "summary": "A weakness has been identified in TOTOLINK A7100RU 7.4cu.2313_B20191024. This issue affects the function exportOvpn of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. This manipulation of the argument Username causes os command…",
-   "date": "2026-11-23T09:17:05.653000+00:00",
-   "cvss": 10.0,
-   "sev": "crit",
    "platforms": []
   },
   {
@@ -679,6 +677,17 @@ window.ARSENAL_FEEDS = {
   {
    "source": "NVD · CVE notés CVSS",
    "kind": "cve",
+   "title": "CVE-2026-76515",
+   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-76515",
+   "summary": "A vulnerability in the Object Linking and Embedding, 2nd Generation (OLE2) file parser for ClamAV could allow an unauthenticated, remote attacker to exceed the configured MaxScanTime and cause a DoS condition on an affected device. This vul…",
+   "date": "2026-11-18T17:17:51.130000+00:00",
+   "cvss": 7.5,
+   "sev": "high",
+   "platforms": []
+  },
+  {
+   "source": "NVD · CVE notés CVSS",
+   "kind": "cve",
    "title": "CVE-2026-76430",
    "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-76430",
    "summary": "A vulnerability in the Ultimate Packer for eXecutables (UPX) unpacker of ClamAV could allow an unauthenticated, remote attacker to cause a DoS condition on an affected device. This vulnerability is due to improper length checks, when unpack…",
@@ -734,17 +743,6 @@ window.ARSENAL_FEEDS = {
    "platforms": [
     "linux"
    ]
-  },
-  {
-   "source": "NVD · CVE notés CVSS",
-   "kind": "cve",
-   "title": "CVE-2026-127337",
-   "link": "https://nvd.nist.gov/vuln/detail/CVE-2026-127337",
-   "summary": "Vulnerability in the Oracle AutoVue product of Oracle Supply Chain (component: Security). The supported version that is affected is 21.1.0. Easily exploitable vulnerability allows unauthenticated attacker with logon to the infrastructure wh…",
-   "date": "2026-11-17T22:18:57.897000+00:00",
-   "cvss": 7.9,
-   "sev": "high",
-   "platforms": []
   },
   {
    "source": "CISA · Advisories",
